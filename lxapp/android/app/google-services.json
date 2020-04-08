@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "582854391789",
+    "firebase_url": "https://lxapp-f05f6.firebaseio.com",
+    "project_id": "lxapp-f05f6",
+    "storage_bucket": "lxapp-f05f6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:582854391789:android:22a9fccef3ebcd412cd9e4",
+        "android_client_info": {
+          "package_name": "com.example.lxapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "582854391789-qq025hpfq382d6f5dofu59877lsnsf57.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDb0_LH69B52tz3NjtlOSCdykTSVtNb5eg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "582854391789-qq025hpfq382d6f5dofu59877lsnsf57.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
