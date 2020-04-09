@@ -3,6 +3,7 @@ import 'package:lxapp/services/auth.dart';
 import 'package:lxapp/shared/constants.dart';
 import 'package:lxapp/shared/loading.dart';
 
+
 class SignIn extends StatefulWidget {
   final Function toggleView;
   SignIn({ this.toggleView });
@@ -36,15 +37,20 @@ class _SignInState extends State<SignIn> {
           ),
         ],
       ),
+      //หน้าจอหลัก
+      
       body: Container(
         padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 50.0),
+        
         child: Form(
+            
             key: _formKey,
             child: Column(
+             
             children: <Widget>[
               SizedBox(height: 20.0),
               TextFormField(
-                decoration: textInputDecoration.copyWith(hintText: 'Email'),
+                decoration: textInputDecoration.copyWith(hintText: 'Email',prefixIcon: Icon(Icons.email)),
                 validator: (val) => val.isEmpty ? 'Enter an email' : null,
                 onChanged: (val) {
                   setState(() => email = val);
@@ -52,7 +58,7 @@ class _SignInState extends State<SignIn> {
               ),
               SizedBox(height: 20.0),
               TextFormField(
-                decoration: textInputDecoration.copyWith(hintText: 'Password'),
+                decoration: textInputDecoration.copyWith(hintText: 'Password',prefixIcon: Icon(Icons.lock)),
                 validator: (val) => val.length < 8 ? 'Enter the password' : null,
                 obscureText: true,
                 onChanged: (val) {
