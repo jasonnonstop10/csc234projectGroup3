@@ -22,7 +22,7 @@ class _RegisterState extends State<Register> {
   @override
   Widget build(BuildContext context) {
     return loading ? Loading() : Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.grey[100],
       appBar: AppBar(
         backgroundColor: Colors.orange[400],
         elevation: 0.0,
@@ -61,7 +61,10 @@ class _RegisterState extends State<Register> {
                 },
               ),
               SizedBox(height: 20.0),
-              RaisedButton(
+              ButtonTheme(
+              minWidth: 500.0,
+              height: 50.0,
+              child: RaisedButton(
                 color: Colors.orange[400],
                 child: Text(
                   'Register',
@@ -81,6 +84,7 @@ class _RegisterState extends State<Register> {
                     }
                   }
                 }
+              ),
               ),
               SizedBox(height: 12.0),
               Text(
