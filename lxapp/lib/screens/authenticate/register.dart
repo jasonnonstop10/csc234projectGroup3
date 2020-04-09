@@ -24,9 +24,11 @@ class _RegisterState extends State<Register> {
     return loading ? Loading() : Scaffold(
       backgroundColor: Colors.grey[100],
       appBar: AppBar(
-        backgroundColor: Colors.orange[400],
+        backgroundColor: Colors.grey[100],
         elevation: 0.0,
-        title: Text('Register LX Application'),
+        title: const Text('Register' , style : TextStyle(
+        color: Colors.black
+        )),
         actions: <Widget>[
           FlatButton.icon(
             icon: Icon(Icons.person),
