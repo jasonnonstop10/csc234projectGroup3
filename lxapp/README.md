@@ -1,6 +1,6 @@
 # lxapp
 
-A new Flutter project.
+LX Application
 
 ## Getting Started
 
