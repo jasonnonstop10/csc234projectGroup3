@@ -73,7 +73,22 @@ class _ForgotPageState extends State<ForgotPage> {
                     letterSpacing: .6)),
             
                   ),
-                  FormCard(),
+                  SizedBox(height: ScreenUtil.getInstance().setHeight(40)),
+                  
+                  Align(
+                    alignment: Alignment.centerLeft,
+                  child: Text("Email",
+                style: TextStyle(
+                    fontFamily: "Poppins-Medium",
+                    fontSize: ScreenUtil.getInstance().setSp(26)))),
+            TextField(
+              decoration: InputDecoration(
+                  focusedBorder: UnderlineInputBorder(
+                      borderSide: BorderSide(color: Colors.orange,width: 3.0),
+                   ),  
+                  hintText: "Email",
+                  hintStyle: TextStyle(color: Colors.grey, fontSize: 12.0)),
+            ),
                   SizedBox(height: ScreenUtil.getInstance().setHeight(40)),
                   
                   Row(
@@ -102,7 +117,7 @@ class _ForgotPageState extends State<ForgotPage> {
                             child: InkWell(
                               onTap: () {},
                               child: Center(
-                                child: Text("REGISTER",
+                                child: Text("RESET",
                                     style: TextStyle(
                                         color: Colors.white,
                                         fontFamily: "Poppins-Bold",
@@ -122,7 +137,7 @@ class _ForgotPageState extends State<ForgotPage> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
                       Text(
-                        "Already have an account?",
+                        "Remember your Password?",
                         style: TextStyle(fontFamily: "Poppins-Medium"),
                       ),
                       InkWell(
@@ -139,45 +154,10 @@ class _ForgotPageState extends State<ForgotPage> {
                   SizedBox(
                     height: ScreenUtil.getInstance().setHeight(40),
                   ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      horizontalLine(),
-                      Text("Register with",
-                          style: TextStyle(
-                              fontSize: 16.0, fontFamily: "Poppins-Medium")),
-                      horizontalLine()
-                    ],
-                  ),
-                  SizedBox(
-                    height: ScreenUtil.getInstance().setHeight(40),
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      SocialIcon(
-                        colors: [
-                          Color(0xFF102397),
-                          Color(0xFF187adf),
-                          Color(0xFF00eaf8),
-                        ],
-                        iconData: CustomIcons.facebook,
-                        onPressed: () {},
-                      ),
-                      SocialIcon(
-                        colors: [
-                          Color(0xFFff4f38),
-                          Color(0xFFff355d),
-                        ],
-                        iconData: CustomIcons.googlePlus,
-                        onPressed: () {},
-                      ),
-                      
-                    ],
-                  ),
-                  SizedBox(
-                    height: ScreenUtil.getInstance().setHeight(30),
-                  ),
+                  
+                  
+                  
+                  
                   
                 ],
               ),
