@@ -163,7 +163,14 @@ class _SignupPageState extends State<SignupPage> {
                         iconData: CustomIcons.googlePlus,
                         onPressed: () {},
                       ),
-                      
+                      SocialIcon(
+                        colors: [
+                          Color(0xFF17ead9),
+                          Color(0xFF6078ea),
+                        ],
+                        iconData: CustomIcons.twitter,
+                        onPressed: () {},
+                      ),
                     ],
                   ),
                   SizedBox(

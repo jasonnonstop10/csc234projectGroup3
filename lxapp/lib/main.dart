@@ -11,7 +11,7 @@ void main() => runApp(MaterialApp(
       debugShowCheckedModeBanner: false,
       routes: <String, WidgetBuilder>{
         '/register': (BuildContext context) => new SignupPage(),
-        '/forgot': (BuildContext context) => new ForgotPage()
+        '/forgot': (BuildContext context) => new ForgotPage(),
       },
       
     ));
@@ -213,8 +213,10 @@ class _MyAppState extends State<MyApp> {
                   SizedBox(
                     height: ScreenUtil.getInstance().setHeight(10),
                   ),
+                  
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
+                    
                     children: <Widget>[
                       SocialIcon(
                         colors: [
@@ -233,7 +235,14 @@ class _MyAppState extends State<MyApp> {
                         iconData: CustomIcons.googlePlus,
                         onPressed: () {},
                       ),
-                      
+                      SocialIcon(
+                        colors: [
+                          Color(0xFF17ead9),
+                          Color(0xFF6078ea),
+                        ],
+                        iconData: CustomIcons.twitter,
+                        onPressed: () {},
+                      ),
                     ],
                   ),
                   SizedBox(
