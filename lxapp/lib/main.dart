@@ -11,7 +11,7 @@ void main() => runApp(MaterialApp(
       debugShowCheckedModeBanner: false,
       routes: <String, WidgetBuilder>{
         '/register': (BuildContext context) => new SignupPage(),
-        '/forgot': (BuildContext context) => new ForgotPage(),
+        '/forgot': (BuildContext context) => new ForgotPage()
       },
       
     ));
@@ -105,13 +105,17 @@ class _MyAppState extends State<MyApp> {
                   Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: <Widget>[
-                Text(
-                  "Forgot Password?",
-                  style: TextStyle(
-                      color: Color(0xFFff9900),
-                                fontFamily: "Poppins-Bold",
-                      fontSize: ScreenUtil.getInstance().setSp(28)),
-                )
+                
+                InkWell(
+                        onTap: () {
+                    Navigator.pushNamed(context, "/forgot");
+                  },
+                        child: Text("Forgot Password",
+                            style: TextStyle(
+                                fontSize: 16,
+                                color: Color(0xFFff9900),
+                                fontFamily: "Poppins-Bold")),
+                      )
               ],
             ),
                   SizedBox(height: ScreenUtil.getInstance().setHeight(40)),
