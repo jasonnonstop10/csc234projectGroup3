@@ -86,7 +86,7 @@ class _ForgotPageState extends State<ForgotPage> {
                   focusedBorder: UnderlineInputBorder(
                       borderSide: BorderSide(color: Colors.orange,width: 3.0),
                    ),  
-                  hintText: "Email",
+                  hintText: "example@kmutt.ac.th",
                   hintStyle: TextStyle(color: Colors.grey, fontSize: 12.0)),
             ),
                   SizedBox(height: ScreenUtil.getInstance().setHeight(40)),

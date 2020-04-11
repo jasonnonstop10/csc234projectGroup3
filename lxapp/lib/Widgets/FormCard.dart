@@ -26,13 +26,13 @@ class FormCard extends StatelessWidget {
                   focusedBorder: UnderlineInputBorder(
                       borderSide: BorderSide(color: Colors.orange,width: 3.0),
                    ),  
-                  hintText: "Email",
+                  hintText: "example@kmutt.ac.th",
                   hintStyle: TextStyle(color: Colors.grey, fontSize: 12.0)),
             ),
             SizedBox(
               height: ScreenUtil.getInstance().setHeight(30),
             ),
-            Text("PassWord",
+            Text("Password",
                 style: TextStyle(
                     fontFamily: "Poppins-Medium",
                     fontSize: ScreenUtil.getInstance().setSp(26))),
@@ -42,7 +42,7 @@ class FormCard extends StatelessWidget {
                 focusedBorder: UnderlineInputBorder(
                       borderSide: BorderSide(color: Colors.orange,width: 3.0),
                    ),
-                  hintText: "Password",
+                  hintText: "••••••••",
                   hintStyle: TextStyle(color: Colors.grey, fontSize: 12.0)),
             ),
             SizedBox(
