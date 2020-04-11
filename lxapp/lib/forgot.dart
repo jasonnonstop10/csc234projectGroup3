@@ -1,54 +1,12 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'Widgets/FormCard.dart';
 import 'Widgets/SocialIcons.dart';
 import 'CustomIcons.dart';
-import 'register.dart';
-import 'forgot.dart';
 
-void main() => runApp(MaterialApp(
-      home: MyApp(),
-      debugShowCheckedModeBanner: false,
-      routes: <String, WidgetBuilder>{
-        '/register': (BuildContext context) => new SignupPage(),
-        '/forgot': (BuildContext context) => new ForgotPage(),
-      },
-      
-    ));
-
-class MyApp extends StatefulWidget {
-  @override
-  _MyAppState createState() => new _MyAppState();
-  
-}
-
-class _MyAppState extends State<MyApp> {
-  bool _isSelected = false;
-
-  void _radio() {
-    setState(() {
-      _isSelected = !_isSelected;
-    });
-  }
-
-  Widget radioButton(bool isSelected) => Container(
-        width: 16.0,
-        height: 16.0,
-        padding: EdgeInsets.all(2.0),
-        decoration: BoxDecoration(
-            shape: BoxShape.circle,
-            border: Border.all(width: 2.0, color: Colors.black)),
-        child: isSelected
-            ? Container(
-                width: double.infinity,
-                height: double.infinity,
-                decoration:
-                    BoxDecoration(shape: BoxShape.circle, color: Colors.black),
-              )
-            : Container(),
-      );
-
-  Widget horizontalLine() => Padding(
+Widget horizontalLine() => Padding(
         padding: EdgeInsets.symmetric(horizontal: 16.0),
         child: Container(
           width: ScreenUtil.getInstance().setWidth(120),
@@ -56,7 +14,14 @@ class _MyAppState extends State<MyApp> {
           color: Colors.black26.withOpacity(.2),
         ),
       );
+class ForgotPage extends StatefulWidget {
+  @override
+  _ForgotPageState createState() => _ForgotPageState();
+  
+}
 
+class _ForgotPageState extends State<ForgotPage> {
+  @override
   @override
   Widget build(BuildContext context) {
     ScreenUtil.instance = ScreenUtil.getInstance()..init(context);
@@ -96,50 +61,20 @@ class _MyAppState extends State<MyApp> {
                       
                     ],
                   ),
-                  
                   SizedBox(
                     height: ScreenUtil.getInstance().setHeight(180),
                   ),
-                  
                   FormCard(),
-                  Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: <Widget>[
-                Text(
-                  "Forgot Password?",
-                  style: TextStyle(
-                      color: Color(0xFFff9900),
-                                fontFamily: "Poppins-Bold",
-                      fontSize: ScreenUtil.getInstance().setSp(28)),
-                )
-              ],
-            ),
                   SizedBox(height: ScreenUtil.getInstance().setHeight(40)),
+                  
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: <Widget>[
-                      Row(
-                        children: <Widget>[
-                          SizedBox(
-                            width: 12.0,
-                          ),
-                          GestureDetector(
-                            onTap: _radio,
-                            child: radioButton(_isSelected),
-                          ),
-                          SizedBox(
-                            width: 8.0,
-                          ),
-                          Text("Remember me",
-                              style: TextStyle(
-                                  fontSize: 12, fontFamily: "Poppins-Medium"))
-                        ],
-                      ),
-                      
                       
                       InkWell(
+                        
                         child: Container(
-                          width: ScreenUtil.getInstance().setWidth(330),
+                          width: max(0, 355),
                           height: ScreenUtil.getInstance().setHeight(100),
                           decoration: BoxDecoration(
                               gradient: LinearGradient(colors: [
@@ -153,13 +88,12 @@ class _MyAppState extends State<MyApp> {
                                     offset: Offset(0.0, 8.0),
                                     blurRadius: 8.0)
                               ]),
-                              
                           child: Material(
                             color: Colors.transparent,
                             child: InkWell(
                               onTap: () {},
                               child: Center(
-                                child: Text("LOGIN",
+                                child: Text("REGISTER",
                                     style: TextStyle(
                                         color: Colors.white,
                                         fontFamily: "Poppins-Bold",
@@ -179,14 +113,14 @@ class _MyAppState extends State<MyApp> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
                       Text(
-                        "Don't have an account? ",
+                        "Already have an account?",
                         style: TextStyle(fontFamily: "Poppins-Medium"),
                       ),
                       InkWell(
                         onTap: () {
-                    Navigator.pushNamed(context, "/register");
+                    Navigator.of(context).pop();
                   },
-                        child: Text("Register now",
+                        child: Text("Login",
                             style: TextStyle(
                                 color: Color(0xFFff9900),
                                 fontFamily: "Poppins-Bold")),
@@ -200,14 +134,14 @@ class _MyAppState extends State<MyApp> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
                       horizontalLine(),
-                      Text("Social Login",
+                      Text("Register with",
                           style: TextStyle(
                               fontSize: 16.0, fontFamily: "Poppins-Medium")),
                       horizontalLine()
                     ],
                   ),
                   SizedBox(
-                    height: ScreenUtil.getInstance().setHeight(10),
+                    height: ScreenUtil.getInstance().setHeight(40),
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,

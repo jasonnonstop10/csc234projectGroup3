@@ -52,18 +52,7 @@ class FormCard extends StatelessWidget {
             SizedBox(
               height: ScreenUtil.getInstance().setHeight(35),
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: <Widget>[
-                Text(
-                  "Forgot Password?",
-                  style: TextStyle(
-                      color: Color(0xFFff9900),
-                                fontFamily: "Poppins-Bold",
-                      fontSize: ScreenUtil.getInstance().setSp(28)),
-                )
-              ],
-            )
+            
           ],
         ),
       ),
