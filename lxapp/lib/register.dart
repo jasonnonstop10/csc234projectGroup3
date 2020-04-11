@@ -64,6 +64,15 @@ class _SignupPageState extends State<SignupPage> {
                   SizedBox(
                     height: ScreenUtil.getInstance().setHeight(180),
                   ),
+                  Align(
+                    alignment: Alignment.bottomLeft,
+                  child: Text("Register",
+                style: TextStyle(
+                    fontSize: ScreenUtil.getInstance().setSp(45),
+                    fontFamily: "Poppins-Bold",
+                    letterSpacing: .6)),
+            
+                  ),
                   FormCard(),
                   SizedBox(height: ScreenUtil.getInstance().setHeight(40)),
                   

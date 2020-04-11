@@ -64,6 +64,15 @@ class _ForgotPageState extends State<ForgotPage> {
                   SizedBox(
                     height: ScreenUtil.getInstance().setHeight(180),
                   ),
+                  Align(
+                    alignment: Alignment.bottomLeft,
+                  child: Text("Reset Your Password",
+                style: TextStyle(
+                    fontSize: ScreenUtil.getInstance().setSp(45),
+                    fontFamily: "Poppins-Bold",
+                    letterSpacing: .6)),
+            
+                  ),
                   FormCard(),
                   SizedBox(height: ScreenUtil.getInstance().setHeight(40)),
                   

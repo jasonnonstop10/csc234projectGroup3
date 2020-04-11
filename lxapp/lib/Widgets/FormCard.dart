@@ -6,18 +6,14 @@ class FormCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return new Container(
       width: double.infinity,
-      height: ScreenUtil.getInstance().setHeight(500),
+      height: ScreenUtil.getInstance().setHeight(400),
      
       child: Padding(
         padding: EdgeInsets.only(left: 16.0, right: 16.0, top: 16.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            Text("Welcome to LX",
-                style: TextStyle(
-                    fontSize: ScreenUtil.getInstance().setSp(45),
-                    fontFamily: "Poppins-Bold",
-                    letterSpacing: .6)),
+            
             SizedBox(
               height: ScreenUtil.getInstance().setHeight(30),
             ),

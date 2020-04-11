@@ -100,6 +100,15 @@ class _MyAppState extends State<MyApp> {
                   SizedBox(
                     height: ScreenUtil.getInstance().setHeight(180),
                   ),
+                  Align(
+                    alignment: Alignment.bottomLeft,
+                  child: Text("Welcome to LX",
+                style: TextStyle(
+                    fontSize: ScreenUtil.getInstance().setSp(45),
+                    fontFamily: "Poppins-Bold",
+                    letterSpacing: .6)),
+            
+                  ),
                   
                   FormCard(),
                   Row(
@@ -108,7 +117,8 @@ class _MyAppState extends State<MyApp> {
                 
                 InkWell(
                         onTap: () {
-                    Navigator.pushNamed(context, "/forgot");
+                    Navigator.push(context,
+MaterialPageRoute(builder: (context) => ForgotPage()));
                   },
                         child: Text("Forgot Password",
                             style: TextStyle(
