@@ -3,6 +3,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'Widgets/FormCard.dart';
+import 'Widgets/SocialIcons.dart';
 import 'CustomIcons.dart';
 
 Widget horizontalLine() => Padding(
