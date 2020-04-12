@@ -5,6 +5,7 @@ import 'Widgets/FormCard.dart';
 
 import 'register.dart';
 import 'forgot.dart';
+import 'event.dart';
 
 void main() => runApp(MaterialApp(
       home: MyApp(),
@@ -12,6 +13,7 @@ void main() => runApp(MaterialApp(
       routes: <String, WidgetBuilder>{
         '/register': (BuildContext context) => new SignupPage(),
         '/forgot': (BuildContext context) => new ForgotPage(),
+        '/event': (BuildContext context) => new EventPage(),
       },
       
     ));
@@ -171,7 +173,7 @@ MaterialPageRoute(builder: (context) => ForgotPage()));
                           child: Material(
                             color: Colors.transparent,
                             child: InkWell(
-                              onTap: () {},
+                              onTap: () {Navigator.pushNamed(context, "/event");},
                               child: Center(
                                 child: Text("LOGIN",
                                     style: TextStyle(
