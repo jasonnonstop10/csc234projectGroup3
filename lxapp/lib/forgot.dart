@@ -6,17 +6,17 @@ import 'Widgets/FormCard.dart';
 import 'CustomIcons.dart';
 
 Widget horizontalLine() => Padding(
-        padding: EdgeInsets.symmetric(horizontal: 16.0),
-        child: Container(
-          width: ScreenUtil.getInstance().setWidth(120),
-          height: 1.0,
-          color: Colors.black26.withOpacity(.2),
-        ),
-      );
+      padding: EdgeInsets.symmetric(horizontal: 16.0),
+      child: Container(
+        width: ScreenUtil.getInstance().setWidth(120),
+        height: 1.0,
+        color: Colors.black26.withOpacity(.2),
+      ),
+    );
+
 class ForgotPage extends StatefulWidget {
   @override
   _ForgotPageState createState() => _ForgotPageState();
-  
 }
 
 class _ForgotPageState extends State<ForgotPage> {
@@ -57,7 +57,6 @@ class _ForgotPageState extends State<ForgotPage> {
                         width: ScreenUtil.getInstance().setWidth(110),
                         height: ScreenUtil.getInstance().setHeight(110),
                       ),
-                      
                     ],
                   ),
                   SizedBox(
@@ -65,37 +64,34 @@ class _ForgotPageState extends State<ForgotPage> {
                   ),
                   Align(
                     alignment: Alignment.bottomLeft,
-                  child: Text("Reset Your Password",
-                style: TextStyle(
-                    fontSize: ScreenUtil.getInstance().setSp(45),
-                    fontFamily: "Poppins-Bold",
-                    letterSpacing: .6)),
-            
+                    child: Text("Reset Your Password",
+                        style: TextStyle(
+                            fontSize: ScreenUtil.getInstance().setSp(45),
+                            fontFamily: "Poppins-Bold",
+                            letterSpacing: .6)),
                   ),
                   SizedBox(height: ScreenUtil.getInstance().setHeight(40)),
-                  
                   Align(
-                    alignment: Alignment.centerLeft,
-                  child: Text("Email",
-                style: TextStyle(
-                    fontFamily: "Poppins-Medium",
-                    fontSize: ScreenUtil.getInstance().setSp(26)))),
-            TextField(
-              decoration: InputDecoration(
-                  focusedBorder: UnderlineInputBorder(
-                      borderSide: BorderSide(color: Colors.orange,width: 3.0),
-                   ),  
-                  hintText: "example@kmutt.ac.th",
-                  hintStyle: TextStyle(color: Colors.grey, fontSize: 12.0)),
-            ),
+                      alignment: Alignment.centerLeft,
+                      child: Text("Email",
+                          style: TextStyle(
+                              fontFamily: "Poppins-Medium",
+                              fontSize: ScreenUtil.getInstance().setSp(26)))),
+                  TextField(
+                    decoration: InputDecoration(
+                        focusedBorder: UnderlineInputBorder(
+                          borderSide:
+                              BorderSide(color: Colors.orange, width: 3.0),
+                        ),
+                        hintText: "example@kmutt.ac.th",
+                        hintStyle:
+                            TextStyle(color: Colors.grey, fontSize: 12.0)),
+                  ),
                   SizedBox(height: ScreenUtil.getInstance().setHeight(40)),
-                  
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: <Widget>[
-                      
                       InkWell(
-                        
                         child: Container(
                           width: max(0, 355),
                           height: ScreenUtil.getInstance().setHeight(100),
@@ -141,8 +137,8 @@ class _ForgotPageState extends State<ForgotPage> {
                       ),
                       InkWell(
                         onTap: () {
-                    Navigator.of(context).pop();
-                  },
+                          Navigator.of(context).pop();
+                        },
                         child: Text("Login",
                             style: TextStyle(
                                 color: Color(0xFFff9900),
@@ -153,11 +149,6 @@ class _ForgotPageState extends State<ForgotPage> {
                   SizedBox(
                     height: ScreenUtil.getInstance().setHeight(40),
                   ),
-                  
-                  
-                  
-                  
-                  
                 ],
               ),
             ),

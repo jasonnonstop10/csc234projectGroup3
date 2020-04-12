@@ -4,19 +4,18 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'Widgets/FormCard.dart';
 
-
 Widget horizontalLine() => Padding(
-        padding: EdgeInsets.symmetric(horizontal: 16.0),
-        child: Container(
-          width: ScreenUtil.getInstance().setWidth(120),
-          height: 1.0,
-          color: Colors.black26.withOpacity(.2),
-        ),
-      );
+      padding: EdgeInsets.symmetric(horizontal: 16.0),
+      child: Container(
+        width: ScreenUtil.getInstance().setWidth(120),
+        height: 1.0,
+        color: Colors.black26.withOpacity(.2),
+      ),
+    );
+
 class SignupPage extends StatefulWidget {
   @override
   _SignupPageState createState() => _SignupPageState();
-  
 }
 
 class _SignupPageState extends State<SignupPage> {
@@ -57,7 +56,6 @@ class _SignupPageState extends State<SignupPage> {
                         width: ScreenUtil.getInstance().setWidth(110),
                         height: ScreenUtil.getInstance().setHeight(110),
                       ),
-                      
                     ],
                   ),
                   SizedBox(
@@ -65,22 +63,18 @@ class _SignupPageState extends State<SignupPage> {
                   ),
                   Align(
                     alignment: Alignment.bottomLeft,
-                  child: Text("Register",
-                style: TextStyle(
-                    fontSize: ScreenUtil.getInstance().setSp(45),
-                    fontFamily: "Poppins-Bold",
-                    letterSpacing: .6)),
-            
+                    child: Text("Register",
+                        style: TextStyle(
+                            fontSize: ScreenUtil.getInstance().setSp(45),
+                            fontFamily: "Poppins-Bold",
+                            letterSpacing: .6)),
                   ),
                   FormCard(),
                   SizedBox(height: ScreenUtil.getInstance().setHeight(40)),
-                  
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: <Widget>[
-                      
                       InkWell(
-                        
                         child: Container(
                           width: max(0, 355),
                           height: ScreenUtil.getInstance().setHeight(100),
@@ -126,8 +120,8 @@ class _SignupPageState extends State<SignupPage> {
                       ),
                       InkWell(
                         onTap: () {
-                    Navigator.of(context).pop();
-                  },
+                          Navigator.of(context).pop();
+                        },
                         child: Text("Login",
                             style: TextStyle(
                                 color: Color(0xFFff9900),
@@ -138,10 +132,6 @@ class _SignupPageState extends State<SignupPage> {
                   SizedBox(
                     height: ScreenUtil.getInstance().setHeight(40),
                   ),
-                  
-                  
-                  
-                  
                 ],
               ),
             ),

@@ -7,13 +7,11 @@ class FormCard extends StatelessWidget {
     return new Container(
       width: double.infinity,
       height: ScreenUtil.getInstance().setHeight(400),
-     
       child: Padding(
         padding: EdgeInsets.only(left: 16.0, right: 16.0, top: 16.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            
             SizedBox(
               height: ScreenUtil.getInstance().setHeight(30),
             ),
@@ -24,9 +22,9 @@ class FormCard extends StatelessWidget {
             TextField(
               decoration: InputDecoration(
                   focusedBorder: UnderlineInputBorder(
-                      borderSide: BorderSide(color: Colors.orange,width: 3.0),
-                   ),  
-                  hintText: "example@kmutt.ac.th",
+                    borderSide: BorderSide(color: Colors.orange, width: 3.0),
+                  ),
+                  hintText: "example@mail.kmutt.ac.th",
                   hintStyle: TextStyle(color: Colors.grey, fontSize: 12.0)),
             ),
             SizedBox(
@@ -39,16 +37,15 @@ class FormCard extends StatelessWidget {
             TextField(
               obscureText: true,
               decoration: InputDecoration(
-                focusedBorder: UnderlineInputBorder(
-                      borderSide: BorderSide(color: Colors.orange,width: 3.0),
-                   ),
+                  focusedBorder: UnderlineInputBorder(
+                    borderSide: BorderSide(color: Colors.orange, width: 3.0),
+                  ),
                   hintText: "••••••••",
                   hintStyle: TextStyle(color: Colors.grey, fontSize: 12.0)),
             ),
             SizedBox(
               height: ScreenUtil.getInstance().setHeight(35),
             ),
-            
           ],
         ),
       ),
