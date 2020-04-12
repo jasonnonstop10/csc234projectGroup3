@@ -49,9 +49,9 @@ class _EventPageState extends State<EventPage> {
     ),
   ),
 
-      body: const Center(
+      body:const Center( 
         child: Text(
-          'This is the home page',
+          'Search',
           style: TextStyle(fontSize: 24),
         ),
       ),
