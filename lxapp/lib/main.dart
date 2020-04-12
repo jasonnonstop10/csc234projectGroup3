@@ -4,7 +4,7 @@ import 'Widgets/FormCard.dart';
 
 import 'register.dart';
 import 'forgot.dart';
-import 'event.dart';
+import 'menu.dart';
 
 void main() => runApp(MaterialApp(
       home: MyApp(),
@@ -12,7 +12,7 @@ void main() => runApp(MaterialApp(
       routes: <String, WidgetBuilder>{
         '/register': (BuildContext context) => new SignupPage(),
         '/forgot': (BuildContext context) => new ForgotPage(),
-        '/event': (BuildContext context) => new EventPage(),
+        '/menu': (BuildContext context) => new MenuPage(),
       },
     ));
 
@@ -165,7 +165,7 @@ class _MyAppState extends State<MyApp> {
                             color: Colors.transparent,
                             child: InkWell(
                               onTap: () {
-                                Navigator.pushNamed(context, "/event");
+                                Navigator.pushNamed(context, "/menu");
                               },
                               child: Center(
                                 child: Text("LOGIN",
