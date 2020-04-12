@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'Widgets/FormCard.dart';
 
-
 import 'register.dart';
 import 'forgot.dart';
+import 'menu.dart';
 
 void main() => runApp(MaterialApp(
       home: MyApp(),
@@ -12,14 +12,13 @@ void main() => runApp(MaterialApp(
       routes: <String, WidgetBuilder>{
         '/register': (BuildContext context) => new SignupPage(),
         '/forgot': (BuildContext context) => new ForgotPage(),
+        '/menu': (BuildContext context) => new MenuPage(),
       },
-      
     ));
 
 class MyApp extends StatefulWidget {
   @override
   _MyAppState createState() => new _MyAppState();
-  
 }
 
 class _MyAppState extends State<MyApp> {
@@ -93,41 +92,38 @@ class _MyAppState extends State<MyApp> {
                         width: ScreenUtil.getInstance().setWidth(110),
                         height: ScreenUtil.getInstance().setHeight(110),
                       ),
-                      
                     ],
                   ),
-                  
                   SizedBox(
                     height: ScreenUtil.getInstance().setHeight(180),
                   ),
                   Align(
                     alignment: Alignment.bottomLeft,
-                  child: Text("Welcome to LX",
-                style: TextStyle(
-                    fontSize: ScreenUtil.getInstance().setSp(45),
-                    fontFamily: "Poppins-Bold",
-                    letterSpacing: .6)),
-            
+                    child: Text("Welcome to LX",
+                        style: TextStyle(
+                            fontSize: ScreenUtil.getInstance().setSp(45),
+                            fontFamily: "Poppins-Bold",
+                            letterSpacing: .6)),
                   ),
-                  
                   FormCard(),
                   Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: <Widget>[
-                
-                InkWell(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: <Widget>[
+                      InkWell(
                         onTap: () {
-                    Navigator.push(context,
-MaterialPageRoute(builder: (context) => ForgotPage()));
-                  },
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => ForgotPage()));
+                        },
                         child: Text("Forgot Password",
                             style: TextStyle(
                                 fontSize: 16,
                                 color: Color(0xFFff9900),
                                 fontFamily: "Poppins-Bold")),
                       )
-              ],
-            ),
+                    ],
+                  ),
                   SizedBox(height: ScreenUtil.getInstance().setHeight(40)),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -149,8 +145,6 @@ MaterialPageRoute(builder: (context) => ForgotPage()));
                                   fontSize: 12, fontFamily: "Poppins-Medium"))
                         ],
                       ),
-                      
-                      
                       InkWell(
                         child: Container(
                           width: ScreenUtil.getInstance().setWidth(330),
@@ -167,11 +161,12 @@ MaterialPageRoute(builder: (context) => ForgotPage()));
                                     offset: Offset(0.0, 8.0),
                                     blurRadius: 8.0)
                               ]),
-                              
                           child: Material(
                             color: Colors.transparent,
                             child: InkWell(
-                              onTap: () {},
+                              onTap: () {
+                                Navigator.pushNamed(context, "/menu");
+                              },
                               child: Center(
                                 child: Text("LOGIN",
                                     style: TextStyle(
@@ -198,8 +193,8 @@ MaterialPageRoute(builder: (context) => ForgotPage()));
                       ),
                       InkWell(
                         onTap: () {
-                    Navigator.pushNamed(context, "/register");
-                  },
+                          Navigator.pushNamed(context, "/register");
+                        },
                         child: Text("Register now",
                             style: TextStyle(
                                 color: Color(0xFFff9900),
@@ -210,11 +205,6 @@ MaterialPageRoute(builder: (context) => ForgotPage()));
                   SizedBox(
                     height: ScreenUtil.getInstance().setHeight(40),
                   ),
-                  
-                  
-                  
-                  
-                  
                 ],
               ),
             ),
