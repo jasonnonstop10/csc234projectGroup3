@@ -124,8 +124,8 @@ class _ForgotPageState extends State<ForgotPage> {
                               boxShadow: [
                                 BoxShadow(
                                     color: Color(0xFFfc315e).withOpacity(.5),
-                                    offset: Offset(0.0, 8.0),
-                                    blurRadius: 8.0)
+                                    offset: Offset(5.0, 17.0),
+                                    blurRadius: 25.0)
                               ]),
                           child: Material(
                             color: Colors.transparent,
