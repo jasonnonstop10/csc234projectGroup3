@@ -105,7 +105,7 @@ class _MyAppState extends State<MyApp> {
                             style: TextStyle(
                                 fontSize: 14,
                                 color: Colors.blueGrey[700],
-                                fontFamily: "Poppins-bold")),
+                                fontFamily: "Poppins-Medium")),
                       )
                     ],
                   ),
@@ -122,7 +122,7 @@ class _MyAppState extends State<MyApp> {
                                 Color(0xFFfc315e),
                                 Color(0xFFfd7f70)
                               ]),
-                              borderRadius: BorderRadius.circular(6.0),
+                              borderRadius: BorderRadius.circular(10.0),
                               boxShadow: [
                                 BoxShadow(
                                     color: Color(0xFFfc315e).withOpacity(.5),
@@ -175,7 +175,57 @@ class _MyAppState extends State<MyApp> {
                       )
                     ],
                   ),
-                  
+                  SizedBox(
+                    height: ScreenUtil.getInstance().setHeight(70),
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Text(
+                        "By creating an account, you agree to our",
+                        style: TextStyle(
+                          color: Colors.blueGrey[700],
+                          fontSize: 10,
+                          fontFamily: "Poppins-Medium"),
+                          
+                      ),
+                      
+                      
+                    ],
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      InkWell(
+                        onTap: () {
+                         
+                        },
+                        child: Text("Terms of Service",
+                            style: TextStyle(
+                                color: Colors.pinkAccent[400],
+                                fontSize: 10,
+                                fontFamily: "Poppins-Bold")),
+                      ),
+                      Text(
+                        " and",
+                        style: TextStyle(
+                          color: Colors.blueGrey[700],
+                          fontSize: 10,
+                          fontFamily: "Poppins-Medium"),
+                          
+                      ),
+                      InkWell(
+                        onTap: () {
+                         
+                        },
+                        child: Text(" Privacy Policy",
+                            style: TextStyle(
+                                color: Colors.pinkAccent[400],
+                                fontSize: 10,
+                                fontFamily: "Poppins-Bold")),
+                      ),
+                    ],
+                  ),
                 ],
               ),
             ),

@@ -120,7 +120,7 @@ class _ForgotPageState extends State<ForgotPage> {
                                 Color(0xFFfc315e),
                                 Color(0xFFfd7f70)
                               ]),
-                              borderRadius: BorderRadius.circular(6.0),
+                              borderRadius: BorderRadius.circular(10.0),
                               boxShadow: [
                                 BoxShadow(
                                     color: Color(0xFFfc315e).withOpacity(.5),

@@ -15,7 +15,7 @@ class FormCard extends StatelessWidget {
             SizedBox(
               height: ScreenUtil.getInstance().setHeight(30),
             ),
-            Text("Email",
+            Text("Email address",
                 style: TextStyle(
                   color: Colors.pinkAccent[400],
                     fontFamily: "Poppins-Bold",
