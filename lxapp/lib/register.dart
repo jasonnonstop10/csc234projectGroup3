@@ -34,10 +34,7 @@ class _SignupPageState extends State<SignupPage> {
           Column(
             crossAxisAlignment: CrossAxisAlignment.end,
             children: <Widget>[
-              Padding(
-                padding: EdgeInsets.only(top: 20.0),
-                child: Image.asset("assets/image_01.png"),
-              ),
+              
               Expanded(
                 child: Container(),
               ),
@@ -51,25 +48,91 @@ class _SignupPageState extends State<SignupPage> {
                 children: <Widget>[
                   Row(
                     children: <Widget>[
-                      Image.asset(
-                        "assets/logo.png",
-                        width: ScreenUtil.getInstance().setWidth(110),
-                        height: ScreenUtil.getInstance().setHeight(110),
-                      ),
+                      
                     ],
                   ),
                   SizedBox(
                     height: ScreenUtil.getInstance().setHeight(180),
                   ),
                   Align(
-                    alignment: Alignment.bottomLeft,
-                    child: Text("Register",
+                    alignment: Alignment.center,
+                    child: Text("(PICTURE FORM HERE)",
                         style: TextStyle(
                             fontSize: ScreenUtil.getInstance().setSp(45),
                             fontFamily: "Poppins-Bold",
                             letterSpacing: .6)),
                   ),
-                  FormCard(),
+                  SizedBox(
+                    height: ScreenUtil.getInstance().setHeight(180),
+                  ),
+                  Align(
+                      alignment: Alignment.centerLeft,
+                      child: Text("Name",
+                          style: TextStyle(
+                              fontFamily: "Poppins-Medium",
+                              fontSize: ScreenUtil.getInstance().setSp(26)))),
+                  TextField(
+                    decoration: InputDecoration(
+                        focusedBorder: UnderlineInputBorder(
+                          borderSide:
+                              BorderSide(color: Colors.orange, width: 3.0),
+                        ),
+                        hintText: "YourName YourSurname",
+                        hintStyle:
+                            TextStyle(color: Colors.grey, fontSize: 12.0)),
+                  ),
+                   SizedBox(height: ScreenUtil.getInstance().setHeight(40)),
+                  Align(
+                      alignment: Alignment.centerLeft,
+                      child: Text("Email",
+                          style: TextStyle(
+                              fontFamily: "Poppins-Medium",
+                              fontSize: ScreenUtil.getInstance().setSp(26)))),
+                  TextField(
+                    decoration: InputDecoration(
+                        focusedBorder: UnderlineInputBorder(
+                          borderSide:
+                              BorderSide(color: Colors.orange, width: 3.0),
+                        ),
+                        hintText: "example@kmutt.ac.th",
+                        hintStyle:
+                            TextStyle(color: Colors.grey, fontSize: 12.0)),
+                  ),
+                  SizedBox(height: ScreenUtil.getInstance().setHeight(40)),
+                  Align(
+                      alignment: Alignment.centerLeft,
+                      child: Text("Password",
+                          style: TextStyle(
+                              fontFamily: "Poppins-Medium",
+                              fontSize: ScreenUtil.getInstance().setSp(26)))),
+                  TextField(
+                    decoration: InputDecoration(
+                        focusedBorder: UnderlineInputBorder(
+                          borderSide:
+                              BorderSide(color: Colors.orange, width: 3.0),
+                        ),
+                        hintText: "••••••••",
+                        hintStyle:
+                            TextStyle(color: Colors.grey, fontSize: 12.0)),
+                  ),
+                  SizedBox(height: ScreenUtil.getInstance().setHeight(40)),
+                  Align(
+                      alignment: Alignment.centerLeft,
+                      child: Text("Confirm Your Password",
+                          style: TextStyle(
+                              fontFamily: "Poppins-Medium",
+                              fontSize: ScreenUtil.getInstance().setSp(26)))),
+                  TextField(
+                    decoration: InputDecoration(
+                        focusedBorder: UnderlineInputBorder(
+                          borderSide:
+                              BorderSide(color: Colors.orange, width: 3.0),
+                        ),
+                        hintText: "••••••••",
+                        hintStyle:
+                            TextStyle(color: Colors.grey, fontSize: 12.0)),
+                  ),
+                  
                   SizedBox(height: ScreenUtil.getInstance().setHeight(40)),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
