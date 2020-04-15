@@ -84,7 +84,7 @@ flutter:
       fonts:
         - asset: assets/WorkSans-Light.otf
     
-    font-family: 'Work Sans', sans-serif;
+    
   
   #
   # For details regarding fonts from package dependencies,

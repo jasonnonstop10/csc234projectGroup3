@@ -18,7 +18,7 @@ class FormCard extends StatelessWidget {
             Text("Email",
                 style: TextStyle(
                   color: Colors.pinkAccent[400],
-                    fontFamily: "Poppins-Medium",
+                    fontFamily: "Poppins-Bold",
                     fontSize: ScreenUtil.getInstance().setSp(26))),
             TextField(
               decoration: InputDecoration(
@@ -34,7 +34,7 @@ class FormCard extends StatelessWidget {
             Text("Password",
                 style: TextStyle(
                   color: Colors.pinkAccent[400],
-                    fontFamily: "Poppins-Medium",
+                    fontFamily: "Poppins-Bold",
                     fontSize: ScreenUtil.getInstance().setSp(26))),
             TextField(
               obscureText: true,
@@ -45,9 +45,7 @@ class FormCard extends StatelessWidget {
                   hintText: "••••••••",
                   hintStyle: TextStyle(color: Colors.grey, fontSize: 12.0)),
             ),
-            SizedBox(
-              height: ScreenUtil.getInstance().setHeight(35),
-            ),
+            
           ],
         ),
       ),

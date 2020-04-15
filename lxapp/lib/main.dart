@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'Widgets/FormCard.dart';
@@ -105,7 +107,7 @@ class _MyAppState extends State<MyApp> {
                             style: TextStyle(
                                 fontSize: 14,
                                 color: Color(0xFF93989a),
-                                fontFamily: "Poppins")),
+                                fontFamily: "Poppins-bold")),
                       )
                     ],
                   ),
@@ -113,26 +115,9 @@ class _MyAppState extends State<MyApp> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: <Widget>[
-                      Row(
-                        children: <Widget>[
-                          SizedBox(
-                            width: 12.0,
-                          ),
-                          GestureDetector(
-                            onTap: _radio,
-                            child: radioButton(_isSelected),
-                          ),
-                          SizedBox(
-                            width: 8.0,
-                          ),
-                          Text("Remember me",
-                              style: TextStyle(
-                                  fontSize: 12, fontFamily: "Poppins-Medium"))
-                        ],
-                      ),
                       InkWell(
                         child: Container(
-                          width: ScreenUtil.getInstance().setWidth(330),
+                          width: max(0, 355),
                           height: ScreenUtil.getInstance().setHeight(100),
                           decoration: BoxDecoration(
                               gradient: LinearGradient(colors: [
@@ -149,11 +134,9 @@ class _MyAppState extends State<MyApp> {
                           child: Material(
                             color: Colors.transparent,
                             child: InkWell(
-                              onTap: () {
-                                Navigator.pushNamed(context, "/menu");
-                              },
+                              onTap: () {},
                               child: Center(
-                                child: Text("LOGIN",
+                                child: Text("Login",
                                     style: TextStyle(
                                         color: Colors.white,
                                         fontFamily: "Poppins-Bold",
@@ -173,23 +156,28 @@ class _MyAppState extends State<MyApp> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
                       Text(
-                        "Don't have an account? ",
-                        style: TextStyle(fontFamily: "Poppins-Medium"),
+                        "New user? ",
+                        style: TextStyle(
+                          color: Colors.blueGrey,
+                          fontFamily: "Poppins-Medium"),
                       ),
                       InkWell(
                         onTap: () {
                           Navigator.pushNamed(context, "/register");
                         },
-                        child: Text("Register now",
+                        child: Text("Sign up",
                             style: TextStyle(
                                 color: Colors.pinkAccent[400],
                                 fontFamily: "Poppins-Bold")),
+                      ),Text(
+                        " here",
+                        style: TextStyle(
+                           color: Colors.blueGrey,
+                          fontFamily: "Poppins-Medium"),
                       )
                     ],
                   ),
-                  SizedBox(
-                    height: ScreenUtil.getInstance().setHeight(40),
-                  ),
+                  
                 ],
               ),
             ),
