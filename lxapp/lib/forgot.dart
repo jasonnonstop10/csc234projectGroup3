@@ -54,6 +54,7 @@ class _ForgotPageState extends State<ForgotPage> {
                     alignment: Alignment.center,
                     child: Text("Forgot Password",
                         style: TextStyle(
+                          color: Colors.blueGrey[700],
                             fontSize: ScreenUtil.getInstance().setSp(45),
                             fontFamily: "Poppins-Bold",
                             letterSpacing: .6)),
@@ -65,6 +66,7 @@ class _ForgotPageState extends State<ForgotPage> {
                     alignment: Alignment.center,
                     child: Text("Enter the wmail address you used to create your",
                         style: TextStyle(
+                          color: Colors.blueGrey[700],
                             fontSize: ScreenUtil.getInstance().setSp(25),
                             fontFamily: "Poppins",
                             letterSpacing: .6)),
@@ -73,6 +75,7 @@ class _ForgotPageState extends State<ForgotPage> {
                     alignment: Alignment.center,
                     child: Text("account and we will email you a link to reset your",
                         style: TextStyle(
+                          color: Colors.blueGrey[700],
                             fontSize: ScreenUtil.getInstance().setSp(25),
                             fontFamily: "Poppins",
                             letterSpacing: .6)),
@@ -81,6 +84,7 @@ class _ForgotPageState extends State<ForgotPage> {
                     alignment: Alignment.center,
                     child: Text("Password",
                         style: TextStyle(
+                          color: Colors.blueGrey[700],
                             fontSize: ScreenUtil.getInstance().setSp(25),
                             fontFamily: "Poppins",
                             letterSpacing: .6)),

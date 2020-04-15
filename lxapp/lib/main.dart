@@ -106,7 +106,7 @@ class _MyAppState extends State<MyApp> {
                         child: Text("Forgot Password?",
                             style: TextStyle(
                                 fontSize: 14,
-                                color: Color(0xFF93989a),
+                                color: Colors.blueGrey[700],
                                 fontFamily: "Poppins-bold")),
                       )
                     ],
@@ -158,7 +158,7 @@ class _MyAppState extends State<MyApp> {
                       Text(
                         "New user? ",
                         style: TextStyle(
-                          color: Colors.blueGrey,
+                          color: Colors.blueGrey[700],
                           fontFamily: "Poppins-Medium"),
                       ),
                       InkWell(
@@ -172,7 +172,7 @@ class _MyAppState extends State<MyApp> {
                       ),Text(
                         " here",
                         style: TextStyle(
-                           color: Colors.blueGrey,
+                           color: Colors.blueGrey[700],
                           fontFamily: "Poppins-Medium"),
                       )
                     ],
