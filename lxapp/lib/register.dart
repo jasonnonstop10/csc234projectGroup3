@@ -2,7 +2,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'Widgets/FormCard.dart';
+
 
 Widget horizontalLine() => Padding(
       padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -43,7 +43,7 @@ class _SignupPageState extends State<SignupPage> {
           ),
           SingleChildScrollView(
             child: Padding(
-              padding: EdgeInsets.only(left: 28.0, right: 28.0, top: 60.0),
+              padding: EdgeInsets.only(left: 28.0, right: 28.0, top: 10.0),
               child: Column(
                 children: <Widget>[
                   Row(
@@ -56,14 +56,19 @@ class _SignupPageState extends State<SignupPage> {
                   ),
                   Align(
                     alignment: Alignment.center,
-                    child: Text("(PICTURE FORM HERE)",
-                        style: TextStyle(
-                            fontSize: ScreenUtil.getInstance().setSp(45),
-                            fontFamily: "Poppins-Bold",
-                            letterSpacing: .6)),
+                    child: (
+                      ClipOval(
+  child: Image.network(
+    'https://lh3.googleusercontent.com/proxy/A5k1yHB4lmQn9YeBhFot8KAmgiUKf51J8FIwbNPrWLrZv_XWZ05bu-2croudtj-mpFP2tTJCU5hd9uaiKtzemq4NA5Z7XW8vVyJ8FnpOgD5amc7AG46Ft-U',
+    width: 150,
+    height: 150,
+    fit: BoxFit.cover,
+  ),
+)
+),
                   ),
                   SizedBox(
-                    height: ScreenUtil.getInstance().setHeight(150),
+                    height: ScreenUtil.getInstance().setHeight(50),
                   ),
                   Align(
                       alignment: Alignment.centerLeft,
