@@ -109,7 +109,7 @@ class _FinishRegState extends State<FinishReg> {
                             borderRadius: BorderRadius.circular(50.0),
                             boxShadow: [
                               BoxShadow(
-                                  color: Color(0xFFfc315e).withOpacity(.1),
+                                  color: Color(0xFF000000).withOpacity(.2),
                                   offset: Offset(0.0, 8.0),
                                   blurRadius: 8.0)
                             ]),

@@ -136,7 +136,7 @@ class _SignupPageState extends State<SignupPage> {
                   ),
                   SizedBox(height: ScreenUtil.getInstance().setHeight(40)),
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
                       InkWell(
                         child: Container(

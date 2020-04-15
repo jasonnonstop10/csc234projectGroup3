@@ -115,7 +115,7 @@ class _MyAppState extends State<MyApp> {
                   ),
                   SizedBox(height: ScreenUtil.getInstance().setHeight(40)),
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
                       InkWell(
                         child: Container(
