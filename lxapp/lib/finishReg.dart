@@ -1,4 +1,4 @@
-import 'dart:math';
+
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -51,10 +51,11 @@ class _FinishRegState extends State<FinishReg> {
                   backgroundColor: Color(0xffffffff),
                   child: CircleAvatar(
                     radius: 70,
-                    backgroundImage: NetworkImage(
-                        'https://lh3.googleusercontent.com/proxy/A5k1yHB4lmQn9YeBhFot8KAmgiUKf51J8FIwbNPrWLrZv_XWZ05bu-2croudtj-mpFP2tTJCU5hd9uaiKtzemq4NA5Z7XW8vVyJ8FnpOgD5amc7AG46Ft-U'),
-                  ),
+                    backgroundImage: AssetImage('assets/profile.jpg'),
+                        
+                  
                 ),
+                  ),
                 SizedBox(
                   height: ScreenUtil.getInstance().setHeight(50),
                 ),

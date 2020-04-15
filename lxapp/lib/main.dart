@@ -26,13 +26,9 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  bool _isSelected = false;
+  
 
-  void _radio() {
-    setState(() {
-      _isSelected = !_isSelected;
-    });
-  }
+  
 
   Widget radioButton(bool isSelected) => Container(
         width: 16.0,
@@ -165,7 +161,7 @@ class _MyAppState extends State<MyApp> {
                       ),
                       InkWell(
                         onTap: () {
-                          Navigator.pushNamed(context, "/finish");
+                          Navigator.pushNamed(context, "/register");
                         },
                         child: Text("Sign up",
                             style: TextStyle(

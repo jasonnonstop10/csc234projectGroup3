@@ -49,17 +49,18 @@ class _SignupPageState extends State<SignupPage> {
                   SizedBox(
                     height: ScreenUtil.getInstance().setHeight(180),
                   ),
-                  Align(
-                    alignment: Alignment.center,
-                    child: (ClipOval(
-                      child: Image.network(
-                        'https://lh3.googleusercontent.com/proxy/A5k1yHB4lmQn9YeBhFot8KAmgiUKf51J8FIwbNPrWLrZv_XWZ05bu-2croudtj-mpFP2tTJCU5hd9uaiKtzemq4NA5Z7XW8vVyJ8FnpOgD5amc7AG46Ft-U',
-                        width: 150,
-                        height: 150,
-                        fit: BoxFit.cover,
-                      ),
-                    )),
+                  CircleAvatar(
+                  radius: 75,
+                  backgroundColor: Color(0xffffffff),
+                  child: CircleAvatar(
+                    radius: 70,
+                    backgroundImage: AssetImage('assets/profile.jpg'),
+                        
+                  
+                ),
                   ),
+                    
+                  
                   SizedBox(
                     height: ScreenUtil.getInstance().setHeight(50),
                   ),
