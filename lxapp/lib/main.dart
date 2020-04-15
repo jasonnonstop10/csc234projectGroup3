@@ -101,11 +101,11 @@ class _MyAppState extends State<MyApp> {
                               MaterialPageRoute(
                                   builder: (context) => ForgotPage()));
                         },
-                        child: Text("Forgot Password",
+                        child: Text("Forgot Password?",
                             style: TextStyle(
-                                fontSize: 16,
-                                color: Color(0xFFff9900),
-                                fontFamily: "Poppins-Bold")),
+                                fontSize: 14,
+                                color: Color(0xFF93989a),
+                                fontFamily: "Poppins")),
                       )
                     ],
                   ),
@@ -182,7 +182,7 @@ class _MyAppState extends State<MyApp> {
                         },
                         child: Text("Register now",
                             style: TextStyle(
-                                color: Color(0xFFff9900),
+                                color: Colors.pinkAccent[400],
                                 fontFamily: "Poppins-Bold")),
                       )
                     ],

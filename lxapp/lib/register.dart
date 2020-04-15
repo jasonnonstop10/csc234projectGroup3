@@ -63,7 +63,7 @@ class _SignupPageState extends State<SignupPage> {
                             letterSpacing: .6)),
                   ),
                   SizedBox(
-                    height: ScreenUtil.getInstance().setHeight(180),
+                    height: ScreenUtil.getInstance().setHeight(150),
                   ),
                   Align(
                       alignment: Alignment.centerLeft,

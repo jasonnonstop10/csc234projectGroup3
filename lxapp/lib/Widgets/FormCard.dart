@@ -17,12 +17,13 @@ class FormCard extends StatelessWidget {
             ),
             Text("Email",
                 style: TextStyle(
+                  color: Colors.pinkAccent[400],
                     fontFamily: "Poppins-Medium",
                     fontSize: ScreenUtil.getInstance().setSp(26))),
             TextField(
               decoration: InputDecoration(
                   focusedBorder: UnderlineInputBorder(
-                    borderSide: BorderSide(color: Colors.orange, width: 3.0),
+                    borderSide: BorderSide(color: Colors.pinkAccent[400], width: 3.0),
                   ),
                   hintText: "example@mail.kmutt.ac.th",
                   hintStyle: TextStyle(color: Colors.grey, fontSize: 12.0)),
@@ -32,13 +33,14 @@ class FormCard extends StatelessWidget {
             ),
             Text("Password",
                 style: TextStyle(
+                  color: Colors.pinkAccent[400],
                     fontFamily: "Poppins-Medium",
                     fontSize: ScreenUtil.getInstance().setSp(26))),
             TextField(
               obscureText: true,
               decoration: InputDecoration(
                   focusedBorder: UnderlineInputBorder(
-                    borderSide: BorderSide(color: Colors.orange, width: 3.0),
+                    borderSide: BorderSide(color: Colors.pinkAccent[400], width: 3.0),
                   ),
                   hintText: "••••••••",
                   hintStyle: TextStyle(color: Colors.grey, fontSize: 12.0)),
