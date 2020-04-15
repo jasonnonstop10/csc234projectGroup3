@@ -112,13 +112,13 @@ class _ForgotPageState extends State<ForgotPage> {
                           height: ScreenUtil.getInstance().setHeight(100),
                           decoration: BoxDecoration(
                               gradient: LinearGradient(colors: [
-                                Color(0xFFff9900),
-                                Color(0xFFffcc66)
+                                Color(0xFFfc315e),
+                                Color(0xFFfd7f70)
                               ]),
                               borderRadius: BorderRadius.circular(6.0),
                               boxShadow: [
                                 BoxShadow(
-                                    color: Color(0xFF6078ea).withOpacity(.3),
+                                    color: Color(0xFFfc315e).withOpacity(.5),
                                     offset: Offset(0.0, 8.0),
                                     blurRadius: 8.0)
                               ]),
@@ -154,7 +154,7 @@ class _ForgotPageState extends State<ForgotPage> {
                         onTap: () {
                           Navigator.of(context).pop();
                         },
-                        child: Text("Login",
+                        child: Text("Reset Password",
                             style: TextStyle(
                                 color: Color(0xFFff9900),
                                 fontFamily: "Poppins-Bold")),

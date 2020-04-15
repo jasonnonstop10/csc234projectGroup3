@@ -80,13 +80,13 @@ class _SignupPageState extends State<SignupPage> {
                           height: ScreenUtil.getInstance().setHeight(100),
                           decoration: BoxDecoration(
                               gradient: LinearGradient(colors: [
-                                Color(0xFFff9900),
-                                Color(0xFFffcc66)
+                                Color(0xFFfc315e),
+                                Color(0xFFfd7f70)
                               ]),
                               borderRadius: BorderRadius.circular(6.0),
                               boxShadow: [
                                 BoxShadow(
-                                    color: Color(0xFF6078ea).withOpacity(.3),
+                                    color: Color(0xFFfc315e).withOpacity(.5),
                                     offset: Offset(0.0, 8.0),
                                     blurRadius: 8.0)
                               ]),
