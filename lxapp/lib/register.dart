@@ -3,7 +3,6 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-
 Widget horizontalLine() => Padding(
       padding: EdgeInsets.symmetric(horizontal: 16.0),
       child: Container(
@@ -34,11 +33,9 @@ class _SignupPageState extends State<SignupPage> {
           Column(
             crossAxisAlignment: CrossAxisAlignment.end,
             children: <Widget>[
-              
               Expanded(
                 child: Container(),
               ),
-              
             ],
           ),
           SingleChildScrollView(
@@ -47,25 +44,21 @@ class _SignupPageState extends State<SignupPage> {
               child: Column(
                 children: <Widget>[
                   Row(
-                    children: <Widget>[
-                      
-                    ],
+                    children: <Widget>[],
                   ),
                   SizedBox(
                     height: ScreenUtil.getInstance().setHeight(180),
                   ),
                   Align(
                     alignment: Alignment.center,
-                    child: (
-                      ClipOval(
-  child: Image.network(
-    'https://lh3.googleusercontent.com/proxy/A5k1yHB4lmQn9YeBhFot8KAmgiUKf51J8FIwbNPrWLrZv_XWZ05bu-2croudtj-mpFP2tTJCU5hd9uaiKtzemq4NA5Z7XW8vVyJ8FnpOgD5amc7AG46Ft-U',
-    width: 150,
-    height: 150,
-    fit: BoxFit.cover,
-  ),
-)
-),
+                    child: (ClipOval(
+                      child: Image.network(
+                        'https://lh3.googleusercontent.com/proxy/A5k1yHB4lmQn9YeBhFot8KAmgiUKf51J8FIwbNPrWLrZv_XWZ05bu-2croudtj-mpFP2tTJCU5hd9uaiKtzemq4NA5Z7XW8vVyJ8FnpOgD5amc7AG46Ft-U',
+                        width: 150,
+                        height: 150,
+                        fit: BoxFit.cover,
+                      ),
+                    )),
                   ),
                   SizedBox(
                     height: ScreenUtil.getInstance().setHeight(50),
@@ -74,32 +67,32 @@ class _SignupPageState extends State<SignupPage> {
                       alignment: Alignment.centerLeft,
                       child: Text("Name",
                           style: TextStyle(
-                            color: Colors.pinkAccent[400],
+                              color: Colors.pinkAccent[400],
                               fontFamily: "Poppins-Bold",
                               fontSize: ScreenUtil.getInstance().setSp(26)))),
                   TextField(
                     decoration: InputDecoration(
                         focusedBorder: UnderlineInputBorder(
-                          borderSide:
-                              BorderSide(color: Colors.pinkAccent[400], width: 3.0),
+                          borderSide: BorderSide(
+                              color: Colors.pinkAccent[400], width: 3.0),
                         ),
                         hintText: "YourName YourSurname",
                         hintStyle:
                             TextStyle(color: Colors.grey, fontSize: 12.0)),
                   ),
-                   SizedBox(height: ScreenUtil.getInstance().setHeight(40)),
+                  SizedBox(height: ScreenUtil.getInstance().setHeight(40)),
                   Align(
                       alignment: Alignment.centerLeft,
                       child: Text("Email",
                           style: TextStyle(
-                            color: Colors.pinkAccent[400],
+                              color: Colors.pinkAccent[400],
                               fontFamily: "Poppins-Bold",
                               fontSize: ScreenUtil.getInstance().setSp(26)))),
                   TextField(
                     decoration: InputDecoration(
                         focusedBorder: UnderlineInputBorder(
-                          borderSide:
-                              BorderSide(color: Colors.pinkAccent[400], width: 3.0),
+                          borderSide: BorderSide(
+                              color: Colors.pinkAccent[400], width: 3.0),
                         ),
                         hintText: "example@kmutt.ac.th",
                         hintStyle:
@@ -110,14 +103,14 @@ class _SignupPageState extends State<SignupPage> {
                       alignment: Alignment.centerLeft,
                       child: Text("Password",
                           style: TextStyle(
-                            color: Colors.pinkAccent[400],
+                              color: Colors.pinkAccent[400],
                               fontFamily: "Poppins-Bold",
                               fontSize: ScreenUtil.getInstance().setSp(26)))),
                   TextField(
                     decoration: InputDecoration(
                         focusedBorder: UnderlineInputBorder(
-                          borderSide:
-                              BorderSide(color: Colors.pinkAccent[400], width: 3.0),
+                          borderSide: BorderSide(
+                              color: Colors.pinkAccent[400], width: 3.0),
                         ),
                         hintText: "••••••••",
                         hintStyle:
@@ -128,20 +121,19 @@ class _SignupPageState extends State<SignupPage> {
                       alignment: Alignment.centerLeft,
                       child: Text("Confirm Your Password",
                           style: TextStyle(
-                            color: Colors.pinkAccent[400],
+                              color: Colors.pinkAccent[400],
                               fontFamily: "Poppins-Bold",
                               fontSize: ScreenUtil.getInstance().setSp(26)))),
                   TextField(
                     decoration: InputDecoration(
                         focusedBorder: UnderlineInputBorder(
-                          borderSide:
-                              BorderSide(color: Colors.pinkAccent[400], width: 3.0),
+                          borderSide: BorderSide(
+                              color: Colors.pinkAccent[400], width: 3.0),
                         ),
                         hintText: "••••••••",
                         hintStyle:
                             TextStyle(color: Colors.grey, fontSize: 12.0)),
                   ),
-                  
                   SizedBox(height: ScreenUtil.getInstance().setHeight(40)),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,

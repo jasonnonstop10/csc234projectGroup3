@@ -3,7 +3,6 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-
 Widget horizontalLine() => Padding(
       padding: EdgeInsets.symmetric(horizontal: 16.0),
       child: Container(
@@ -26,115 +25,123 @@ class _FinishRegState extends State<FinishReg> {
     ScreenUtil.instance =
         ScreenUtil(width: 750, height: 1334, allowFontScaling: true);
     return new Scaffold(
-      backgroundColor: Colors.white,
-      resizeToAvoidBottomPadding: true,
-      body: Stack(
-        fit: StackFit.expand,
-        children: <Widget>[
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.end,
-            children: <Widget>[
-              
-              Expanded(
-                child: Container(),
-              ),
-              
-            ],
+        backgroundColor: Colors.transparent,
+        resizeToAvoidBottomPadding: true,
+        body: Container(
+          decoration: new BoxDecoration(
+            gradient: new LinearGradient(
+                colors: [const Color(0xFFfc315e), const Color(0xFFfc8e73)],
+                begin: FractionalOffset.topLeft,
+                end: FractionalOffset.bottomRight,
+                stops: [0.0, 1.0],
+                tileMode: TileMode.clamp),
           ),
-          SingleChildScrollView(
-            child: Padding(
-              padding: EdgeInsets.only(left: 28.0, right: 28.0, top: 60.0),
-              child: Column(
-                children: <Widget>[
-                  Row(
-                    children: <Widget>[
-                      
-                    ],
+          child: Padding(
+            padding: EdgeInsets.only(left: 28.0, right: 28.0, top: 120.0),
+            child: Column(
+              children: <Widget>[
+                Row(
+                  children: <Widget>[],
+                ),
+                SizedBox(
+                  height: ScreenUtil.getInstance().setHeight(180),
+                ),
+                CircleAvatar(
+                  radius: 75,
+                  backgroundColor: Color(0xffffffff),
+                  child: CircleAvatar(
+                    radius: 70,
+                    backgroundImage: NetworkImage(
+                        'https://lh3.googleusercontent.com/proxy/A5k1yHB4lmQn9YeBhFot8KAmgiUKf51J8FIwbNPrWLrZv_XWZ05bu-2croudtj-mpFP2tTJCU5hd9uaiKtzemq4NA5Z7XW8vVyJ8FnpOgD5amc7AG46Ft-U'),
                   ),
-                  SizedBox(
-                    height: ScreenUtil.getInstance().setHeight(180),
-                  ),
-                  Align(
+                ),
+                SizedBox(
+                  height: ScreenUtil.getInstance().setHeight(50),
+                ),
+                Align(
                     alignment: Alignment.center,
-                    child: Text("(PICTURE FORM HERE)",
+                    child: Text("Bae Irene",
                         style: TextStyle(
+                          color: Colors.white,
                             fontSize: ScreenUtil.getInstance().setSp(45),
-                            fontFamily: "Poppins-Bold",
+                            fontFamily: "Poppins-Medium",
                             letterSpacing: .6)),
                   ),
                   SizedBox(
-                    height: ScreenUtil.getInstance().setHeight(150),
+                  height: ScreenUtil.getInstance().setHeight(10),
+                ),
+                  Align(
+                    alignment: Alignment.center,
+                    child: Text("You account is ready! Tap on Get Started to ",
+                        style: TextStyle(
+                          color: Colors.white,
+                            fontSize: ScreenUtil.getInstance().setSp(25),
+                            fontFamily: "Poppins",
+                            letterSpacing: .6)),
                   ),
-                  
-                  
-                  SizedBox(height: ScreenUtil.getInstance().setHeight(40)),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: <Widget>[
-                      InkWell(
-                        child: Container(
-                          width: max(0, 355),
-                          height: ScreenUtil.getInstance().setHeight(100),
-                          decoration: BoxDecoration(
-                              gradient: LinearGradient(colors: [
-                                Color(0xFFfc315e),
-                                Color(0xFFfd7f70)
-                              ]),
-                              borderRadius: BorderRadius.circular(6.0),
-                              boxShadow: [
-                                BoxShadow(
-                                    color: Color(0xFFfc315e).withOpacity(.5),
-                                    offset: Offset(0.0, 8.0),
-                                    blurRadius: 8.0)
-                              ]),
-                          child: Material(
-                            color: Colors.transparent,
-                            child: InkWell(
-                              onTap: () {},
-                              child: Center(
-                                child: Text("REGISTER",
-                                    style: TextStyle(
-                                        color: Colors.white,
-                                        fontFamily: "Poppins-Bold",
-                                        fontSize: 18,
-                                        letterSpacing: 1.0)),
-                              ),
+                  SizedBox(
+                  height: ScreenUtil.getInstance().setHeight(5),
+                ),
+                  Align(
+                    alignment: Alignment.center,
+                    child: Text("proceed.",
+                        style: TextStyle(
+                          color: Colors.white,
+                            fontSize: ScreenUtil.getInstance().setSp(25),
+                            fontFamily: "Poppins",
+                            letterSpacing: .6)),
+                  ),
+                  SizedBox(
+                  height: ScreenUtil.getInstance().setHeight(100),
+                ),
+                Align(
+                  alignment: Alignment.center,
+                  child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    InkWell(
+                      child: Container(
+                        width: ScreenUtil.getInstance().setHeight(275),
+                        height: ScreenUtil.getInstance().setHeight(100),
+                        decoration: BoxDecoration(
+                            gradient: LinearGradient(
+                                colors: [Color(0xFFffffff), Color(0xFFffffff)]),
+                            borderRadius: BorderRadius.circular(50.0),
+                            boxShadow: [
+                              BoxShadow(
+                                  color: Color(0xFFfc315e).withOpacity(.1),
+                                  offset: Offset(0.0, 8.0),
+                                  blurRadius: 8.0)
+                            ]),
+                        child: Material(
+                          
+                          color: Colors.transparent,
+                          child: InkWell(
+                            onTap: () {},
+                            child: Center(
+                              child: Text("Get Started",
+                                  style: TextStyle(
+                                      color: Colors.pinkAccent,
+                                      fontFamily: "Poppins-Bold",
+                                      fontSize: 18,
+                                      letterSpacing: 1.0)),
                             ),
                           ),
                         ),
-                      )
-                    ],
-                  ),
-                  SizedBox(
-                    height: ScreenUtil.getInstance().setHeight(40),
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      Text(
-                        "Already have an account?",
-                        style: TextStyle(fontFamily: "Poppins-Medium"),
                       ),
-                      InkWell(
-                        onTap: () {
-                          Navigator.of(context).pop();
-                        },
-                        child: Text("Login",
-                            style: TextStyle(
-                                color: Colors.pinkAccent[400],
-                                fontFamily: "Poppins-Bold")),
-                      )
-                    ],
-                  ),
-                  SizedBox(
-                    height: ScreenUtil.getInstance().setHeight(40),
-                  ),
-                ],
-              ),
+                    )
+                  ],
+                ),
+                ),
+                
+                SizedBox(
+                  height: ScreenUtil.getInstance().setHeight(40),
+                ),
+                
+                
+              ],
             ),
-          )
-        ],
-      ),
-    );
+          ),
+        ));
   }
 }

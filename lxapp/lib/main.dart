@@ -165,7 +165,7 @@ class _MyAppState extends State<MyApp> {
                       ),
                       InkWell(
                         onTap: () {
-                          Navigator.pushNamed(context, "/register");
+                          Navigator.pushNamed(context, "/finish");
                         },
                         child: Text("Sign up",
                             style: TextStyle(
