@@ -41,7 +41,7 @@ class _SignupPageState extends State<SignupPage> {
           ),
           SingleChildScrollView(
             child: Padding(
-              padding: EdgeInsets.only(left: 28.0, right: 28.0, top: 10.0),
+              padding: EdgeInsets.only(left: 28.0, right: 28.0, top: 0.0),
               child: Column(
                 children: <Widget>[
                   Row(
@@ -58,8 +58,17 @@ class _SignupPageState extends State<SignupPage> {
                       backgroundImage: AssetImage('assets/profile.jpg'),
                     ),
                   ),
+                  InkWell(
+                        onTap: () {
+                          
+                        },
+                        child: Text("Upload Picture",
+                            style: TextStyle(
+                                color: Colors.pinkAccent[400],
+                                fontFamily: "Poppins-Bold")),
+                      ),
                   SizedBox(
-                    height: ScreenUtil.getInstance().setHeight(50),
+                    height: ScreenUtil.getInstance().setHeight(40),
                   ),
                   Align(
                       alignment: Alignment.centerLeft,
