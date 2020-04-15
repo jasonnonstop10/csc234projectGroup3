@@ -70,7 +70,21 @@ flutter:
 
     - family: Poppins-Medium
       fonts:
-        - asset: assets/Poppins-Medium.ttf    
+        - asset: assets/Poppins-Medium.ttf   
+    
+    - family: Work-Bold
+      fonts:
+        - asset: assets/WorkSans-Bold.otf
+    
+    - family: Work-Medium
+      fonts:
+        - asset: assets/WorkSans-Medium.otf
+
+    - family: Work-Light
+      fonts:
+        - asset: assets/WorkSans-Light.otf
+    
+    font-family: 'Work Sans', sans-serif;
   
   #
   # For details regarding fonts from package dependencies,
