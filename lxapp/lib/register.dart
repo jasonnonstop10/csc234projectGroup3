@@ -1,6 +1,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_login_page_ui/finishReg.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 Widget horizontalLine() => Padding(
@@ -50,17 +51,13 @@ class _SignupPageState extends State<SignupPage> {
                     height: ScreenUtil.getInstance().setHeight(180),
                   ),
                   CircleAvatar(
-                  radius: 75,
-                  backgroundColor: Color(0xffffffff),
-                  child: CircleAvatar(
-                    radius: 70,
-                    backgroundImage: AssetImage('assets/profile.jpg'),
-                        
-                  
-                ),
+                    radius: 75,
+                    backgroundColor: Color(0xffffffff),
+                    child: CircleAvatar(
+                      radius: 70,
+                      backgroundImage: AssetImage('assets/profile.jpg'),
+                    ),
                   ),
-                    
-                  
                   SizedBox(
                     height: ScreenUtil.getInstance().setHeight(50),
                   ),
@@ -158,7 +155,11 @@ class _SignupPageState extends State<SignupPage> {
                           child: Material(
                             color: Colors.transparent,
                             child: InkWell(
-                              onTap: () {},
+                              onTap: () {
+                                Route route = MaterialPageRoute(
+                                    builder: (context) => FinishReg());
+                                Navigator.push(context, route);
+                              },
                               child: Center(
                                 child: Text("REGISTER",
                                     style: TextStyle(
