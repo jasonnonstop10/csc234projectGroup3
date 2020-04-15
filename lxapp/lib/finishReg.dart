@@ -2,7 +2,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'Widgets/FormCard.dart';
+
 
 Widget horizontalLine() => Padding(
       padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -13,12 +13,12 @@ Widget horizontalLine() => Padding(
       ),
     );
 
-class SignupPage extends StatefulWidget {
+class FinishReg extends StatefulWidget {
   @override
-  _SignupPageState createState() => _SignupPageState();
+  _FinishRegState createState() => _FinishRegState();
 }
 
-class _SignupPageState extends State<SignupPage> {
+class _FinishRegState extends State<FinishReg> {
   @override
   @override
   Widget build(BuildContext context) {
@@ -65,77 +65,7 @@ class _SignupPageState extends State<SignupPage> {
                   SizedBox(
                     height: ScreenUtil.getInstance().setHeight(150),
                   ),
-                  Align(
-                      alignment: Alignment.centerLeft,
-                      child: Text("Name",
-                          style: TextStyle(
-                            color: Colors.pinkAccent[400],
-                              fontFamily: "Poppins-Bold",
-                              fontSize: ScreenUtil.getInstance().setSp(26)))),
-                  TextField(
-                    decoration: InputDecoration(
-                        focusedBorder: UnderlineInputBorder(
-                          borderSide:
-                              BorderSide(color: Colors.pinkAccent[400], width: 3.0),
-                        ),
-                        hintText: "YourName YourSurname",
-                        hintStyle:
-                            TextStyle(color: Colors.grey, fontSize: 12.0)),
-                  ),
-                   SizedBox(height: ScreenUtil.getInstance().setHeight(40)),
-                  Align(
-                      alignment: Alignment.centerLeft,
-                      child: Text("Email",
-                          style: TextStyle(
-                            color: Colors.pinkAccent[400],
-                              fontFamily: "Poppins-Bold",
-                              fontSize: ScreenUtil.getInstance().setSp(26)))),
-                  TextField(
-                    decoration: InputDecoration(
-                        focusedBorder: UnderlineInputBorder(
-                          borderSide:
-                              BorderSide(color: Colors.pinkAccent[400], width: 3.0),
-                        ),
-                        hintText: "example@kmutt.ac.th",
-                        hintStyle:
-                            TextStyle(color: Colors.grey, fontSize: 12.0)),
-                  ),
-                  SizedBox(height: ScreenUtil.getInstance().setHeight(40)),
-                  Align(
-                      alignment: Alignment.centerLeft,
-                      child: Text("Password",
-                          style: TextStyle(
-                            color: Colors.pinkAccent[400],
-                              fontFamily: "Poppins-Bold",
-                              fontSize: ScreenUtil.getInstance().setSp(26)))),
-                  TextField(
-                    decoration: InputDecoration(
-                        focusedBorder: UnderlineInputBorder(
-                          borderSide:
-                              BorderSide(color: Colors.pinkAccent[400], width: 3.0),
-                        ),
-                        hintText: "••••••••",
-                        hintStyle:
-                            TextStyle(color: Colors.grey, fontSize: 12.0)),
-                  ),
-                  SizedBox(height: ScreenUtil.getInstance().setHeight(40)),
-                  Align(
-                      alignment: Alignment.centerLeft,
-                      child: Text("Confirm Your Password",
-                          style: TextStyle(
-                            color: Colors.pinkAccent[400],
-                              fontFamily: "Poppins-Bold",
-                              fontSize: ScreenUtil.getInstance().setSp(26)))),
-                  TextField(
-                    decoration: InputDecoration(
-                        focusedBorder: UnderlineInputBorder(
-                          borderSide:
-                              BorderSide(color: Colors.pinkAccent[400], width: 3.0),
-                        ),
-                        hintText: "••••••••",
-                        hintStyle:
-                            TextStyle(color: Colors.grey, fontSize: 12.0)),
-                  ),
+                  
                   
                   SizedBox(height: ScreenUtil.getInstance().setHeight(40)),
                   Row(

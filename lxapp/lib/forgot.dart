@@ -64,7 +64,7 @@ class _ForgotPageState extends State<ForgotPage> {
                   ),
                   Align(
                     alignment: Alignment.center,
-                    child: Text("Enter the wmail address you used to create your",
+                    child: Text("Enter the email address you used to create your",
                         style: TextStyle(
                           color: Colors.blueGrey[700],
                             fontSize: ScreenUtil.getInstance().setSp(25),
@@ -95,7 +95,7 @@ class _ForgotPageState extends State<ForgotPage> {
                       child: Text("Email",
                           style: TextStyle(
                             color: Colors.pinkAccent[400],
-                              fontFamily: "Poppins-Medium",
+                              fontFamily: "Poppins-Bold",
                               fontSize: ScreenUtil.getInstance().setSp(26)))),
                   TextField(
                     decoration: InputDecoration(

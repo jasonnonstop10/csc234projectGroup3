@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'Widgets/FormCard.dart';
 
+import 'finishReg.dart';
 import 'register.dart';
 import 'forgot.dart';
 import 'menu.dart';
@@ -15,6 +16,7 @@ void main() => runApp(MaterialApp(
         '/register': (BuildContext context) => new SignupPage(),
         '/forgot': (BuildContext context) => new ForgotPage(),
         '/menu': (BuildContext context) => new MenuPage(),
+        '/finish': (BuildContext context) => new FinishReg(),
       },
     ));
 
