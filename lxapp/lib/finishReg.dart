@@ -65,7 +65,7 @@ class _FinishRegState extends State<FinishReg> {
                         style: TextStyle(
                           color: Colors.white,
                             fontSize: ScreenUtil.getInstance().setSp(45),
-                            fontFamily: "Poppins-Medium",
+                            fontFamily: "work-Medium",
                             letterSpacing: .6)),
                   ),
                   SizedBox(
@@ -77,7 +77,7 @@ class _FinishRegState extends State<FinishReg> {
                         style: TextStyle(
                           color: Colors.white,
                             fontSize: ScreenUtil.getInstance().setSp(25),
-                            fontFamily: "Poppins",
+                            fontFamily: "work",
                             letterSpacing: .6)),
                   ),
                   SizedBox(
@@ -89,7 +89,7 @@ class _FinishRegState extends State<FinishReg> {
                         style: TextStyle(
                           color: Colors.white,
                             fontSize: ScreenUtil.getInstance().setSp(25),
-                            fontFamily: "Poppins",
+                            fontFamily: "work",
                             letterSpacing: .6)),
                   ),
                   SizedBox(
@@ -123,8 +123,8 @@ class _FinishRegState extends State<FinishReg> {
                               child: Text("Get Started",
                                   style: TextStyle(
                                       color: Colors.pinkAccent,
-                                      fontFamily: "Poppins-Bold",
-                                      fontSize: 18,
+                                      fontFamily: "Work-Bold",
+                                      fontSize: 15,
                                       letterSpacing: 1.0)),
                             ),
                           ),

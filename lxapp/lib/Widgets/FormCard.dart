@@ -17,30 +17,30 @@ class FormCard extends StatelessWidget {
             ),
             Text("Email address",
                 style: TextStyle(
-                  color: Colors.pinkAccent[400],
-                    fontFamily: "Poppins-Bold",
+                  color: Color(0xFFfc315e),
+                    fontFamily: "Work-Medium",
                     fontSize: ScreenUtil.getInstance().setSp(26))),
             TextField(
               decoration: InputDecoration(
                   focusedBorder: UnderlineInputBorder(
-                    borderSide: BorderSide(color: Colors.pinkAccent[400], width: 3.0),
+                    borderSide: BorderSide(color: Color(0xFFfc315e), width: 3.0),
                   ),
                   hintText: "example@mail.kmutt.ac.th",
-                  hintStyle: TextStyle(color: Colors.grey, fontSize: 12.0)),
+                  hintStyle: TextStyle(color: Colors.grey, fontSize: 12.0,fontFamily: "Work-Medium")),
             ),
             SizedBox(
               height: ScreenUtil.getInstance().setHeight(30),
             ),
             Text("Password",
                 style: TextStyle(
-                  color: Colors.pinkAccent[400],
-                    fontFamily: "Poppins-Bold",
+                  color: Color(0xFFfc315e),
+                    fontFamily: "Work-Medium",
                     fontSize: ScreenUtil.getInstance().setSp(26))),
             TextField(
               obscureText: true,
               decoration: InputDecoration(
                   focusedBorder: UnderlineInputBorder(
-                    borderSide: BorderSide(color: Colors.pinkAccent[400], width: 3.0),
+                    borderSide: BorderSide(color: Color(0xFFfc315e), width: 3.0),
                   ),
                   hintText: "••••••••",
                   hintStyle: TextStyle(color: Colors.grey, fontSize: 12.0)),

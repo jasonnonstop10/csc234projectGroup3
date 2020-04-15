@@ -105,7 +105,7 @@ class _MyAppState extends State<MyApp> {
                             style: TextStyle(
                                 fontSize: 14,
                                 color: Colors.blueGrey[700],
-                                fontFamily: "Poppins-Medium")),
+                                fontFamily: "Work-Medium")),
                       )
                     ],
                   ),
@@ -119,8 +119,8 @@ class _MyAppState extends State<MyApp> {
                           height: ScreenUtil.getInstance().setHeight(100),
                           decoration: BoxDecoration(
                               gradient: LinearGradient(colors: [
-                                Color(0xFFfc315e),
-                                Color(0xFFfd7f70)
+                                Color(0xFFfd7f70),Color(0xFFfc315e)
+                                
                               ]),
                               borderRadius: BorderRadius.circular(10.0),
                               boxShadow: [
@@ -137,7 +137,7 @@ class _MyAppState extends State<MyApp> {
                                 child: Text("Login",
                                     style: TextStyle(
                                         color: Colors.white,
-                                        fontFamily: "Poppins-Bold",
+                                        fontFamily: "work-Bold",
                                         fontSize: 18,
                                         letterSpacing: 1.0)),
                               ),
@@ -157,7 +157,7 @@ class _MyAppState extends State<MyApp> {
                         "New user? ",
                         style: TextStyle(
                           color: Colors.blueGrey[700],
-                          fontFamily: "Poppins-Medium"),
+                          fontFamily: "Work-Medium"),
                       ),
                       InkWell(
                         onTap: () {
@@ -165,13 +165,13 @@ class _MyAppState extends State<MyApp> {
                         },
                         child: Text("Sign up",
                             style: TextStyle(
-                                color: Colors.pinkAccent[400],
-                                fontFamily: "Poppins-Bold")),
+                                color: Color(0xFFfc315e),
+                                fontFamily: "Work-Bold")),
                       ),Text(
                         " here",
                         style: TextStyle(
                            color: Colors.blueGrey[700],
-                          fontFamily: "Poppins-Medium"),
+                          fontFamily: "Work-Medium"),
                       )
                     ],
                   ),
@@ -186,7 +186,7 @@ class _MyAppState extends State<MyApp> {
                         style: TextStyle(
                           color: Colors.blueGrey[700],
                           fontSize: 10,
-                          fontFamily: "Poppins-Medium"),
+                          fontFamily: "Work-Medium"),
                           
                       ),
                       
@@ -204,14 +204,14 @@ class _MyAppState extends State<MyApp> {
                             style: TextStyle(
                                 color: Colors.pinkAccent[400],
                                 fontSize: 10,
-                                fontFamily: "Poppins-Bold")),
+                                fontFamily: "Work-Bold")),
                       ),
                       Text(
                         " and",
                         style: TextStyle(
                           color: Colors.blueGrey[700],
                           fontSize: 10,
-                          fontFamily: "Poppins-Medium"),
+                          fontFamily: "Work-Medium"),
                           
                       ),
                       InkWell(
@@ -222,7 +222,7 @@ class _MyAppState extends State<MyApp> {
                             style: TextStyle(
                                 color: Colors.pinkAccent[400],
                                 fontSize: 10,
-                                fontFamily: "Poppins-Bold")),
+                                fontFamily: "work-Bold")),
                       ),
                     ],
                   ),

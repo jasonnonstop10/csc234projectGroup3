@@ -55,8 +55,8 @@ class _ForgotPageState extends State<ForgotPage> {
                     child: Text("Forgot Password",
                         style: TextStyle(
                           color: Colors.blueGrey[700],
-                            fontSize: ScreenUtil.getInstance().setSp(45),
-                            fontFamily: "Poppins-Bold",
+                            fontSize: ScreenUtil.getInstance().setSp(55),
+                            fontFamily: "Work-Bold",
                             letterSpacing: .6)),
                   ),
                   SizedBox(
@@ -68,7 +68,7 @@ class _ForgotPageState extends State<ForgotPage> {
                         style: TextStyle(
                           color: Colors.blueGrey[700],
                             fontSize: ScreenUtil.getInstance().setSp(25),
-                            fontFamily: "Poppins",
+                            fontFamily: "Work-Thin",
                             letterSpacing: .6)),
                   ),
                   Align(
@@ -77,7 +77,7 @@ class _ForgotPageState extends State<ForgotPage> {
                         style: TextStyle(
                           color: Colors.blueGrey[700],
                             fontSize: ScreenUtil.getInstance().setSp(25),
-                            fontFamily: "Poppins",
+                            fontFamily: "Work-Thin",
                             letterSpacing: .6)),
                   ),
                   Align(
@@ -86,16 +86,16 @@ class _ForgotPageState extends State<ForgotPage> {
                         style: TextStyle(
                           color: Colors.blueGrey[700],
                             fontSize: ScreenUtil.getInstance().setSp(25),
-                            fontFamily: "Poppins",
+                            fontFamily: "Work-Thin",
                             letterSpacing: .6)),
                   ),
                   SizedBox(height: ScreenUtil.getInstance().setHeight(40)),
                   Align(
                       alignment: Alignment.centerLeft,
-                      child: Text("Email",
+                      child: Text("Email address",
                           style: TextStyle(
-                            color: Colors.pinkAccent[400],
-                              fontFamily: "Poppins-Bold",
+                            color: Color(0xFFfd7f70),
+                              fontFamily: "Work-Medium",
                               fontSize: ScreenUtil.getInstance().setSp(26)))),
                   TextField(
                     decoration: InputDecoration(
@@ -105,7 +105,7 @@ class _ForgotPageState extends State<ForgotPage> {
                         ),
                         hintText: "example@kmutt.ac.th",
                         hintStyle:
-                            TextStyle(color: Colors.grey, fontSize: 12.0)),
+                            TextStyle(color: Colors.grey, fontSize: 12.0,fontFamily: "Work-Thin",)),
                   ),
                   SizedBox(height: ScreenUtil.getInstance().setHeight(40)),
                   Row(
@@ -117,8 +117,8 @@ class _ForgotPageState extends State<ForgotPage> {
                           height: ScreenUtil.getInstance().setHeight(100),
                           decoration: BoxDecoration(
                               gradient: LinearGradient(colors: [
-                                Color(0xFFfc315e),
-                                Color(0xFFfd7f70)
+                                Color(0xFFfd7f70),Color(0xFFfc315e)
+                                
                               ]),
                               borderRadius: BorderRadius.circular(10.0),
                               boxShadow: [
@@ -132,10 +132,10 @@ class _ForgotPageState extends State<ForgotPage> {
                             child: InkWell(
                               onTap: () {},
                               child: Center(
-                                child: Text("RESET",
+                                child: Text("Submit",
                                     style: TextStyle(
                                         color: Colors.white,
-                                        fontFamily: "Poppins-Bold",
+                                        fontFamily: "Work-Bold",
                                         fontSize: 18,
                                         letterSpacing: 1.0)),
                               ),
@@ -148,28 +148,8 @@ class _ForgotPageState extends State<ForgotPage> {
                   SizedBox(
                     height: ScreenUtil.getInstance().setHeight(40),
                   ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      Text(
-                        "Remember your Password?",
-                        style: TextStyle(
-                          color: Colors.blueGrey[700],fontFamily: "Poppins-Medium"),
-                      ),
-                      InkWell(
-                        onTap: () {
-                          Navigator.of(context).pop();
-                        },
-                        child: Text("Login",
-                            style: TextStyle(
-                                color: Colors.pinkAccent[400],
-                                fontFamily: "Poppins-Bold")),
-                      )
-                    ],
-                  ),
-                  SizedBox(
-                    height: ScreenUtil.getInstance().setHeight(40),
-                  ),
+                  
+                  
                 ],
               ),
             ),
