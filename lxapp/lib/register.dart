@@ -38,7 +38,7 @@ class _SignupPageState extends State<SignupPage> {
               Expanded(
                 child: Container(),
               ),
-              Image.asset("assets/image_02.png")
+              
             ],
           ),
           SingleChildScrollView(

@@ -38,7 +38,7 @@ class _ForgotPageState extends State<ForgotPage> {
               Expanded(
                 child: Container(),
               ),
-              Image.asset("assets/image_02.png")
+              
             ],
           ),
           SingleChildScrollView(
@@ -153,7 +153,8 @@ class _ForgotPageState extends State<ForgotPage> {
                     children: <Widget>[
                       Text(
                         "Remember your Password?",
-                        style: TextStyle(fontFamily: "Poppins-Medium"),
+                        style: TextStyle(
+                          color: Colors.blueGrey[700],fontFamily: "Poppins-Medium"),
                       ),
                       InkWell(
                         onTap: () {
