@@ -69,13 +69,14 @@ class _SignupPageState extends State<SignupPage> {
                       alignment: Alignment.centerLeft,
                       child: Text("Name",
                           style: TextStyle(
+                            color: Colors.pinkAccent[400],
                               fontFamily: "Poppins-Medium",
                               fontSize: ScreenUtil.getInstance().setSp(26)))),
                   TextField(
                     decoration: InputDecoration(
                         focusedBorder: UnderlineInputBorder(
                           borderSide:
-                              BorderSide(color: Colors.orange, width: 3.0),
+                              BorderSide(color: Colors.pinkAccent[400], width: 3.0),
                         ),
                         hintText: "YourName YourSurname",
                         hintStyle:
@@ -86,13 +87,14 @@ class _SignupPageState extends State<SignupPage> {
                       alignment: Alignment.centerLeft,
                       child: Text("Email",
                           style: TextStyle(
+                            color: Colors.pinkAccent[400],
                               fontFamily: "Poppins-Medium",
                               fontSize: ScreenUtil.getInstance().setSp(26)))),
                   TextField(
                     decoration: InputDecoration(
                         focusedBorder: UnderlineInputBorder(
                           borderSide:
-                              BorderSide(color: Colors.orange, width: 3.0),
+                              BorderSide(color: Colors.pinkAccent[400], width: 3.0),
                         ),
                         hintText: "example@kmutt.ac.th",
                         hintStyle:
@@ -103,13 +105,14 @@ class _SignupPageState extends State<SignupPage> {
                       alignment: Alignment.centerLeft,
                       child: Text("Password",
                           style: TextStyle(
+                            color: Colors.pinkAccent[400],
                               fontFamily: "Poppins-Medium",
                               fontSize: ScreenUtil.getInstance().setSp(26)))),
                   TextField(
                     decoration: InputDecoration(
                         focusedBorder: UnderlineInputBorder(
                           borderSide:
-                              BorderSide(color: Colors.orange, width: 3.0),
+                              BorderSide(color: Colors.pinkAccent[400], width: 3.0),
                         ),
                         hintText: "••••••••",
                         hintStyle:
@@ -120,13 +123,14 @@ class _SignupPageState extends State<SignupPage> {
                       alignment: Alignment.centerLeft,
                       child: Text("Confirm Your Password",
                           style: TextStyle(
+                            color: Colors.pinkAccent[400],
                               fontFamily: "Poppins-Medium",
                               fontSize: ScreenUtil.getInstance().setSp(26)))),
                   TextField(
                     decoration: InputDecoration(
                         focusedBorder: UnderlineInputBorder(
                           borderSide:
-                              BorderSide(color: Colors.orange, width: 3.0),
+                              BorderSide(color: Colors.pinkAccent[400], width: 3.0),
                         ),
                         hintText: "••••••••",
                         hintStyle:
@@ -187,7 +191,7 @@ class _SignupPageState extends State<SignupPage> {
                         },
                         child: Text("Login",
                             style: TextStyle(
-                                color: Color(0xFFff9900),
+                                color: Colors.pinkAccent[400],
                                 fontFamily: "Poppins-Bold")),
                       )
                     ],
