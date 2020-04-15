@@ -85,26 +85,11 @@ class _MyAppState extends State<MyApp> {
               padding: EdgeInsets.only(left: 28.0, right: 28.0, top: 60.0),
               child: Column(
                 children: <Widget>[
-                  Row(
-                    children: <Widget>[
-                      Image.asset(
-                        "assets/logo.png",
-                        width: ScreenUtil.getInstance().setWidth(110),
-                        height: ScreenUtil.getInstance().setHeight(110),
-                      ),
-                    ],
-                  ),
+                 
                   SizedBox(
-                    height: ScreenUtil.getInstance().setHeight(180),
+                    height: ScreenUtil.getInstance().setHeight(350),
                   ),
-                  Align(
-                    alignment: Alignment.bottomLeft,
-                    child: Text("Welcome to LX",
-                        style: TextStyle(
-                            fontSize: ScreenUtil.getInstance().setSp(45),
-                            fontFamily: "Poppins-Bold",
-                            letterSpacing: .6)),
-                  ),
+                  
                   FormCard(),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.end,
