@@ -66,7 +66,7 @@ class _ProfilePageState extends State<ProfilePage> {
                ),
                ListTile(
                  leading: Icon(Icons.settings),
-                 title:Text("Seting"),
+                 title:Text("Setting"),
                  trailing: Icon(Icons.keyboard_arrow_right),
                  onTap: (){
 
