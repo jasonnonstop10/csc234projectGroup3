@@ -103,7 +103,7 @@ class _ForgotPageState extends State<ForgotPage> {
                           borderSide:
                               BorderSide(color: Colors.pinkAccent[400], width: 3.0),
                         ),
-                        hintText: "example@kmutt.ac.th",
+                        hintText: "example@mail.kmutt.ac.th",
                         hintStyle:
                             TextStyle(color: Colors.grey, fontSize: 12.0,fontFamily: "Work-Thin",)),
                   ),

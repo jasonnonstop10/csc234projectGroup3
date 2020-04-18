@@ -7,13 +7,11 @@ class ProfilePage extends StatefulWidget {
 class _ProfilePageState extends State<ProfilePage> {
   @override
   Widget build(BuildContext context) {
-   return MaterialApp(
-      title: 'Welcome to Flutter',
-      home: Scaffold(
-        body: Center(
-          child: Text('profile page'),
-        ),
-      ),
-    );
+   return new Scaffold(
+      backgroundColor: Colors.white,
+      resizeToAvoidBottomPadding: true,
+      body: 
+      Text('profile page'),
+      );
   }
 }

@@ -29,10 +29,6 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  
-
-  
-
   Widget radioButton(bool isSelected) => Container(
         width: 16.0,
         height: 16.0,
@@ -80,7 +76,6 @@ class _MyAppState extends State<MyApp> {
               Expanded(
                 child: Container(),
               ),
-              
             ],
           ),
           SingleChildScrollView(
@@ -88,11 +83,9 @@ class _MyAppState extends State<MyApp> {
               padding: EdgeInsets.only(left: 28.0, right: 28.0, top: 60.0),
               child: Column(
                 children: <Widget>[
-                 
                   SizedBox(
                     height: ScreenUtil.getInstance().setHeight(350),
                   ),
-                  
                   FormCard(),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.end,
@@ -122,8 +115,8 @@ class _MyAppState extends State<MyApp> {
                           height: ScreenUtil.getInstance().setHeight(100),
                           decoration: BoxDecoration(
                               gradient: LinearGradient(colors: [
-                                Color(0xFFfd7f70),Color(0xFFfc315e)
-                                
+                                Color(0xFFfd7f70),
+                                Color(0xFFfc315e)
                               ]),
                               borderRadius: BorderRadius.circular(10.0),
                               boxShadow: [
@@ -135,7 +128,12 @@ class _MyAppState extends State<MyApp> {
                           child: Material(
                             color: Colors.transparent,
                             child: InkWell(
-                              onTap: () {},
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => MenuPage()));
+                              },
                               child: Center(
                                 child: Text("Login",
                                     style: TextStyle(
@@ -159,8 +157,8 @@ class _MyAppState extends State<MyApp> {
                       Text(
                         "New user? ",
                         style: TextStyle(
-                          color: Colors.blueGrey[700],
-                          fontFamily: "Work-Medium"),
+                            color: Colors.blueGrey[700],
+                            fontFamily: "Work-Medium"),
                       ),
                       InkWell(
                         onTap: () {
@@ -170,11 +168,12 @@ class _MyAppState extends State<MyApp> {
                             style: TextStyle(
                                 color: Color(0xFFfc315e),
                                 fontFamily: "Work-Bold")),
-                      ),Text(
+                      ),
+                      Text(
                         " here",
                         style: TextStyle(
-                           color: Colors.blueGrey[700],
-                          fontFamily: "Work-Medium"),
+                            color: Colors.blueGrey[700],
+                            fontFamily: "Work-Medium"),
                       )
                     ],
                   ),
@@ -187,13 +186,10 @@ class _MyAppState extends State<MyApp> {
                       Text(
                         "By creating an account, you agree to our",
                         style: TextStyle(
-                          color: Colors.blueGrey[700],
-                          fontSize: 10,
-                          fontFamily: "Work-Medium"),
-                          
+                            color: Colors.blueGrey[700],
+                            fontSize: 10,
+                            fontFamily: "Work-Medium"),
                       ),
-                      
-                      
                     ],
                   ),
                   Row(
@@ -201,7 +197,7 @@ class _MyAppState extends State<MyApp> {
                     children: <Widget>[
                       InkWell(
                         onTap: () {
-                         Navigator.pushNamed(context, "/register");
+                          Navigator.pushNamed(context, "/register");
                         },
                         child: Text("Terms of Service",
                             style: TextStyle(
@@ -212,15 +208,12 @@ class _MyAppState extends State<MyApp> {
                       Text(
                         " and",
                         style: TextStyle(
-                          color: Colors.blueGrey[700],
-                          fontSize: 10,
-                          fontFamily: "Work-Medium"),
-                          
+                            color: Colors.blueGrey[700],
+                            fontSize: 10,
+                            fontFamily: "Work-Medium"),
                       ),
                       InkWell(
-                        onTap: () {
-                         
-                        },
+                        onTap: () {},
                         child: Text(" Privacy Policy",
                             style: TextStyle(
                                 color: Colors.pinkAccent[400],
