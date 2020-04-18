@@ -9,9 +9,8 @@ class _SearchingPageState extends State<SearchingPage> {
   Widget build(BuildContext context) {
     return new Scaffold(
       backgroundColor: Colors.white,
-      resizeToAvoidBottomPadding: true,
       body: 
-      Text('profile page'),
+      Text('Searchingpage'),
       );
   }
 }

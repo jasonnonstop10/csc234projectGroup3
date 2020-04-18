@@ -9,9 +9,8 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
   return new Scaffold(
       backgroundColor: Colors.white,
-      resizeToAvoidBottomPadding: true,
       body: 
-      Text('profile page'),
+      Text('home page'),
       );
   }
 }

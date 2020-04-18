@@ -21,9 +21,6 @@ class _MenuPageState extends State<MenuPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Lx navigator app'),
-      ),
       body: _children[_currentIndex], // new
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
@@ -32,19 +29,19 @@ class _MenuPageState extends State<MenuPage> {
         items: <BottomNavigationBarItem>[
           new BottomNavigationBarItem(
             icon: Icon(Icons.home),
-            title: Text('Home'),
+            title: Text("Home"),
           ),
           new BottomNavigationBarItem(
             icon: Icon(Icons.search),
-            title: Text('Searching'),
+            title: Text("Searching"),
           ),
           new BottomNavigationBarItem(
-            icon: Icon(Icons.event),
-            title: Text('Event'),
+            icon: Icon(Icons.local_activity),
+            title: Text("Rewind"),
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.person),
-            title: Text('Profile'),
+            title: Text("Profile"),
           ),
         ],
         selectedItemColor: Color(0xFFfc315e),
