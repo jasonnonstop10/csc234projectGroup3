@@ -41,7 +41,7 @@ class _ProfilePageState extends State<ProfilePage> {
              children: <Widget>[
                ListTile(
                  leading: Icon(Icons.card_giftcard),
-                 title:Text("Rewind"),
+                 title:Text("Reward"),
                  trailing:Text("100 point"),
                  onTap: (){
                  },
