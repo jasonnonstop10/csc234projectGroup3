@@ -8,9 +8,11 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
   return new Scaffold(
-      backgroundColor: Colors.white,
-      body: 
-      Text('home page'),
+      body:Stack(
+        children:<Widget>[
+           
+        ]
+      )
       );
   }
 }

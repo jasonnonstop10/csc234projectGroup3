@@ -12,11 +12,11 @@ class _ProfilePageState extends State<ProfilePage> {
    return new Scaffold(
       backgroundColor: Colors.white,
 
-      body: SingleChildScrollView(
+      body:Stack(
+        children:<Widget>[SingleChildScrollView(
         child: Column(
           
           children: <Widget>[
-            
            Card(
               elevation: 4.0,
               margin: const EdgeInsets.fromLTRB(0, 40.0, 0, 0),
@@ -28,7 +28,6 @@ class _ProfilePageState extends State<ProfilePage> {
                    
                 ),
                   onTap: (){
-
                  },
               )
             ),
@@ -41,11 +40,18 @@ class _ProfilePageState extends State<ProfilePage> {
             child: Column(
              children: <Widget>[
                ListTile(
-                 leading: Icon(Icons.redeem),
+                 leading: Icon(Icons.card_giftcard),
                  title:Text("Rewind"),
+                 trailing:Text("100 point"),
+                 onTap: (){
+                 },
+
+               ),
+               ListTile(
+                 leading: Icon(Icons.history),
+                 title:Text("History"),
                  trailing: Icon(Icons.keyboard_arrow_right),
                  onTap: (){
-
                  },
                ),
                ListTile(
@@ -74,7 +80,7 @@ class _ProfilePageState extends State<ProfilePage> {
                ),
                ListTile(
                  leading: Icon(Icons.lock_open),
-                 title:Text("logout"),
+                 title:Text("Logout"),
                  trailing: Icon(Icons.keyboard_arrow_right),
                  onTap: (){
 
@@ -85,6 +91,7 @@ class _ProfilePageState extends State<ProfilePage> {
           ),
           ],
         )
+      )]
       )
       );
   }

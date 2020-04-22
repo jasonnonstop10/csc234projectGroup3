@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_login_page_ui/eventPage.dart';
+import 'package:flutter_login_page_ui/rewardPage.dart';
 import 'package:flutter_login_page_ui/homePage.dart';
 import 'package:flutter_login_page_ui/profilePage.dart';
 import 'package:flutter_login_page_ui/searchingPage.dart';
@@ -14,7 +14,7 @@ class _MenuPageState extends State<MenuPage> {
   final List<Widget> _children = [
     HomePage(),
     SearchingPage(),
-    EventPage(),
+    RewardPage(),
     ProfilePage(),
   ];
 
@@ -37,7 +37,7 @@ class _MenuPageState extends State<MenuPage> {
           ),
           new BottomNavigationBarItem(
             icon: Icon(Icons.local_activity),
-            title: Text("Rewind"),
+            title: Text("Reward"),
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.person),

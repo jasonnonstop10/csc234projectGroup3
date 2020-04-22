@@ -8,9 +8,9 @@ class _SearchingPageState extends State<SearchingPage> {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
-      backgroundColor: Colors.white,
-      body: 
-      Text('Searchingpage'),
+      body:Stack(
+        children:<Widget>[]
+      )
       );
   }
 }
