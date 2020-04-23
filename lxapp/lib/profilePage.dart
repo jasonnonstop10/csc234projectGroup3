@@ -59,7 +59,7 @@ class _ProfilePageState extends State<ProfilePage> {
                  title:Text("QR code"),
                  trailing: Icon(Icons.keyboard_arrow_right),
                  onTap: (){
-
+                      
                  },
                ),
                ListTile(
