@@ -1,10 +1,15 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
+import 'package:flutter_login_page_ui/grid.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'Widgets/FormCard.dart';
-import 'Widgets/SocialIcons.dart';
-import 'CustomIcons.dart';
+
+import 'finishReg.dart';
+
 import 'register.dart';
 import 'forgot.dart';
+import 'menu.dart';
 
 void main() => runApp(MaterialApp(
       home: MyApp(),
@@ -12,25 +17,18 @@ void main() => runApp(MaterialApp(
       routes: <String, WidgetBuilder>{
         '/register': (BuildContext context) => new SignupPage(),
         '/forgot': (BuildContext context) => new ForgotPage(),
+        '/menu': (BuildContext context) => new MenuPage(),
+        '/finish': (BuildContext context) => new FinishReg(),
+        '/grid': (BuildContext context) => new GridPage(),
       },
-      
     ));
 
 class MyApp extends StatefulWidget {
   @override
   _MyAppState createState() => new _MyAppState();
-  
 }
 
 class _MyAppState extends State<MyApp> {
-  bool _isSelected = false;
-
-  void _radio() {
-    setState(() {
-      _isSelected = !_isSelected;
-    });
-  }
-
   Widget radioButton(bool isSelected) => Container(
         width: 16.0,
         height: 16.0,
@@ -78,7 +76,6 @@ class _MyAppState extends State<MyApp> {
               Expanded(
                 child: Container(),
               ),
-              Image.asset("assets/image_02.png")
             ],
           ),
           SingleChildScrollView(
@@ -86,97 +83,62 @@ class _MyAppState extends State<MyApp> {
               padding: EdgeInsets.only(left: 28.0, right: 28.0, top: 60.0),
               child: Column(
                 children: <Widget>[
-                  Row(
-                    children: <Widget>[
-                      Image.asset(
-                        "assets/logo.png",
-                        width: ScreenUtil.getInstance().setWidth(110),
-                        height: ScreenUtil.getInstance().setHeight(110),
-                      ),
-                      
-                    ],
-                  ),
-                  
                   SizedBox(
-                    height: ScreenUtil.getInstance().setHeight(180),
+                    height: ScreenUtil.getInstance().setHeight(350),
                   ),
-                  Align(
-                    alignment: Alignment.bottomLeft,
-                  child: Text("Welcome to LX",
-                style: TextStyle(
-                    fontSize: ScreenUtil.getInstance().setSp(45),
-                    fontFamily: "Poppins-Bold",
-                    letterSpacing: .6)),
-            
-                  ),
-                  
                   FormCard(),
                   Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: <Widget>[
-                
-                InkWell(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: <Widget>[
+                      InkWell(
                         onTap: () {
-                    Navigator.push(context,
-MaterialPageRoute(builder: (context) => ForgotPage()));
-                  },
-                        child: Text("Forgot Password",
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => ForgotPage()));
+                        },
+                        child: Text("Forgot Password?",
                             style: TextStyle(
-                                fontSize: 16,
-                                color: Color(0xFFff9900),
-                                fontFamily: "Poppins-Bold")),
+                                fontSize: 14,
+                                color: Colors.blueGrey[700],
+                                fontFamily: "Work-Medium")),
                       )
-              ],
-            ),
+                    ],
+                  ),
                   SizedBox(height: ScreenUtil.getInstance().setHeight(40)),
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
-                      Row(
-                        children: <Widget>[
-                          SizedBox(
-                            width: 12.0,
-                          ),
-                          GestureDetector(
-                            onTap: _radio,
-                            child: radioButton(_isSelected),
-                          ),
-                          SizedBox(
-                            width: 8.0,
-                          ),
-                          Text("Remember me",
-                              style: TextStyle(
-                                  fontSize: 12, fontFamily: "Poppins-Medium"))
-                        ],
-                      ),
-                      
-                      
                       InkWell(
                         child: Container(
-                          width: ScreenUtil.getInstance().setWidth(330),
+                          width: max(0, 355),
                           height: ScreenUtil.getInstance().setHeight(100),
                           decoration: BoxDecoration(
                               gradient: LinearGradient(colors: [
-                                Color(0xFFff9900),
-                                Color(0xFFffcc66)
+                                Color(0xFFfd7f70),
+                                Color(0xFFfc315e)
                               ]),
-                              borderRadius: BorderRadius.circular(6.0),
+                              borderRadius: BorderRadius.circular(10.0),
                               boxShadow: [
                                 BoxShadow(
-                                    color: Color(0xFF6078ea).withOpacity(.3),
-                                    offset: Offset(0.0, 8.0),
-                                    blurRadius: 8.0)
+                                    color: Color(0xFFfc315e).withOpacity(.5),
+                                    offset: Offset(5.0, 17.0),
+                                    blurRadius: 25.0)
                               ]),
-                              
                           child: Material(
                             color: Colors.transparent,
                             child: InkWell(
-                              onTap: () {},
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => MenuPage()));
+                              },
                               child: Center(
-                                child: Text("LOGIN",
+                                child: Text("Login",
                                     style: TextStyle(
                                         color: Colors.white,
-                                        fontFamily: "Poppins-Bold",
+                                        fontFamily: "work-Bold",
                                         fontSize: 18,
                                         letterSpacing: 1.0)),
                               ),
@@ -193,72 +155,73 @@ MaterialPageRoute(builder: (context) => ForgotPage()));
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
                       Text(
-                        "Don't have an account? ",
-                        style: TextStyle(fontFamily: "Poppins-Medium"),
+                        "New user? ",
+                        style: TextStyle(
+                            color: Colors.blueGrey[700],
+                            fontFamily: "Work-Medium"),
                       ),
                       InkWell(
                         onTap: () {
-                    Navigator.pushNamed(context, "/register");
-                  },
-                        child: Text("Register now",
+                          Navigator.pushNamed(context, "/register");
+                        },
+                        child: Text("Sign up",
                             style: TextStyle(
-                                color: Color(0xFFff9900),
-                                fontFamily: "Poppins-Bold")),
+                                color: Color(0xFFfc315e),
+                                fontFamily: "Work-Bold")),
+                      ),
+                      Text(
+                        " here",
+                        style: TextStyle(
+                            color: Colors.blueGrey[700],
+                            fontFamily: "Work-Medium"),
                       )
                     ],
                   ),
                   SizedBox(
-                    height: ScreenUtil.getInstance().setHeight(40),
+                    height: ScreenUtil.getInstance().setHeight(70),
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
-                      horizontalLine(),
-                      Text("Social Login",
-                          style: TextStyle(
-                              fontSize: 16.0, fontFamily: "Poppins-Medium")),
-                      horizontalLine()
+                      Text(
+                        "By creating an account, you agree to our",
+                        style: TextStyle(
+                            color: Colors.blueGrey[700],
+                            fontSize: 10,
+                            fontFamily: "Work-Medium"),
+                      ),
                     ],
                   ),
-                  SizedBox(
-                    height: ScreenUtil.getInstance().setHeight(10),
-                  ),
-                  
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    
                     children: <Widget>[
-                      SocialIcon(
-                        colors: [
-                          Color(0xFF102397),
-                          Color(0xFF187adf),
-                          Color(0xFF00eaf8),
-                        ],
-                        iconData: CustomIcons.facebook,
-                        onPressed: () {},
+                      InkWell(
+                        onTap: () {
+                          Navigator.pushNamed(context, "/register");
+                        },
+                        child: Text("Terms of Service",
+                            style: TextStyle(
+                                color: Colors.pinkAccent[400],
+                                fontSize: 10,
+                                fontFamily: "Work-Bold")),
                       ),
-                      SocialIcon(
-                        colors: [
-                          Color(0xFFff4f38),
-                          Color(0xFFff355d),
-                        ],
-                        iconData: CustomIcons.googlePlus,
-                        onPressed: () {},
+                      Text(
+                        " and",
+                        style: TextStyle(
+                            color: Colors.blueGrey[700],
+                            fontSize: 10,
+                            fontFamily: "Work-Medium"),
                       ),
-                      SocialIcon(
-                        colors: [
-                          Color(0xFF17ead9),
-                          Color(0xFF6078ea),
-                        ],
-                        iconData: CustomIcons.twitter,
-                        onPressed: () {},
+                      InkWell(
+                        onTap: () {},
+                        child: Text(" Privacy Policy",
+                            style: TextStyle(
+                                color: Colors.pinkAccent[400],
+                                fontSize: 10,
+                                fontFamily: "work-Bold")),
                       ),
                     ],
                   ),
-                  SizedBox(
-                    height: ScreenUtil.getInstance().setHeight(30),
-                  ),
-                  
                 ],
               ),
             ),
