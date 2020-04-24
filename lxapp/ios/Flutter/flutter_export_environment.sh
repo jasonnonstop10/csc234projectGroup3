@@ -1,10 +1,11 @@
 #!/bin/sh
 # This is a generated file; do not edit or check into version control.
-export "FLUTTER_ROOT=C:\src\flutter"
-export "FLUTTER_APPLICATION_PATH=C:\Users\HP\Documents\csc234project\lxapp"
-export "FLUTTER_TARGET=lib\main.dart"
+export "FLUTTER_ROOT=/Users/krerkthadkunanupatum/Development/flutter"
+export "FLUTTER_APPLICATION_PATH=/Users/krerkthadkunanupatum/Desktop/lx_project/csc234project/lxapp"
+export "FLUTTER_TARGET=/Users/krerkthadkunanupatum/Desktop/lx_project/csc234project/lxapp/lib/main.dart"
 export "FLUTTER_BUILD_DIR=build"
-export "SYMROOT=${SOURCE_ROOT}/../build\ios"
-export "FLUTTER_FRAMEWORK_DIR=C:\src\flutter\bin\cache\artifacts\engine\ios"
+export "SYMROOT=${SOURCE_ROOT}/../build/ios"
+export "FLUTTER_FRAMEWORK_DIR=/Users/krerkthadkunanupatum/Development/flutter/bin/cache/artifacts/engine/ios"
 export "FLUTTER_BUILD_NAME=1.0.0"
 export "FLUTTER_BUILD_NUMBER=1"
+export "TRACK_WIDGET_CREATION=true"

@@ -19,13 +19,18 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
+  firebase_core: ^0.4.0+9
+  
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.2
   flutter_screenutil: ^0.4.2
+  getflutter: ^1.0.11
 
 dev_dependencies:
+  path_provider: 0.4.1
+  barcode_scan: ^0.0.4
+  qr_flutter: ^1.1.1
   flutter_test:
     sdk: flutter
 
@@ -46,6 +51,7 @@ flutter:
    - assets/image_01.png
    - assets/image_02.png
    - assets/logo.png
+   - assets/profile.jpg
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
@@ -70,8 +76,25 @@ flutter:
 
     - family: Poppins-Medium
       fonts:
-        - asset: assets/Poppins-Medium.ttf    
+        - asset: assets/Poppins-Medium.ttf   
+    
+    - family: Work-Bold
+      fonts:
+        - asset: assets/WorkSans-Bold.otf
+    
+    - family: Work-Medium
+      fonts:
+        - asset: assets/WorkSans-Medium.otf
+
+    - family: Work-Light
+      fonts:
+        - asset: assets/WorkSans-Light.otf
+    
+    
   
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.io/custom-fonts/#from-packages
+
+
+

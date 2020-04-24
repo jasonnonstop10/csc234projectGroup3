@@ -13,12 +13,12 @@ Widget horizontalLine() => Padding(
       ),
     );
 
-class ForgotPage extends StatefulWidget {
+class GridPage extends StatefulWidget {
   @override
-  _ForgotPageState createState() => _ForgotPageState();
+  _GridPageState createState() => _GridPageState();
 }
 
-class _ForgotPageState extends State<ForgotPage> {
+class _GridPageState extends State<GridPage> {
   @override
   @override
   Widget build(BuildContext context) {
@@ -103,7 +103,7 @@ class _ForgotPageState extends State<ForgotPage> {
                           borderSide:
                               BorderSide(color: Colors.pinkAccent[400], width: 3.0),
                         ),
-                        hintText: "example@mail.kmutt.ac.th",
+                        hintText: "example@kmutt.ac.th",
                         hintStyle:
                             TextStyle(color: Colors.grey, fontSize: 12.0,fontFamily: "Work-Thin",)),
                   ),

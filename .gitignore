@@ -17,4 +17,8 @@ lxapp/assets/Poppins-Bold.ttf
 
 lxapp/assets/Poppins-Medium.ttf
 
+<<<<<<< HEAD
 lxapp/ios/Flutter/flutter_export_environment.sh
+=======
+lxapp/.flutter-plugins-dependencies
+>>>>>>> dev

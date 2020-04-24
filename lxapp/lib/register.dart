@@ -1,8 +1,8 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_login_page_ui/finishReg.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'Widgets/FormCard.dart';
 
 Widget horizontalLine() => Padding(
       padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -34,45 +34,116 @@ class _SignupPageState extends State<SignupPage> {
           Column(
             crossAxisAlignment: CrossAxisAlignment.end,
             children: <Widget>[
-              Padding(
-                padding: EdgeInsets.only(top: 20.0),
-                child: Image.asset("assets/image_01.png"),
-              ),
               Expanded(
                 child: Container(),
               ),
-              Image.asset("assets/image_02.png")
             ],
           ),
           SingleChildScrollView(
             child: Padding(
-              padding: EdgeInsets.only(left: 28.0, right: 28.0, top: 60.0),
+              padding: EdgeInsets.only(left: 28.0, right: 28.0, top: 0.0),
               child: Column(
                 children: <Widget>[
                   Row(
-                    children: <Widget>[
-                      Image.asset(
-                        "assets/logo.png",
-                        width: ScreenUtil.getInstance().setWidth(110),
-                        height: ScreenUtil.getInstance().setHeight(110),
-                      ),
-                    ],
+                    children: <Widget>[],
                   ),
                   SizedBox(
                     height: ScreenUtil.getInstance().setHeight(180),
                   ),
-                  Align(
-                    alignment: Alignment.bottomLeft,
-                    child: Text("Register",
-                        style: TextStyle(
-                            fontSize: ScreenUtil.getInstance().setSp(45),
-                            fontFamily: "Poppins-Bold",
-                            letterSpacing: .6)),
+                  CircleAvatar(
+                    radius: 75,
+                    backgroundColor: Color(0xffffffff),
+                    child: CircleAvatar(
+                      radius: 70,
+                      backgroundImage: AssetImage('assets/profile.jpg'),
+                    ),
                   ),
-                  FormCard(),
+                  InkWell(
+                        onTap: () {
+                          
+                        },
+                        child: Text("Upload Picture",
+                            style: TextStyle(
+                                color: Color(0xFFfd7f70),
+                                fontFamily: "Work-bold")),
+                      ),
+                  SizedBox(
+                    height: ScreenUtil.getInstance().setHeight(40),
+                  ),
+                  Align(
+                      alignment: Alignment.centerLeft,
+                      child: Text("Name",
+                          style: TextStyle(
+                              color: Color(0xFFfd7f70),
+                              fontFamily: "Work-medium",
+                              fontSize: ScreenUtil.getInstance().setSp(26)))),
+                  TextField(
+                    decoration: InputDecoration(
+                        focusedBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(
+                              color: Color(0xFFfd7f70), width: 3.0),
+                        ),
+                        hintText: "YourName YourSurname",
+                        hintStyle:
+                            TextStyle(color: Colors.grey, fontSize: 12.0,fontFamily: "Work-thin")),
+                  ),
+                  SizedBox(height: ScreenUtil.getInstance().setHeight(40)),
+                  Align(
+                      alignment: Alignment.centerLeft,
+                      child: Text("Email",
+                          style: TextStyle(
+                              color: Color(0xFFfd7f70),
+                              fontFamily: "Work-medium",
+                              fontSize: ScreenUtil.getInstance().setSp(26)))),
+                  TextField(
+                    decoration: InputDecoration(
+                        focusedBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(
+                              color: Color(0xFFfd7f70), width: 3.0),
+                        ),
+                        hintText: "example@kmutt.ac.th",
+                        hintStyle:
+                            TextStyle(color: Colors.grey, fontSize: 12.0,fontFamily: "Work-thin")),
+                  ),
+                  SizedBox(height: ScreenUtil.getInstance().setHeight(40)),
+                  Align(
+                      alignment: Alignment.centerLeft,
+                      child: Text("Password",
+                          style: TextStyle(
+                              color: Color(0xFFfd7f70),
+                              fontFamily: "Work-medium",
+                              fontSize: ScreenUtil.getInstance().setSp(26)))),
+                  TextField(
+                    decoration: InputDecoration(
+                        focusedBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(
+                              color: Color(0xFFfd7f70), width: 3.0),
+                        ),
+                        hintText: "••••••••",
+                        hintStyle:
+                            TextStyle(color: Colors.grey, fontSize: 12.0)),
+                  ),
+                  SizedBox(height: ScreenUtil.getInstance().setHeight(40)),
+                  Align(
+                      alignment: Alignment.centerLeft,
+                      child: Text("Confirm Password",
+                          style: TextStyle(
+                              color: Color(0xFFfd7f70),
+                              fontFamily: "Work-medium",
+                              fontSize: ScreenUtil.getInstance().setSp(26)))),
+                  TextField(
+                    decoration: InputDecoration(
+                        focusedBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(
+                              color: Color(0xFFfd7f70), width: 3.0),
+                        ),
+                        hintText: "••••••••",
+                        hintStyle:
+                            TextStyle(color: Colors.grey, fontSize: 12.0)),
+                  ),
                   SizedBox(height: ScreenUtil.getInstance().setHeight(40)),
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
                       InkWell(
                         child: Container(
@@ -80,25 +151,29 @@ class _SignupPageState extends State<SignupPage> {
                           height: ScreenUtil.getInstance().setHeight(100),
                           decoration: BoxDecoration(
                               gradient: LinearGradient(colors: [
-                                Color(0xFFff9900),
-                                Color(0xFFffcc66)
+                                Color(0xFFfd7f70),Color(0xFFfc315e)
+                                
                               ]),
-                              borderRadius: BorderRadius.circular(6.0),
+                              borderRadius: BorderRadius.circular(10.0),
                               boxShadow: [
                                 BoxShadow(
-                                    color: Color(0xFF6078ea).withOpacity(.3),
-                                    offset: Offset(0.0, 8.0),
-                                    blurRadius: 8.0)
+                                    color: Color(0xFFfc315e).withOpacity(.5),
+                                    offset: Offset(5.0, 17.0),
+                                    blurRadius: 25.0)
                               ]),
                           child: Material(
                             color: Colors.transparent,
                             child: InkWell(
-                              onTap: () {},
+                              onTap: () {
+                                Route route = MaterialPageRoute(
+                                    builder: (context) => FinishReg());
+                                Navigator.push(context, route);
+                              },
                               child: Center(
-                                child: Text("REGISTER",
+                                child: Text("Sign up",
                                     style: TextStyle(
                                         color: Colors.white,
-                                        fontFamily: "Poppins-Bold",
+                                        fontFamily: "Work-medium",
                                         fontSize: 18,
                                         letterSpacing: 1.0)),
                               ),
@@ -115,8 +190,10 @@ class _SignupPageState extends State<SignupPage> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
                       Text(
-                        "Already have an account?",
-                        style: TextStyle(fontFamily: "Poppins-Medium"),
+                        "You already have an account?",
+                        style: TextStyle(fontFamily: "Work-medium",
+                        fontSize: 12,
+                        color: Colors.blueGrey[700]),
                       ),
                       InkWell(
                         onTap: () {
@@ -124,8 +201,9 @@ class _SignupPageState extends State<SignupPage> {
                         },
                         child: Text("Login",
                             style: TextStyle(
-                                color: Color(0xFFff9900),
-                                fontFamily: "Poppins-Bold")),
+                                color: Color(0xFFfd7f70),
+                                fontSize: 12,
+                                fontFamily: "Work-bold")),
                       )
                     ],
                   ),
