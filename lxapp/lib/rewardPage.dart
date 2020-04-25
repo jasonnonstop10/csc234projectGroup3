@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 Widget horizontalLine() => Padding(
       padding: EdgeInsets.symmetric(horizontal: 16.0),
       child: Container(
@@ -18,9 +19,7 @@ class _RewardPageState extends State<RewardPage> {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
-        body: Stack(
-            fit: StackFit.expand,
-            children: <Widget>[
+        body: Stack(fit: StackFit.expand, children: <Widget>[
       SingleChildScrollView(
           child: Padding(
               padding: EdgeInsets.only(left: 28.0, right: 28.0, top: 0.0),
@@ -37,7 +36,9 @@ class _RewardPageState extends State<RewardPage> {
                         style: TextStyle(
                             color: Color(0xFF373A42),
                             fontFamily: "Work-bold",
-                            fontSize: ScreenUtil.getInstance().setSp(56))))
+                            fontSize: ScreenUtil.getInstance().setSp(56)))),
+                SizedBox(height: ScreenUtil.getInstance().setHeight(50)),
+                
               ])))
     ]));
   }

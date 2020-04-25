@@ -92,7 +92,8 @@ class _DetailState extends State<Detail> {
                 Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
-                      InkWell(
+                      Flexible(
+                      child:InkWell(
                         child: Container(
                           width: max(0, 355),
                           height: ScreenUtil.getInstance().setHeight(100),
@@ -126,7 +127,7 @@ class _DetailState extends State<Detail> {
                           ),
                         ),
                       )
-                    ],
+                      )],
                   ),
                 
               ],

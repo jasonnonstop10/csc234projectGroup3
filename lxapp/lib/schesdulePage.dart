@@ -19,9 +19,7 @@ class _SchesdulePageState extends State<SchesdulePage> {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
-        body: Stack(
-            fit: StackFit.expand,
-            children: <Widget>[
+        body: Stack(fit: StackFit.expand, children: <Widget>[
       SingleChildScrollView(
           child: Padding(
               padding: EdgeInsets.only(left: 28.0, right: 28.0, top: 0.0),
@@ -38,7 +36,95 @@ class _SchesdulePageState extends State<SchesdulePage> {
                         style: TextStyle(
                             color: Color(0xFF373A42),
                             fontFamily: "Work-bold",
-                            fontSize: ScreenUtil.getInstance().setSp(56))))
+                            fontSize: ScreenUtil.getInstance().setSp(56)))),
+                SizedBox(height: ScreenUtil.getInstance().setHeight(50)),
+                Row(children: <Widget>[
+                  Flexible(
+
+                          child: Card(
+                            child: Column(
+                              mainAxisSize: MainAxisSize.min,
+                              children: <Widget>[
+                                const ListTile(
+                                  leading: Icon(Icons.calendar_today),
+                                  title: Text('Open Lx building',
+                                      style: TextStyle(
+                                          fontFamily: "Work-bold",
+                                          color: Colors.black)),
+                                  subtitle: Text('Lx building',
+                                      style: TextStyle(
+                                          fontFamily: "Work-bold",
+                                          color: Color(0xFFfc315e))),
+                                ),
+                                ButtonBar(
+                                  children: <Widget>[
+                                    FlatButton(
+                                      child: const Text('View deteil',
+                                          style: TextStyle(
+                                              fontFamily: "Work-bold",
+                                      )),
+                                      onPressed: () {/* ... */},
+                                    ),
+                                    IconButton(
+                                      icon: Icon(Icons.map),
+                                     
+                                      onPressed: () {/* ... */},
+                                    ),
+                                    IconButton(
+                                      icon: Icon(Icons.center_focus_strong),
+                                      
+                                      onPressed: () {/* ... */},
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ))
+                ]),
+                SizedBox(height: ScreenUtil.getInstance().setHeight(25)),
+                  Row(children: <Widget>[
+                  Flexible(
+
+                          child: Card(
+                            child: Column(
+                              mainAxisSize: MainAxisSize.min,
+                              children: <Widget>[
+                                const ListTile(
+                                  leading: Icon(Icons.calendar_today),
+                                  title: Text('Open Lx building',
+                                      style: TextStyle(
+                                          fontFamily: "Work-bold",
+                                          color: Colors.black)),
+                                  subtitle: Text('Lx building',
+                                      style: TextStyle(
+                                          fontFamily: "Work-bold",
+                                          color: Color(0xFFfc315e))),
+                                ),
+                                ButtonBar(
+                                  children: <Widget>[
+                                    FlatButton(
+                                      child: const Text('View deteil',
+                                          style: TextStyle(
+                                              fontFamily: "Work-bold",
+                                      )),
+                                      onPressed: () {/* ... */},
+                                    ),
+                                    IconButton(
+                                      icon: Icon(Icons.map),
+                                     
+                                      onPressed: () {/* ... */},
+                                    ),
+                                    IconButton(
+                                      icon: Icon(Icons.center_focus_strong),
+                                      
+                                      onPressed: () {/* ... */},
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ))
+                ])
               ])))
     ]));
   }

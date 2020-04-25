@@ -66,7 +66,8 @@ class _HomePageState extends State<HomePage> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
-                      InkWell(
+                      Flexible(
+                      child: InkWell(
                         child: Container(
                           width: max(0, 355),
                           height: ScreenUtil.getInstance().setHeight(400),
@@ -107,7 +108,7 @@ class _HomePageState extends State<HomePage> {
                           ),
                         ),
                       )
-                    ],
+                      )],
                   ),
                   SizedBox(
                     height: ScreenUtil.getInstance().setHeight(40),
@@ -124,7 +125,8 @@ class _HomePageState extends State<HomePage> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
-                      InkWell(
+                     Flexible(
+                      child: InkWell(
                         child: Container(
                           width: max(0, 355),
                           height: ScreenUtil.getInstance().setHeight(400),
@@ -163,7 +165,7 @@ class _HomePageState extends State<HomePage> {
                           ),
                         ),
                       )
-                    ],
+                     )],
                   ),
                   SizedBox(
                     height: ScreenUtil.getInstance().setHeight(40),
@@ -180,7 +182,8 @@ class _HomePageState extends State<HomePage> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
-                      InkWell(
+                      Flexible(
+                      child:InkWell(
                         child: Container(
                           width: max(0, 355),
                           height: ScreenUtil.getInstance().setHeight(400),
@@ -219,7 +222,7 @@ class _HomePageState extends State<HomePage> {
                           ),
                         ),
                       )
-                    ],
+                      )],
                   ),
                   SizedBox(
                     height: ScreenUtil.getInstance().setHeight(40),
