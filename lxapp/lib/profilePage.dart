@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'qrScanner.dart';
+
 
 class ProfilePage extends StatefulWidget {
   @override
@@ -59,7 +61,11 @@ class _ProfilePageState extends State<ProfilePage> {
                  title:Text("QR code"),
                  trailing: Icon(Icons.keyboard_arrow_right),
                  onTap: (){
-                      
+                    Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => QrScanner()),
+                            );
+
                  },
                ),
                ListTile(

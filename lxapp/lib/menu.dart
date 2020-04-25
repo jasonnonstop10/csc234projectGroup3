@@ -32,8 +32,8 @@ class _MenuPageState extends State<MenuPage> {
             title: Text("Home"),
           ),
           new BottomNavigationBarItem(
-            icon: Icon(Icons.search),
-            title: Text("Searching"),
+            icon: Icon(Icons.schedule),
+            title: Text("Schesdule"),
           ),
           new BottomNavigationBarItem(
             icon: Icon(Icons.local_activity),
