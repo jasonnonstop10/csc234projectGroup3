@@ -1,7 +1,8 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_login_page_ui/finishReg.dart';
+import 'package:flutter_login_page_ui/detail.dart';
+
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 Widget horizontalLine() => Padding(
@@ -85,7 +86,9 @@ class _HomePageState extends State<HomePage> {
                             color: Colors.transparent,
                             child: InkWell(
                               onTap: () {
-                                
+                                Route route = MaterialPageRoute(
+                                    builder: (context) => Detail());
+                                Navigator.push(context, route);
                               },
                               child: Center(
                                 child: Text("FRIDAY AUG 24, 9AM \nBrightlight Music Festival",
