@@ -50,89 +50,19 @@ class _HomePageState extends State<HomePage> {
                   SizedBox(
                     height: ScreenUtil.getInstance().setHeight(180),
                   ),
-                  CircleAvatar(
-                    radius: 75,
-                    backgroundColor: Color(0xffffffff),
-                    child: CircleAvatar(
-                      radius: 70,
-                      backgroundImage: AssetImage('assets/profile.jpg'),
-                    ),
-                  ),
+                  
                   
                   SizedBox(
                     height: ScreenUtil.getInstance().setHeight(40),
                   ),
                   Align(
                       alignment: Alignment.centerLeft,
-                      child: Text("Name",
+                      child: Text("For you",
                           style: TextStyle(
-                              color: Color(0xFFfd7f70),
-                              fontFamily: "Work-medium",
-                              fontSize: ScreenUtil.getInstance().setSp(26)))),
-                  TextField(
-                    decoration: InputDecoration(
-                        focusedBorder: UnderlineInputBorder(
-                          borderSide: BorderSide(
-                              color: Color(0xFFfd7f70), width: 3.0),
-                        ),
-                        hintText: "YourName YourSurname",
-                        hintStyle:
-                            TextStyle(color: Colors.grey, fontSize: 12.0,fontFamily: "Work-thin")),
-                  ),
-                  SizedBox(height: ScreenUtil.getInstance().setHeight(40)),
-                  Align(
-                      alignment: Alignment.centerLeft,
-                      child: Text("Email",
-                          style: TextStyle(
-                              color: Color(0xFFfd7f70),
-                              fontFamily: "Work-medium",
-                              fontSize: ScreenUtil.getInstance().setSp(26)))),
-                  TextField(
-                    decoration: InputDecoration(
-                        focusedBorder: UnderlineInputBorder(
-                          borderSide: BorderSide(
-                              color: Color(0xFFfd7f70), width: 3.0),
-                        ),
-                        hintText: "example@kmutt.ac.th",
-                        hintStyle:
-                            TextStyle(color: Colors.grey, fontSize: 12.0,fontFamily: "Work-thin")),
-                  ),
-                  SizedBox(height: ScreenUtil.getInstance().setHeight(40)),
-                  Align(
-                      alignment: Alignment.centerLeft,
-                      child: Text("Password",
-                          style: TextStyle(
-                              color: Color(0xFFfd7f70),
-                              fontFamily: "Work-medium",
-                              fontSize: ScreenUtil.getInstance().setSp(26)))),
-                  TextField(
-                    decoration: InputDecoration(
-                        focusedBorder: UnderlineInputBorder(
-                          borderSide: BorderSide(
-                              color: Color(0xFFfd7f70), width: 3.0),
-                        ),
-                        hintText: "••••••••",
-                        hintStyle:
-                            TextStyle(color: Colors.grey, fontSize: 12.0)),
-                  ),
-                  SizedBox(height: ScreenUtil.getInstance().setHeight(40)),
-                  Align(
-                      alignment: Alignment.centerLeft,
-                      child: Text("Confirm Password",
-                          style: TextStyle(
-                              color: Color(0xFFfd7f70),
-                              fontFamily: "Work-medium",
-                              fontSize: ScreenUtil.getInstance().setSp(26)))),
-                  TextField(
-                    decoration: InputDecoration(
-                        focusedBorder: UnderlineInputBorder(
-                          borderSide: BorderSide(
-                              color: Color(0xFFfd7f70), width: 3.0),
-                        ),
-                        hintText: "••••••••",
-                        hintStyle:
-                            TextStyle(color: Colors.grey, fontSize: 12.0)),
-                  ),
+                              color: Color(0xFF373A42),
+                              fontFamily: "Work-bold",
+                              fontSize: ScreenUtil.getInstance().setSp(56)))),
+                  
                   SizedBox(height: ScreenUtil.getInstance().setHeight(40)),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -140,7 +70,7 @@ class _HomePageState extends State<HomePage> {
                       InkWell(
                         child: Container(
                           width: max(0, 355),
-                          height: ScreenUtil.getInstance().setHeight(100),
+                          height: ScreenUtil.getInstance().setHeight(400),
                           decoration: BoxDecoration(
                               gradient: LinearGradient(colors: [
                                 Color(0xFFfd7f70),Color(0xFFfc315e)
@@ -157,19 +87,22 @@ class _HomePageState extends State<HomePage> {
                             color: Colors.transparent,
                             child: InkWell(
                               onTap: () {
-                                Route route = MaterialPageRoute(
-                                    builder: (context) => FinishReg());
-                                Navigator.push(context, route);
+                                
                               },
                               child: Center(
-                                child: Text("Sign up",
+                                child: Text("FRIDAY AUG 24, 9AM \nBrightlight Music Festival",
                                     style: TextStyle(
                                         color: Colors.white,
                                         fontFamily: "Work-medium",
                                         fontSize: 18,
                                         letterSpacing: 1.0)),
+                                        
+                                        
                               ),
+                              
+                              
                             ),
+                            
                           ),
                         ),
                       )
@@ -178,30 +111,7 @@ class _HomePageState extends State<HomePage> {
                   SizedBox(
                     height: ScreenUtil.getInstance().setHeight(40),
                   ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      Text(
-                        "You already have an account?",
-                        style: TextStyle(fontFamily: "Work-medium",
-                        fontSize: 12,
-                        color: Colors.blueGrey[700]),
-                      ),
-                      InkWell(
-                        onTap: () {
-                          Navigator.of(context).pop();
-                        },
-                        child: Text("Login",
-                            style: TextStyle(
-                                color: Color(0xFFfd7f70),
-                                fontSize: 12,
-                                fontFamily: "Work-bold")),
-                      )
-                    ],
-                  ),
-                  SizedBox(
-                    height: ScreenUtil.getInstance().setHeight(40),
-                  ),
+                  
                 ],
               ),
             ),
