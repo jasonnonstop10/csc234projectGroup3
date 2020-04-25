@@ -137,7 +137,7 @@ class _MyAppState extends State<MyApp> {
                           child: Material(
                             color: Colors.transparent,
                             child: InkWell(
-                              onTap: () {Navigator.pushNamed(context, "/home");},
+                              onTap: () {Navigator.pushNamed(context, "/menu");},
                               child: Center(
                                 child: Text("Login",
                                     style: TextStyle(

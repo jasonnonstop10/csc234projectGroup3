@@ -10,7 +10,10 @@ class _RewardPageState extends State<RewardPage> {
   Widget build(BuildContext context) {
    return new Scaffold(
      body:Stack(
-        children:<Widget>[]
+       fit: StackFit.expand,
+        children:<Widget>[
+          
+        ]
       ),
    );
   }

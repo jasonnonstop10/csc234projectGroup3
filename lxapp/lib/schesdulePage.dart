@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-class SearchingPage extends StatefulWidget {
+class SchesdulePage extends StatefulWidget {
   @override
-  _SearchingPageState createState() => _SearchingPageState();
+  _SchesdulePageState createState() => _SchesdulePageState();
 }
 
-class _SearchingPageState extends State<SearchingPage> {
+class _SchesdulePageState extends State<SchesdulePage> {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
