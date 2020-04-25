@@ -48,13 +48,11 @@ class _HomePageState extends State<HomePage> {
                     children: <Widget>[],
                   ),
                   SizedBox(
-                    height: ScreenUtil.getInstance().setHeight(180),
+                    height: ScreenUtil.getInstance().setHeight(120),
                   ),
                   
                   
-                  SizedBox(
-                    height: ScreenUtil.getInstance().setHeight(40),
-                  ),
+                  
                   Align(
                       alignment: Alignment.centerLeft,
                       child: Text("For you",
@@ -111,7 +109,118 @@ class _HomePageState extends State<HomePage> {
                   SizedBox(
                     height: ScreenUtil.getInstance().setHeight(40),
                   ),
+                  Align(
+                      alignment: Alignment.centerLeft,
+                      child: Text("Collection",
+                          style: TextStyle(
+                              color: Color(0xFF373A42),
+                              fontFamily: "Work-bold",
+                              fontSize: ScreenUtil.getInstance().setSp(56)))),
                   
+                  SizedBox(height: ScreenUtil.getInstance().setHeight(40)),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      InkWell(
+                        child: Container(
+                          width: max(0, 355),
+                          height: ScreenUtil.getInstance().setHeight(400),
+                          decoration: BoxDecoration(
+                              gradient: LinearGradient(colors: [
+                                Color(0xFFfd7f70),Color(0xFFfc315e)
+                                
+                              ]),
+                              borderRadius: BorderRadius.circular(10.0),
+                              boxShadow: [
+                                BoxShadow(
+                                    color: Color(0xFFfc315e).withOpacity(.5),
+                                    offset: Offset(5.0, 17.0),
+                                    blurRadius: 25.0)
+                              ]),
+                          child: Material(
+                            color: Colors.transparent,
+                            child: InkWell(
+                              onTap: () {
+                                
+                              },
+                              child: Center(
+                                child: Text("FRIDAY AUG 24, 9AM \nBrightlight Music Festival",
+                                    style: TextStyle(
+                                        color: Colors.white,
+                                        fontFamily: "Work-medium",
+                                        fontSize: 18,
+                                        letterSpacing: 1.0)),
+                                        
+                                        
+                              ),
+                              
+                              
+                            ),
+                            
+                          ),
+                        ),
+                      )
+                    ],
+                  ),
+                  SizedBox(
+                    height: ScreenUtil.getInstance().setHeight(40),
+                  ),
+                  Align(
+                      alignment: Alignment.centerLeft,
+                      child: Text("Upcoming",
+                          style: TextStyle(
+                              color: Color(0xFF373A42),
+                              fontFamily: "Work-bold",
+                              fontSize: ScreenUtil.getInstance().setSp(56)))),
+                  
+                  SizedBox(height: ScreenUtil.getInstance().setHeight(40)),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      InkWell(
+                        child: Container(
+                          width: max(0, 355),
+                          height: ScreenUtil.getInstance().setHeight(400),
+                          decoration: BoxDecoration(
+                              gradient: LinearGradient(colors: [
+                                Color(0xFFfd7f70),Color(0xFFfc315e)
+                                
+                              ]),
+                              borderRadius: BorderRadius.circular(10.0),
+                              boxShadow: [
+                                BoxShadow(
+                                    color: Color(0xFFfc315e).withOpacity(.5),
+                                    offset: Offset(5.0, 17.0),
+                                    blurRadius: 25.0)
+                              ]),
+                          child: Material(
+                            color: Colors.transparent,
+                            child: InkWell(
+                              onTap: () {
+                                
+                              },
+                              child: Center(
+                                child: Text("FRIDAY AUG 24, 9AM \nBrightlight Music Festival",
+                                    style: TextStyle(
+                                        color: Colors.white,
+                                        fontFamily: "Work-medium",
+                                        fontSize: 18,
+                                        letterSpacing: 1.0)),
+                                        
+                                        
+                              ),
+                              
+                              
+                            ),
+                            
+                          ),
+                        ),
+                      )
+                    ],
+                  ),
+                  SizedBox(
+                    height: ScreenUtil.getInstance().setHeight(40),
+                  ),
                 ],
               ),
             ),
