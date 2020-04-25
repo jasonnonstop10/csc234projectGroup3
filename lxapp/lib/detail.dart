@@ -1,5 +1,7 @@
 
 
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_login_page_ui/grid.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -47,22 +49,13 @@ class _DetailState extends State<Detail> {
                 SizedBox(
                   height: ScreenUtil.getInstance().setHeight(180),
                 ),
-                CircleAvatar(
-                  radius: 75,
-                  backgroundColor: Color(0xffffffff),
-                  child: CircleAvatar(
-                    radius: 70,
-                    backgroundImage: AssetImage('assets/profile.jpg'),
-                        
-                  
-                ),
-                  ),
+                
                 SizedBox(
                   height: ScreenUtil.getInstance().setHeight(50),
                 ),
                 Align(
-                    alignment: Alignment.center,
-                    child: Text("Detail Test",
+                    alignment: Alignment.centerLeft,
+                    child: Text("Brightlight Festival",
                         style: TextStyle(
                           color: Colors.white,
                             fontSize: ScreenUtil.getInstance().setSp(45),
@@ -73,8 +66,8 @@ class _DetailState extends State<Detail> {
                   height: ScreenUtil.getInstance().setHeight(10),
                 ),
                   Align(
-                    alignment: Alignment.center,
-                    child: Text("You account is ready! Tap on Get Started to ",
+                    alignment: Alignment.centerLeft,
+                    child: Text("Friday, 24 Aug 2020",
                         style: TextStyle(
                           color: Colors.white,
                             fontSize: ScreenUtil.getInstance().setSp(25),
@@ -84,68 +77,57 @@ class _DetailState extends State<Detail> {
                   SizedBox(
                   height: ScreenUtil.getInstance().setHeight(5),
                 ),
-                  Align(
-                    alignment: Alignment.center,
-                    child: Text("proceed.",
-                        style: TextStyle(
-                          color: Colors.white,
-                            fontSize: ScreenUtil.getInstance().setSp(25),
-                            fontFamily: "work",
-                            letterSpacing: .6)),
-                  ),
-                  SizedBox(
-                  height: ScreenUtil.getInstance().setHeight(100),
-                ),
-                Align(
-                  alignment: Alignment.center,
-                  child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    InkWell(
-                      child: Container(
-                        width: ScreenUtil.getInstance().setHeight(275),
-                        height: ScreenUtil.getInstance().setHeight(100),
-                        decoration: BoxDecoration(
-                            gradient: LinearGradient(
-                                colors: [Color(0xFFffffff), Color(0xFFffffff)]),
-                            borderRadius: BorderRadius.circular(50.0),
-                            boxShadow: [
-                              BoxShadow(
-                                  color: Color(0xFF000000).withOpacity(.2),
-                                  offset: Offset(0.0, 8.0),
-                                  blurRadius: 8.0)
-                            ]),
-                        child: Material(
-                          
-                          color: Colors.transparent,
-                          child: InkWell(
-                            onTap: (
-                              
-                            ) {
-                              Route route = MaterialPageRoute(
-                                    builder: (context) => GridPage());
-                                Navigator.push(context, route);
-                            },
-                            child: Center(
-                              child: Text("Get Started",
-                                  style: TextStyle(
-                                      color: Colors.pinkAccent,
-                                      fontFamily: "Work-Bold",
-                                      fontSize: 15,
-                                      letterSpacing: 1.0)),
-                            ),
-                          ),
-                        ),
-                      ),
-                    )
-                  ],
-                ),
-                ),
+                  new Text(
+    "Free directories: directories are perfect for customers that are searching for a particular topic. What’s great about them is that you only have to post once and they are good for long periods of time. It saves a lot of your time when you don’t have to resubmit your information every week…",    
+    style: TextStyle(
+      fontFamily: "WorkSans-Regular",
+    fontSize: 15,
+      color:Color(0xff80848b),  
+    ),
+  ),
                 
                 SizedBox(
                   height: ScreenUtil.getInstance().setHeight(40),
                 ),
-                
+                Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      InkWell(
+                        child: Container(
+                          width: max(0, 355),
+                          height: ScreenUtil.getInstance().setHeight(100),
+                          decoration: BoxDecoration(
+                              gradient: LinearGradient(colors: [
+                                Color(0xFFfd7f70),Color(0xFFfc315e)
+                                
+                              ]),
+                              borderRadius: BorderRadius.circular(10.0),
+                              boxShadow: [
+                                BoxShadow(
+                                    color: Color(0xFFfc315e).withOpacity(.5),
+                                    offset: Offset(5.0, 17.0),
+                                    blurRadius: 25.0)
+                              ]),
+                          child: Material(
+                            color: Colors.transparent,
+                            child: InkWell(
+                              onTap: () {
+                                
+                              },
+                              child: Center(
+                                child: Text("Join",
+                                    style: TextStyle(
+                                        color: Colors.white,
+                                        fontFamily: "Work-medium",
+                                        fontSize: 18,
+                                        letterSpacing: 1.0)),
+                              ),
+                            ),
+                          ),
+                        ),
+                      )
+                    ],
+                  ),
                 
               ],
             ),
