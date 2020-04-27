@@ -30,7 +30,7 @@ class _RewardPageState extends State<RewardPage> {
                 SizedBox(
                   height: ScreenUtil.getInstance().setHeight(120),
                 ),
-                Align(
+                Align( 
                     alignment: Alignment.centerLeft,
                     child: Text("Reward",
                         style: TextStyle(
@@ -38,7 +38,71 @@ class _RewardPageState extends State<RewardPage> {
                             fontFamily: "Work-bold",
                             fontSize: ScreenUtil.getInstance().setSp(56)))),
                 SizedBox(height: ScreenUtil.getInstance().setHeight(50)),
-                
+                GridView.count(
+                  shrinkWrap: true,
+                  primary: false,
+                  padding: const EdgeInsets.all(20),
+                  crossAxisSpacing: 10,
+                  mainAxisSpacing: 10,
+                  crossAxisCount: 2,
+                  children: <Widget>[
+                    Card(
+                      child: InkWell(
+                        splashColor: Colors.blue.withAlpha(30),
+                        onTap: () {
+                          print('Card tapped.');
+                        },
+                        child: new Container(
+                          padding: new EdgeInsets.all(32.0),
+                          child: new Column(
+                            children: <Widget>[
+                              new Image.network("https://pixabay.com/images/id-1238246/"),
+                              new Text('Free burger'),
+                              new Text('buy 1 free 1 when you buy burger in 10 point')
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                    Card(
+                      child: Flexible(
+                    child:InkWell(
+                        splashColor: Colors.blue.withAlpha(30),
+                        onTap: () {
+                          print('Card tapped.');
+                        },
+                        child: new Container(
+                          padding: new EdgeInsets.all(32.0),
+                          child: new Column(
+                            children: <Widget>[
+                              new Image.network("https://pixabay.com/images/id-1238246/"),
+                              new Text('Free burger'),
+                              new Text('buy 1 free 1 when you buy burger in 10 point')
+                            ],
+                          ),
+                        ),
+                      ),)
+                    ),
+                     Card(
+                      child: InkWell(
+                        splashColor: Colors.blue.withAlpha(30),
+                        onTap: () {
+                          print('Card tapped.');
+                        },
+                        child: new Container(
+                          padding: new EdgeInsets.all(32.0),
+                          child: new Column(
+                            children: <Widget>[
+                              new Image.network("https://pixabay.com/images/id-1238246/"),
+                              new Text('Free burger'),
+                              new Text('buy 1 free 1 when you buy burger in 10 point')
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
               ])))
     ]));
   }
