@@ -137,7 +137,28 @@ class _DetailState extends State<Detail> {
                       
                         onTap: () {},
                       ),
+                      ListTile(
+                        
+                        title: Text("Location",
+                            style: TextStyle(fontFamily: "Work-bold")),
+                        
+                        
+                      ),
+                      ListTile(
+                        
+                        title: Text("Map Here",
+                            style: TextStyle(fontFamily: "Work-regular")),
+                        
+                        
+                      ),
+                      ListTile(
+                        
+                        title: Text("F1, LX Building",
+                            style: TextStyle(fontFamily: "Work-bold",color: Color(0xFF80848B))),
+                       
                       
+                        onTap: () {},
+                      ),
                     ],
                   ),
                 ),
@@ -180,6 +201,9 @@ class _DetailState extends State<Detail> {
                       ),
                     ))
                   ],
+                ),
+                SizedBox(
+                  height: ScreenUtil.getInstance().setHeight(60),
                 ),
               ],
             ),
