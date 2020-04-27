@@ -1,3 +1,4 @@
+import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -30,7 +31,7 @@ class _RewardPageState extends State<RewardPage> {
                 SizedBox(
                   height: ScreenUtil.getInstance().setHeight(120),
                 ),
-                Align( 
+                Align(
                     alignment: Alignment.centerLeft,
                     child: Text("Reward",
                         style: TextStyle(
@@ -38,71 +39,51 @@ class _RewardPageState extends State<RewardPage> {
                             fontFamily: "Work-bold",
                             fontSize: ScreenUtil.getInstance().setSp(56)))),
                 SizedBox(height: ScreenUtil.getInstance().setHeight(50)),
-                GridView.count(
-                  shrinkWrap: true,
-                  primary: false,
-                  padding: const EdgeInsets.all(20),
-                  crossAxisSpacing: 10,
-                  mainAxisSpacing: 10,
-                  crossAxisCount: 2,
+                Row(
                   children: <Widget>[
-                    Card(
+                    Flexible(
                       child: InkWell(
-                        splashColor: Colors.blue.withAlpha(30),
-                        onTap: () {
-                          print('Card tapped.');
-                        },
-                        child: new Container(
-                          padding: new EdgeInsets.all(32.0),
-                          child: new Column(
-                            children: <Widget>[
-                              new Image.network("https://pixabay.com/images/id-1238246/"),
-                              new Text('Free burger'),
-                              new Text('buy 1 free 1 when you buy burger in 10 point')
-                            ],
+                        child: Container(
+                          width: max(0, 355),
+                          height: ScreenUtil.getInstance().setHeight(400),
+                          decoration: BoxDecoration(
+                              gradient: LinearGradient(colors: [
+                                Color(0xFFfd7f70),Color(0xFFfc315e)
+                                
+                              ]),
+                              borderRadius: BorderRadius.circular(10.0),
+                              boxShadow: [
+                                BoxShadow(
+                                    color: Color(0xFFfc315e).withOpacity(.5),
+                                    offset: Offset(5.0, 17.0),
+                                    blurRadius: 25.0)
+                              ]),
+                          child: Material(
+                            color: Colors.transparent,
+                            child: InkWell(
+                              onTap: () {
+                              },
+                              child: Center(
+                                child: Text("Freeburger",
+                                    style: TextStyle(
+                                        color: Colors.white,
+                                        fontFamily: "Work-medium",
+                                        fontSize: 18,
+                                        letterSpacing: 1.0)),
+                                        
+                                        
+                              ),
+                              
+                              
+                            ),
+                            
                           ),
                         ),
-                      ),
-                    ),
-                    Card(
-                      child: Flexible(
-                    child:InkWell(
-                        splashColor: Colors.blue.withAlpha(30),
-                        onTap: () {
-                          print('Card tapped.');
-                        },
-                        child: new Container(
-                          child: new Column(
-                            children: <Widget>[
-                              new Image.network("https://pixabay.com/images/id-1238246/"),
-                              new Text('Free burger'),
-                              new Text('buy 1 free 1 when you buy burger in 10 point')
-                            ],
-                          ),
-                        ),
-                      ),)
-                    ),
-                     Card(
-                      child: InkWell(
-                        splashColor: Colors.blue.withAlpha(30),
-                        onTap: () {
-                          print('Card tapped.');
-                        },
-                        child: new Container(
-                          padding: new EdgeInsets.all(32.0),
-                          child: new Column(
-                            children: <Widget>[
-                              new Image.network("https://pixabay.com/images/id-1238246/"),
-                              new Text('Free burger'),
-                              new Text('buy 1 free 1 when you buy burger in 10 point')
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
+                      )
+                      )
                   ],
                 ),
-              ])))
+              ]))),
     ]));
   }
 }

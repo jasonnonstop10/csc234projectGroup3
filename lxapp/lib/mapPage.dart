@@ -19,31 +19,27 @@ class _MapPageState extends State<MapPage> {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
-        backgroundColor: Colors.white,
         body: Stack(fit: StackFit.expand, children: <Widget>[
-          SingleChildScrollView(
+      SingleChildScrollView(
+          child: Padding(
               padding: EdgeInsets.only(left: 28.0, right: 28.0, top: 0.0),
               child: Column(children: <Widget>[
                 Row(
                   children: <Widget>[],
                 ),
                 SizedBox(
-                  height: ScreenUtil.getInstance().setHeight(50),
+                  height: ScreenUtil.getInstance().setHeight(120),
                 ),
                 Align(
                     alignment: Alignment.centerLeft,
-                    child: Text("Map",
+                    child: Text("Reward",
                         style: TextStyle(
                             color: Color(0xFF373A42),
                             fontFamily: "Work-bold",
                             fontSize: ScreenUtil.getInstance().setSp(56)))),
                 SizedBox(height: ScreenUtil.getInstance().setHeight(50)),
-                Row(children: <Widget>[
-                  Image.network(
-                    'https://picsum.photos/250?image=9',
-                  )
-                ])
-              ]))
-        ]));
+                Row(children: <Widget>[])
+              ])))
+    ]));
   }
 }
