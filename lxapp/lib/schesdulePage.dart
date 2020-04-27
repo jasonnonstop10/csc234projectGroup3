@@ -32,7 +32,7 @@ class _SchesdulePageState extends State<SchesdulePage> {
                 ),
                 Align(
                     alignment: Alignment.centerLeft,
-                    child: Text("Scheadule",
+                    child: Text("Schesdule",
                         style: TextStyle(
                             color: Color(0xFF373A42),
                             fontFamily: "Work-bold",
@@ -59,7 +59,7 @@ class _SchesdulePageState extends State<SchesdulePage> {
                                 ButtonBar(
                                   children: <Widget>[
                                     FlatButton(
-                                      child: const Text('View deteil',
+                                      child: const Text('View detail',
                                           style: TextStyle(
                                               fontFamily: "Work-bold",
                                       )),
@@ -103,7 +103,7 @@ class _SchesdulePageState extends State<SchesdulePage> {
                                 ButtonBar(
                                   children: <Widget>[
                                     FlatButton(
-                                      child: const Text('View deteil',
+                                      child: const Text('View detail',
                                           style: TextStyle(
                                               fontFamily: "Work-bold",
                                       )),
