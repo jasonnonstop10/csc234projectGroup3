@@ -29,7 +29,15 @@ class _DetailState extends State<Detail> {
         backgroundColor: Colors.transparent,
         resizeToAvoidBottomPadding: false,
         body: SingleChildScrollView(
-          
+          child: Container(
+            decoration: new BoxDecoration(
+            gradient: new LinearGradient(
+                colors: [const Color(0xFFfc315e), const Color(0xFFfc8e73)],
+                begin: FractionalOffset.topLeft,
+                end: FractionalOffset.bottomRight,
+                stops: [0.0, 1.0],
+                tileMode: TileMode.clamp),
+          ),
           child: Padding(
             padding: EdgeInsets.only(left: 28.0, right: 28.0, top: 120.0),
             child: Column(
@@ -207,6 +215,7 @@ class _DetailState extends State<Detail> {
                 ),
               ],
             ),
+          ),
           ),
         ));
   }
