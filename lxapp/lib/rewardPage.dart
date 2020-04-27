@@ -40,8 +40,6 @@ class _RewardPageState extends State<RewardPage> {
                             fontSize: ScreenUtil.getInstance().setSp(56)))),
                 SizedBox(height: ScreenUtil.getInstance().setHeight(50)),
                 Row(
-                  children: <Widget>[
-                Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
                       Flexible(
@@ -73,9 +71,9 @@ class _RewardPageState extends State<RewardPage> {
                       )
                       )],
                   ),
-                ],)]
+                ],)
                 ),
-    )),
+    ),
     ]));
   }
 }
