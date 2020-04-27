@@ -29,7 +29,7 @@ class _DetailState extends State<Detail> {
         resizeToAvoidBottomPadding: false,
         body: SingleChildScrollView(
           child: Container(
-            
+            decoration: new BoxDecoration(image: new DecorationImage(image: new AssetImage("assets/eventpic.jpg"), fit: BoxFit.cover)),
           child: Padding(
             padding: EdgeInsets.only(left: 28.0, right: 28.0, top: 120.0),
             child: Column(
