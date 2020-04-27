@@ -72,7 +72,6 @@ class _RewardPageState extends State<RewardPage> {
                           print('Card tapped.');
                         },
                         child: new Container(
-                          padding: new EdgeInsets.all(32.0),
                           child: new Column(
                             children: <Widget>[
                               new Image.network("https://pixabay.com/images/id-1238246/"),
