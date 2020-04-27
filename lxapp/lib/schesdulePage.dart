@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'mapPage.dart';
-import 'genarelQRcode.dart';
 import 'detail.dart';
 Widget horizontalLine() => Padding(
       padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -83,11 +82,7 @@ class _SchesdulePageState extends State<SchesdulePage> {
                                     IconButton(
                                       icon: Icon(Icons.center_focus_strong),
                                       
-                                      onPressed: () {Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => GenerateScreen()),
-                            );},
+                                      onPressed: () {},
                                     ),
                                   ],
                                 ),
@@ -121,17 +116,17 @@ class _SchesdulePageState extends State<SchesdulePage> {
                                           style: TextStyle(
                                               fontFamily: "Work-bold",
                                       )),
-                                      onPressed: () {/* ... */},
+                                      onPressed: () {},
                                     ),
                                     IconButton(
                                       icon: Icon(Icons.map),
                                      
-                                      onPressed: () {/* ... */},
+                                      onPressed: () {},
                                     ),
                                     IconButton(
                                       icon: Icon(Icons.center_focus_strong),
                                       
-                                      onPressed: () {/* ... */},
+                                      onPressed: () {},
                                     ),
                                   ],
                                 ),
