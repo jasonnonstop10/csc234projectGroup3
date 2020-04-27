@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_login_page_ui/rewardPage.dart';
 import 'package:flutter_login_page_ui/homePage.dart';
 import 'package:flutter_login_page_ui/profilePage.dart';
-import 'package:flutter_login_page_ui/searchingPage.dart';
+import 'package:flutter_login_page_ui/schesdulePage.dart';
 
 class MenuPage extends StatefulWidget {
   @override
@@ -13,7 +13,7 @@ class _MenuPageState extends State<MenuPage> {
   int _currentIndex = 0;
   final List<Widget> _children = [
     HomePage(),
-    SearchingPage(),
+    SchesdulePage(),
     RewardPage(),
     ProfilePage(),
   ];
@@ -29,19 +29,23 @@ class _MenuPageState extends State<MenuPage> {
         items: <BottomNavigationBarItem>[
           new BottomNavigationBarItem(
             icon: Icon(Icons.home),
-            title: Text("Home"),
+            title: Text("Home",style: TextStyle(
+                              fontFamily: "Work-bold")),
           ),
           new BottomNavigationBarItem(
-            icon: Icon(Icons.search),
-            title: Text("Searching"),
+            icon: Icon(Icons.schedule),
+            title: Text("Schesdule",style: TextStyle(
+                              fontFamily: "Work-bold")),
           ),
           new BottomNavigationBarItem(
             icon: Icon(Icons.local_activity),
-            title: Text("Reward"),
+            title: Text("Reward",style: TextStyle(
+                              fontFamily: "Work-bold")),
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.person),
-            title: Text("Profile"),
+            title: Text("Profile",style: TextStyle(
+                              fontFamily: "Work-bold")),
           ),
         ],
         selectedItemColor: Color(0xFFfc315e),
