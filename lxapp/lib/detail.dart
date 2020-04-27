@@ -31,7 +31,7 @@ class _DetailState extends State<Detail> {
           child: Container(
             decoration: new BoxDecoration(image: new DecorationImage(image: new AssetImage("assets/eventpic.jpg"), fit: BoxFit.cover)),
           child: Padding(
-            padding: EdgeInsets.only(left: 28.0, right: 28.0, top: 120.0),
+            padding: EdgeInsets.only(left: 0.0, right: 0.0, top: 120.0),
             child: Column(
               children: <Widget>[
                 Row(
@@ -40,20 +40,22 @@ class _DetailState extends State<Detail> {
                 SizedBox(
                   height: ScreenUtil.getInstance().setHeight(180),
                 ),
-                Align(
-                  alignment: Alignment.centerLeft,
+                Padding(
+                  padding: const EdgeInsets.only(left: 0.0, right: 130.0),
+               
                   child: Text("Brightlight Festival",
                       style: TextStyle(
                           color: Colors.white,
                           fontSize: ScreenUtil.getInstance().setSp(45),
                           fontFamily: "work-Bold",
                           letterSpacing: .6)),
+                
                 ),
                 SizedBox(
                   height: ScreenUtil.getInstance().setHeight(10),
                 ),
-                Align(
-                  alignment: Alignment.centerLeft,
+                Padding(
+                  padding: const EdgeInsets.only(left: 0.0, right: 240.0),
                   child: Text("Friday, 24 Aug 2020",
                       style: TextStyle(
                           color: Colors.white,
@@ -64,8 +66,8 @@ class _DetailState extends State<Detail> {
                 SizedBox(
                   height: ScreenUtil.getInstance().setHeight(5),
                 ),
-                Align(
-                  alignment: Alignment.centerLeft,
+                Padding(
+                  padding: const EdgeInsets.only(left:0.0, right: 270.0),
                   child: Text("F.1, LX Building",
                       style: TextStyle(
                           color: Colors.white,
@@ -76,8 +78,8 @@ class _DetailState extends State<Detail> {
                 SizedBox(
                   height: ScreenUtil.getInstance().setHeight(5),
                 ),
-                Align(
-                  alignment: Alignment.centerLeft,
+                Padding(
+                  padding: const EdgeInsets.only(left: 0.0, right: 323.0),
                   child: Text("2 hours",
                       style: TextStyle(
                           color: Colors.white,
@@ -90,7 +92,7 @@ class _DetailState extends State<Detail> {
                   elevation: 4.0,
                   margin: const EdgeInsets.fromLTRB(0, 8.0, 0, 8.0),
                   shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10.0)),
+                  borderRadius: BorderRadius.circular(10.0)),
                   child: Column(
                     children: <Widget>[
                       ListTile(
@@ -154,14 +156,7 @@ class _DetailState extends State<Detail> {
                       
                         onTap: () {},
                       ),
-                    ],
-                  ),
-                ),
-                ),
-                SizedBox(
-                  height: ScreenUtil.getInstance().setHeight(40),
-                ),
-                Row(
+                      Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     Flexible(
@@ -198,8 +193,13 @@ class _DetailState extends State<Detail> {
                   ],
                 ),
                 SizedBox(
-                  height: ScreenUtil.getInstance().setHeight(60),
+                  height: ScreenUtil.getInstance().setHeight(40),
                 ),
+                    ],
+                  ),
+                ),
+                ),
+                
               ],
             ),
           ),
