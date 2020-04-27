@@ -50,9 +50,7 @@ class _DetailState extends State<Detail> {
                   height: ScreenUtil.getInstance().setHeight(180),
                 ),
                 
-                SizedBox(
-                  height: ScreenUtil.getInstance().setHeight(50),
-                ),
+               
                 Align(
                     alignment: Alignment.centerLeft,
                     child: Text("Brightlight Festival",
@@ -85,6 +83,63 @@ class _DetailState extends State<Detail> {
       color:Color(0xff80848b),  
     ),
   ),
+  Card(
+                    elevation: 4.0,
+                    margin: const EdgeInsets.fromLTRB(14.0, 8.0, 14.0, 8.0),
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10.0)),
+                    child: Column(
+                      children: <Widget>[
+                        ListTile(
+                          leading: Icon(Icons.card_giftcard,
+                              color: Color(0xFFfc315e)),
+                          title: Text("Reward",
+                              style: TextStyle(fontFamily: "Work-bold")),
+                          trailing: Text("100 point"),
+                          onTap: () {},
+                        ),
+                        ListTile(
+                          leading:
+                              Icon(Icons.history, color: Color(0xFFfc315e)),
+                          title: Text("History",
+                              style: TextStyle(fontFamily: "Work-bold")),
+                          trailing: Icon(Icons.keyboard_arrow_right,
+                              color: Color(0xFFfc315e)),
+                          onTap: () {},
+                        ),
+                        ListTile(
+                          leading: Icon(Icons.aspect_ratio,
+                              color: Color(0xFFfc315e)),
+                          title: Text("QR code",
+                              style: TextStyle(fontFamily: "Work-bold")),
+                          trailing: Icon(Icons.keyboard_arrow_right,
+                              color: Color(0xFFfc315e)),
+                          onTap: () {
+                            
+                          },
+                        ),
+                        ListTile(
+                          leading: Icon(Icons.lock_outline,
+                              color: Color(0xFFfc315e)),
+                          title: Text("Change Password",
+                              style: TextStyle(fontFamily: "Work-bold")),
+                          trailing: Icon(Icons.keyboard_arrow_right,
+                              color: Color(0xFFfc315e)),
+                          onTap: () {},
+                        ),
+                        ListTile(
+                          leading:
+                              Icon(Icons.settings, color: Color(0xFFfc315e)),
+                          title: Text("Setting",
+                              style: TextStyle(fontFamily: "Work-bold")),
+                          trailing: Icon(Icons.keyboard_arrow_right,
+                              color: Color(0xFFfc315e)),
+                          onTap: () {},
+                        ),
+                        
+                      ],
+                    ),
+                  ),
                 
                 SizedBox(
                   height: ScreenUtil.getInstance().setHeight(40),
