@@ -69,6 +69,7 @@ class _HomePageState extends State<HomePage> {
                       Flexible(
                       child: InkWell(
                         child: Container(
+                          padding: const EdgeInsets.only(top: 130.0,right: 50),
                           width: max(0, 355),
                           height: ScreenUtil.getInstance().setHeight(400),
                           decoration: new BoxDecoration(image: new DecorationImage(image: new AssetImage("assets/eventpic.jpg"), fit: BoxFit.cover),
@@ -85,13 +86,14 @@ class _HomePageState extends State<HomePage> {
                                 child: Text("FRIDAY AUG 24, 9AM \nBrightlight Music Festival",
                                     style: TextStyle(
                                         color: Colors.white,
-                                        fontFamily: "Work-medium",
+                                        fontFamily: "Work-Bold",
                                         fontSize: 18,
-                                        letterSpacing: 1.0)),
+                                        letterSpacing: 1.0,
+                                        )),
                                         
                                         
-                              ),
                               
+                              ), 
                               
                             ),
                             
@@ -118,6 +120,7 @@ class _HomePageState extends State<HomePage> {
                      Flexible(
                       child: InkWell(
                         child: Container(
+                          padding: const EdgeInsets.only(top: 130.0,right: 50),
                           width: max(0, 355),
                           height: ScreenUtil.getInstance().setHeight(400),
                           decoration: new BoxDecoration(image: new DecorationImage(image: new AssetImage("assets/eventpic1.jpg"), fit: BoxFit.cover),
@@ -132,7 +135,7 @@ class _HomePageState extends State<HomePage> {
                                 child: Text("FRIDAY AUG 24, 9AM \nBrightlight Music Festival",
                                     style: TextStyle(
                                         color: Colors.white,
-                                        fontFamily: "Work-medium",
+                                        fontFamily: "Work-Bold",
                                         fontSize: 18,
                                         letterSpacing: 1.0)),
                                         
@@ -165,6 +168,7 @@ class _HomePageState extends State<HomePage> {
                       Flexible(
                       child:InkWell(
                         child: Container(
+                          padding: const EdgeInsets.only(top: 130.0,right: 50),
                           width: max(0, 355),
                           height: ScreenUtil.getInstance().setHeight(400),
                           decoration: new BoxDecoration(image: new DecorationImage(image: new AssetImage("assets/eventpic2.jpg"), fit: BoxFit.cover),
@@ -179,7 +183,7 @@ class _HomePageState extends State<HomePage> {
                                 child: Text("FRIDAY AUG 24, 9AM \nBrightlight Music Festival",
                                     style: TextStyle(
                                         color: Colors.white,
-                                        fontFamily: "Work-medium",
+                                        fontFamily: "Work-bold",
                                         fontSize: 18,
                                         letterSpacing: 1.0)),
                                         
