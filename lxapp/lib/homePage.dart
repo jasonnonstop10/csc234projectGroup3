@@ -42,7 +42,7 @@ class _HomePageState extends State<HomePage> {
           ),
           SingleChildScrollView(
             child: Padding(
-              padding: EdgeInsets.only(left: 28.0, right: 28.0, top: 0.0),
+              padding: EdgeInsets.only(left: 18.0, right: 18.0, top: 0.0),
               child: Column(
                 children: <Widget>[
                   Row(
@@ -69,8 +69,8 @@ class _HomePageState extends State<HomePage> {
                       Flexible(
                       child: InkWell(
                         child: Container(
-                          padding: const EdgeInsets.only(top: 130.0,right: 50),
-                          width: max(0, 355),
+                          padding: const EdgeInsets.only(top: 130.0,right: 70),
+                          width: max(0, 385),
                           height: ScreenUtil.getInstance().setHeight(400),
                           decoration: new BoxDecoration(image: new DecorationImage(image: new AssetImage("assets/eventpic.jpg"), fit: BoxFit.cover),
                       borderRadius: BorderRadius.circular(10.0)),
@@ -120,8 +120,8 @@ class _HomePageState extends State<HomePage> {
                      Flexible(
                       child: InkWell(
                         child: Container(
-                          padding: const EdgeInsets.only(top: 130.0,right: 50),
-                          width: max(0, 355),
+                          padding: const EdgeInsets.only(top: 130.0,right: 70),
+                          width: max(0, 385),
                           height: ScreenUtil.getInstance().setHeight(400),
                           decoration: new BoxDecoration(image: new DecorationImage(image: new AssetImage("assets/eventpic1.jpg"), fit: BoxFit.cover),
                       borderRadius: BorderRadius.circular(10.0)),
@@ -168,8 +168,8 @@ class _HomePageState extends State<HomePage> {
                       Flexible(
                       child:InkWell(
                         child: Container(
-                          padding: const EdgeInsets.only(top: 130.0,right: 50),
-                          width: max(0, 355),
+                          padding: const EdgeInsets.only(top: 130.0,right: 70),
+                          width: max(0, 385),
                           height: ScreenUtil.getInstance().setHeight(400),
                           decoration: new BoxDecoration(image: new DecorationImage(image: new AssetImage("assets/eventpic2.jpg"), fit: BoxFit.cover),
                       borderRadius: BorderRadius.circular(10.0)),
