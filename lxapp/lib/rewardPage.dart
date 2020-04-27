@@ -41,49 +41,41 @@ class _RewardPageState extends State<RewardPage> {
                 SizedBox(height: ScreenUtil.getInstance().setHeight(50)),
                 Row(
                   children: <Widget>[
-                    Flexible(
+                Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Flexible(
                       child: InkWell(
                         child: Container(
-                          width: max(0, 355),
-                          height: ScreenUtil.getInstance().setHeight(400),
-                          decoration: BoxDecoration(
-                              gradient: LinearGradient(colors: [
-                                Color(0xFFfd7f70),Color(0xFFfc315e)
-                                
-                              ]),
-                              borderRadius: BorderRadius.circular(10.0),
-                              boxShadow: [
-                                BoxShadow(
-                                    color: Color(0xFFfc315e).withOpacity(.5),
-                                    offset: Offset(5.0, 17.0),
-                                    blurRadius: 25.0)
-                              ]),
+                          padding: const EdgeInsets.only(top: 130.0,right: 50),
+                          width: max(0,150),
+                          height: ScreenUtil.getInstance().setHeight(200),
+                          decoration: new BoxDecoration(image: new DecorationImage(image: new AssetImage("assets/eventpic.jpg"), fit: BoxFit.cover),
+                      borderRadius: BorderRadius.circular(10.0)),
                           child: Material(
                             color: Colors.transparent,
                             child: InkWell(
                               onTap: () {
                               },
                               child: Center(
-                                child: Text("Freeburger",
+                                child: Text("Free pizza",
                                     style: TextStyle(
                                         color: Colors.white,
-                                        fontFamily: "Work-medium",
+                                        fontFamily: "Work-Bold",
                                         fontSize: 18,
-                                        letterSpacing: 1.0)),
-                                        
-                                        
+                                        letterSpacing: 1.0,
+                                        )),     
                               ),
-                              
-                              
                             ),
                             
                           ),
                         ),
                       )
-                      )
-                  ],
+                      )],
+                  ),
+                ],)]
                 ),
-              ]))),
+    )),
     ]));
   }
 }

@@ -32,13 +32,15 @@ class _MapPageState extends State<MapPage> {
                 ),
                 Align(
                     alignment: Alignment.centerLeft,
-                    child: Text("Reward",
+                    child: Text("Map",
                         style: TextStyle(
                             color: Color(0xFF373A42),
                             fontFamily: "Work-bold",
                             fontSize: ScreenUtil.getInstance().setSp(56)))),
                 SizedBox(height: ScreenUtil.getInstance().setHeight(50)),
-                Row(children: <Widget>[])
+                Row(children:<Widget>[
+                    Image.network(""),
+                ])
               ])))
     ]));
   }
