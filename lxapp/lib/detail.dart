@@ -1,5 +1,3 @@
-
-
 import 'dart:math';
 
 import 'package:flutter/material.dart';
@@ -29,16 +27,9 @@ class _DetailState extends State<Detail> {
         ScreenUtil(width: 750, height: 1334, allowFontScaling: true);
     return new Scaffold(
         backgroundColor: Colors.transparent,
-        resizeToAvoidBottomPadding: true,
-        body: Container(
-          decoration: new BoxDecoration(
-            gradient: new LinearGradient(
-                colors: [const Color(0xFFfc315e), const Color(0xFFfc8e73)],
-                begin: FractionalOffset.topLeft,
-                end: FractionalOffset.bottomRight,
-                stops: [0.0, 1.0],
-                tileMode: TileMode.clamp),
-          ),
+        resizeToAvoidBottomPadding: false,
+        body: SingleChildScrollView(
+          
           child: Padding(
             padding: EdgeInsets.only(left: 28.0, right: 28.0, top: 120.0),
             child: Column(
@@ -49,142 +40,147 @@ class _DetailState extends State<Detail> {
                 SizedBox(
                   height: ScreenUtil.getInstance().setHeight(180),
                 ),
-                
-               
                 Align(
-                    alignment: Alignment.centerLeft,
-                    child: Text("Brightlight Festival",
-                        style: TextStyle(
+                  alignment: Alignment.centerLeft,
+                  child: Text("Brightlight Festival",
+                      style: TextStyle(
                           color: Colors.white,
-                            fontSize: ScreenUtil.getInstance().setSp(45),
-                            fontFamily: "work-Medium",
-                            letterSpacing: .6)),
-                  ),
-                  SizedBox(
+                          fontSize: ScreenUtil.getInstance().setSp(45),
+                          fontFamily: "work-Bold",
+                          letterSpacing: .6)),
+                ),
+                SizedBox(
                   height: ScreenUtil.getInstance().setHeight(10),
                 ),
-                  Align(
-                    alignment: Alignment.centerLeft,
-                    child: Text("Friday, 24 Aug 2020",
-                        style: TextStyle(
+                Align(
+                  alignment: Alignment.centerLeft,
+                  child: Text("Friday, 24 Aug 2020",
+                      style: TextStyle(
                           color: Colors.white,
-                            fontSize: ScreenUtil.getInstance().setSp(25),
-                            fontFamily: "work",
-                            letterSpacing: .6)),
-                  ),
-                  SizedBox(
+                          fontSize: ScreenUtil.getInstance().setSp(25),
+                          fontFamily: "work",
+                          letterSpacing: .6)),
+                ),
+                SizedBox(
                   height: ScreenUtil.getInstance().setHeight(5),
                 ),
-                  new Text(
-    "Free directories: directories are perfect for customers that are searching for a particular topic. What’s great about them is that you only have to post once and they are good for long periods of time. It saves a lot of your time when you don’t have to resubmit your information every week…",    
-    style: TextStyle(
-      fontFamily: "WorkSans-Regular",
-    fontSize: 15,
-      color:Color(0xff80848b),  
-    ),
-  ),
-  Card(
-                    elevation: 4.0,
-                    margin: const EdgeInsets.fromLTRB(14.0, 8.0, 14.0, 8.0),
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10.0)),
-                    child: Column(
-                      children: <Widget>[
-                        ListTile(
-                          leading: Icon(Icons.card_giftcard,
-                              color: Color(0xFFfc315e)),
-                          title: Text("Reward",
-                              style: TextStyle(fontFamily: "Work-bold")),
-                          trailing: Text("100 point"),
-                          onTap: () {},
-                        ),
-                        ListTile(
-                          leading:
-                              Icon(Icons.history, color: Color(0xFFfc315e)),
-                          title: Text("History",
-                              style: TextStyle(fontFamily: "Work-bold")),
-                          trailing: Icon(Icons.keyboard_arrow_right,
-                              color: Color(0xFFfc315e)),
-                          onTap: () {},
-                        ),
-                        ListTile(
-                          leading: Icon(Icons.aspect_ratio,
-                              color: Color(0xFFfc315e)),
-                          title: Text("QR code",
-                              style: TextStyle(fontFamily: "Work-bold")),
-                          trailing: Icon(Icons.keyboard_arrow_right,
-                              color: Color(0xFFfc315e)),
-                          onTap: () {
-                            
-                          },
-                        ),
-                        ListTile(
-                          leading: Icon(Icons.lock_outline,
-                              color: Color(0xFFfc315e)),
-                          title: Text("Change Password",
-                              style: TextStyle(fontFamily: "Work-bold")),
-                          trailing: Icon(Icons.keyboard_arrow_right,
-                              color: Color(0xFFfc315e)),
-                          onTap: () {},
-                        ),
-                        ListTile(
-                          leading:
-                              Icon(Icons.settings, color: Color(0xFFfc315e)),
-                          title: Text("Setting",
-                              style: TextStyle(fontFamily: "Work-bold")),
-                          trailing: Icon(Icons.keyboard_arrow_right,
-                              color: Color(0xFFfc315e)),
-                          onTap: () {},
-                        ),
+                Align(
+                  alignment: Alignment.centerLeft,
+                  child: Text("F.1, LX Building",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: ScreenUtil.getInstance().setSp(25),
+                          fontFamily: "work",
+                          letterSpacing: .6)),
+                ),
+                SizedBox(
+                  height: ScreenUtil.getInstance().setHeight(5),
+                ),
+                Align(
+                  alignment: Alignment.centerLeft,
+                  child: Text("2 hours",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: ScreenUtil.getInstance().setSp(25),
+                          fontFamily: "work",
+                          letterSpacing: .6)),
+                ),
+                SingleChildScrollView(
+                child: Card(
+                  elevation: 4.0,
+                  margin: const EdgeInsets.fromLTRB(0, 8.0, 0, 8.0),
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10.0)),
+                  child: Column(
+                    children: <Widget>[
+                      ListTile(
                         
-                      ],
-                    ),
+                        title: Text("Detail",
+                            style: TextStyle(fontFamily: "Work-bold")),
+                        
+                        
+                      ),
+                      ListTile(
+                        
+                        title: Text("Free directories: directories are perfect for customers that are searching for a particular topic. What’s great about them is that you only have to post once and they are good for long periods of time. It saves a lot of your time when you don’t have to resubmit your information every week…",
+                            style: TextStyle(fontFamily: "Work-regular")),
+                        
+                        
+                      ),
+                      ListTile(
+                        
+                        title: Text("Read more",
+                            style: TextStyle(fontFamily: "Work-bold",color: Color(0xFFfc315e))),
+                       
+                      
+                        onTap: () {},
+                      ),
+                     ListTile(
+                        
+                        title: Text("Update",
+                            style: TextStyle(fontFamily: "Work-bold")),
+                        
+                        
+                      ),
+                      ListTile(
+                        
+                        title: Text("Free directories: directories are perfect for customers that are searching for a particular topic. What’s great about them is that you only have to post once and they are good for long periods of time. It saves a lot of your time when you don’t have to resubmit your information every week…",
+                            style: TextStyle(fontFamily: "Work-regular")),
+                        
+                        
+                      ),
+                      ListTile(
+                        
+                        title: Text("Read more",
+                            style: TextStyle(fontFamily: "Work-bold",color: Color(0xFFfc315e))),
+                       
+                      
+                        onTap: () {},
+                      ),
+                      
+                    ],
                   ),
-                
+                ),
+                ),
                 SizedBox(
                   height: ScreenUtil.getInstance().setHeight(40),
                 ),
                 Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      Flexible(
-                      child:InkWell(
-                        child: Container(
-                          width: max(0, 355),
-                          height: ScreenUtil.getInstance().setHeight(100),
-                          decoration: BoxDecoration(
-                              gradient: LinearGradient(colors: [
-                                Color(0xFFfd7f70),Color(0xFFfc315e)
-                                
-                              ]),
-                              borderRadius: BorderRadius.circular(10.0),
-                              boxShadow: [
-                                BoxShadow(
-                                    color: Color(0xFFfc315e).withOpacity(.5),
-                                    offset: Offset(5.0, 17.0),
-                                    blurRadius: 25.0)
-                              ]),
-                          child: Material(
-                            color: Colors.transparent,
-                            child: InkWell(
-                              onTap: () {
-                                
-                              },
-                              child: Center(
-                                child: Text("Join",
-                                    style: TextStyle(
-                                        color: Colors.white,
-                                        fontFamily: "Work-medium",
-                                        fontSize: 18,
-                                        letterSpacing: 1.0)),
-                              ),
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    Flexible(
+                        child: InkWell(
+                      child: Container(
+                        width: max(0, 355),
+                        height: ScreenUtil.getInstance().setHeight(100),
+                        decoration: BoxDecoration(
+                            gradient: LinearGradient(
+                                colors: [Color(0xFFfd7f70), Color(0xFFfc315e)]),
+                            borderRadius: BorderRadius.circular(10.0),
+                            boxShadow: [
+                              BoxShadow(
+                                  color: Color(0xFFfc315e).withOpacity(.5),
+                                  offset: Offset(5.0, 17.0),
+                                  blurRadius: 25.0)
+                            ]),
+                        child: Material(
+                          color: Colors.transparent,
+                          child: InkWell(
+                            onTap: () {},
+                            child: Center(
+                              child: Text("Join",
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontFamily: "Work-medium",
+                                      fontSize: 18,
+                                      letterSpacing: 1.0)),
                             ),
                           ),
                         ),
-                      )
-                      )],
-                  ),
-                
+                      ),
+                    ))
+                  ],
+                ),
               ],
             ),
           ),
