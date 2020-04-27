@@ -71,18 +71,8 @@ class _HomePageState extends State<HomePage> {
                         child: Container(
                           width: max(0, 355),
                           height: ScreenUtil.getInstance().setHeight(400),
-                          decoration: BoxDecoration(
-                              gradient: LinearGradient(colors: [
-                                Color(0xFFfd7f70),Color(0xFFfc315e)
-                                
-                              ]),
-                              borderRadius: BorderRadius.circular(10.0),
-                              boxShadow: [
-                                BoxShadow(
-                                    color: Color(0xFFfc315e).withOpacity(.5),
-                                    offset: Offset(5.0, 17.0),
-                                    blurRadius: 25.0)
-                              ]),
+                          decoration: new BoxDecoration(image: new DecorationImage(image: new AssetImage("assets/eventpic.jpg"), fit: BoxFit.cover),
+                      borderRadius: BorderRadius.circular(10.0)),
                           child: Material(
                             color: Colors.transparent,
                             child: InkWell(
