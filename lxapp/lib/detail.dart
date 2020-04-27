@@ -146,8 +146,10 @@ class _DetailState extends State<Detail> {
                         
                         
                       ),
-                      Image.asset('assets/maps.jpg'),
-                      
+                      Padding(
+                        padding: const EdgeInsets.only(left: 13.0, right: 13.0),
+                      child: Image.asset('assets/maps.jpg'),
+                      ),
                       ListTile(
                         
                         title: Text("F1, LX Building",
@@ -162,7 +164,7 @@ class _DetailState extends State<Detail> {
                     Flexible(
                         child: InkWell(
                       child: Container(
-                        width: max(0, 355),
+                        width: max(0, 390),
                         height: ScreenUtil.getInstance().setHeight(100),
                         decoration: BoxDecoration(
                             gradient: LinearGradient(
