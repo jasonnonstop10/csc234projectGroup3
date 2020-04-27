@@ -124,7 +124,7 @@ class _DetailState extends State<Detail> {
                       ),
                       ListTile(
                         
-                        title: Text("Free directories: directories are perfect for customers that are searching for a particular topic. What’s great about them is that you only have to post once and they are good for long periods of time. It saves a lot of your time when you don’t have to resubmit your information every week…",
+                        title: Text("July 24, 2019 Customers that are searching for a particular topic. What’s great about them is that you only have…",
                             style: TextStyle(fontFamily: "Work-regular")),
                         
                         
@@ -144,13 +144,8 @@ class _DetailState extends State<Detail> {
                         
                         
                       ),
-                      ListTile(
-                        
-                        title: Text("Map Here",
-                            style: TextStyle(fontFamily: "Work-regular")),
-                        
-                        
-                      ),
+                      Image.asset('assets/maps.jpg'),
+                      
                       ListTile(
                         
                         title: Text("F1, LX Building",
