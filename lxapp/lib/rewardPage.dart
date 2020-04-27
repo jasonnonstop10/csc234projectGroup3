@@ -50,7 +50,7 @@ class _RewardPageState extends State<RewardPage> {
                           padding: const EdgeInsets.only(top: 130.0,right: 50),
                           width: max(0,150),
                           height: ScreenUtil.getInstance().setHeight(200),
-                          decoration: new BoxDecoration(image: new DecorationImage(image: new AssetImage("assets/eventpic.jpg"), fit: BoxFit.cover),
+                          decoration: new BoxDecoration(image: new DecorationImage(image: new AssetImage("assets/pizza.jpg"), fit: BoxFit.cover),
                       borderRadius: BorderRadius.circular(10.0)),
                           child: Material(
                             color: Colors.transparent,
