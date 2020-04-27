@@ -199,7 +199,7 @@ class _HomePageState extends State<HomePage> {
                       )],
                   ),
                   SizedBox(
-                    height: ScreenUtil.getInstance().setHeight(40),
+                    height: ScreenUtil.getInstance().setHeight(160),
                   ),
                 ],
               ),

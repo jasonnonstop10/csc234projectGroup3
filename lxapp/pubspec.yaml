@@ -57,6 +57,7 @@ flutter:
    - assets/eventpic2.jpg
    - assets/maps.jpg
    - assets/eventpiclong.jpg
+   - assets/pizza.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.io/assets-and-images/#resolution-aware.
