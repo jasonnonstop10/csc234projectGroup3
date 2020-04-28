@@ -79,11 +79,6 @@ class _SchesdulePageState extends State<SchesdulePage> {
                                   builder: (context) => MapPage()),
                             );},
                                     ),
-                                    IconButton(
-                                      icon: Icon(Icons.center_focus_strong),
-                                      
-                                      onPressed: () {},
-                                    ),
                                   ],
                                 ),
                               ],
@@ -121,11 +116,6 @@ class _SchesdulePageState extends State<SchesdulePage> {
                                     IconButton(
                                       icon: Icon(Icons.map),
                                      
-                                      onPressed: () {},
-                                    ),
-                                    IconButton(
-                                      icon: Icon(Icons.center_focus_strong),
-                                      
                                       onPressed: () {},
                                     ),
                                   ],

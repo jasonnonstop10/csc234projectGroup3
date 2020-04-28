@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_login_page_ui/rewardPage.dart';
 import 'package:flutter_login_page_ui/homePage.dart';
 import 'package:flutter_login_page_ui/profilePage.dart';
 import 'package:flutter_login_page_ui/schesdulePage.dart';
@@ -14,7 +13,6 @@ class _MenuPageState extends State<MenuPage> {
   final List<Widget> _children = [
     HomePage(),
     SchesdulePage(),
-    RewardPage(),
     ProfilePage(),
   ];
 
@@ -35,11 +33,6 @@ class _MenuPageState extends State<MenuPage> {
           new BottomNavigationBarItem(
             icon: Icon(Icons.schedule),
             title: Text("Schesdule",style: TextStyle(
-                              fontFamily: "Work-bold")),
-          ),
-          new BottomNavigationBarItem(
-            icon: Icon(Icons.local_activity),
-            title: Text("Reward",style: TextStyle(
                               fontFamily: "Work-bold")),
           ),
           BottomNavigationBarItem(
