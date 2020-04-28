@@ -1,6 +1,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_login_page_ui/mapPage.dart';
 import 'package:flutter_login_page_ui/schesdulePage.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -160,10 +161,20 @@ class _DetailState extends State<Detail> {
                         
                         
                       ),
-                      Padding(
-                        padding: const EdgeInsets.only(left: 13.0, right: 13.0),
-                      child: Image.asset('assets/maps.jpg'),
+                      
+                      GestureDetector(
+                        
+                        child: Hero(
+                          tag: 'imageHero',
+                          child: Image.asset('assets/maps.jpg'),
+                        ),
+                        onTap: () {
+                                Route route = MaterialPageRoute(
+                                    builder: (context) => MapPage());
+                                Navigator.push(context, route);
+                              },
                       ),
+                      
                       ListTile(
                         
                         title: Text("F1, LX Building",
