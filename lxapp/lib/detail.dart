@@ -43,7 +43,7 @@ class _DetailState extends State<Detail> {
                 Padding(
                   padding: const EdgeInsets.only(left: 0.0, right: 130.0),
                
-                  child: Text("Brightlight Festival",
+                  child: Text("SIT DD",
                       style: TextStyle(
                           color: Colors.white,
                           fontSize: ScreenUtil.getInstance().setSp(45),
@@ -104,7 +104,7 @@ class _DetailState extends State<Detail> {
                       ),
                       ListTile(
                         
-                        title: Text("Free directories: directories are perfect for customers that are searching for a particular topic. What’s great about them is that you only have to post once and they are good for long periods of time. It saves a lot of your time when you don’t have to resubmit your information every week…",
+                        title: Text("",
                             style: TextStyle(fontFamily: "Work-regular")),
                         
                         

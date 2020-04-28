@@ -171,7 +171,7 @@ class _HomePageState extends State<HomePage> {
                           padding: const EdgeInsets.only(top: 130.0,right: 70),
                           width: max(0, 385),
                           height: ScreenUtil.getInstance().setHeight(400),
-                          decoration: new BoxDecoration(image: new DecorationImage(image: new AssetImage("assets/eventpic2.jpg"), fit: BoxFit.cover),
+                          decoration: new BoxDecoration(image: new DecorationImage(image: new AssetImage("assets/eventpic2.gif"), fit: BoxFit.cover),
                       borderRadius: BorderRadius.circular(10.0)),
                           child: Material(
                             color: Colors.transparent,
