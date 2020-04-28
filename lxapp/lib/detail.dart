@@ -1,6 +1,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_login_page_ui/schesdulePage.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 Widget horizontalLine() => Padding(
@@ -179,7 +180,12 @@ class _DetailState extends State<Detail> {
                         child: Material(
                           color: Colors.transparent,
                           child: InkWell(
-                            onTap: () {},
+                            onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => SchesdulePage()));
+                        },
                             child: Center(
                               child: Text("Join",
                                   style: TextStyle(
