@@ -63,45 +63,47 @@ class _HomePageState extends State<HomePage> {
                               fontSize: ScreenUtil.getInstance().setSp(56)))),
                   
                   SizedBox(height: ScreenUtil.getInstance().setHeight(40)),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      Flexible(
-                      child: InkWell(
-                        child: Container(
-                          padding: const EdgeInsets.only(top: 130.0,right: 70),
-                          width: max(0, 385),
-                          height: ScreenUtil.getInstance().setHeight(400),
-                          decoration: new BoxDecoration(image: new DecorationImage(image: new AssetImage("assets/eventpic.jpg"), fit: BoxFit.cover),
-                      borderRadius: BorderRadius.circular(10.0)),
-                          child: Material(
-                            color: Colors.transparent,
-                            child: InkWell(
+                  Card(
+                    elevation: 4.0,
+                    margin: const EdgeInsets.fromLTRB(1.0, 8.0, 1.0, 8.0),
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10.0)),
+                    child: Column(
+                      children: <Widget>[
+                        Image.asset('assets/eventpic1.jpg'),
+                        ListTile(
+                         
+                          title: Text("SIT DD",
+                              style: TextStyle(fontFamily: "Work-bold",fontSize: 30,color: Color(0xFF373A42))),
+                          
                               onTap: () {
                                 Route route = MaterialPageRoute(
                                     builder: (context) => Detail());
                                 Navigator.push(context, route);
                               },
-                              child: Center(
-                                child: Text("FRIDAY AUG 24, 9AM \nBrightlight Music Festival",
-                                    style: TextStyle(
-                                        color: Colors.white,
-                                        fontFamily: "Work-Bold",
-                                        fontSize: 18,
-                                        letterSpacing: 1.0,
-                                        )),
-                                        
-                                        
                               
-                              ), 
-                              
-                            ),
-                            
-                          ),
+                          
                         ),
-                      )
-                      )],
+                        ListTile(
+                         
+                          title: Text("Friday AUG 24, 9 AM ",
+                              style: TextStyle(fontFamily: "Work-bold",fontSize: 16,color: Color(0xFF80848B))),
+                          
+                              onTap: () {
+                                Route route = MaterialPageRoute(
+                                    builder: (context) => Detail());
+                                Navigator.push(context, route);
+                              },
+                              
+                          
+                        ),
+                        
+                       
+                      ],
+                    ),
+                    
                   ),
+                  
                   SizedBox(
                     height: ScreenUtil.getInstance().setHeight(40),
                   ),
@@ -114,41 +116,45 @@ class _HomePageState extends State<HomePage> {
                               fontSize: ScreenUtil.getInstance().setSp(56)))),
                   
                   SizedBox(height: ScreenUtil.getInstance().setHeight(40)),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                     Flexible(
-                      child: InkWell(
-                        child: Container(
-                          padding: const EdgeInsets.only(top: 130.0,right: 70),
-                          width: max(0, 385),
-                          height: ScreenUtil.getInstance().setHeight(400),
-                          decoration: new BoxDecoration(image: new DecorationImage(image: new AssetImage("assets/eventpic1.jpg"), fit: BoxFit.cover),
-                      borderRadius: BorderRadius.circular(10.0)),
-                          child: Material(
-                            color: Colors.transparent,
-                            child: InkWell(
+                  Card(
+                    elevation: 4.0,
+                    margin: const EdgeInsets.fromLTRB(1.0, 8.0, 1.0, 8.0),
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10.0)),
+                    child: Column(
+                      children: <Widget>[
+                        Image.asset('assets/eventpic1.jpg'),
+                        ListTile(
+                         
+                          title: Text("SIT DD",
+                              style: TextStyle(fontFamily: "Work-bold",fontSize: 30,color: Color(0xFF373A42))),
+                          
                               onTap: () {
-                                
+                                Route route = MaterialPageRoute(
+                                    builder: (context) => Detail());
+                                Navigator.push(context, route);
                               },
-                              child: Center(
-                                child: Text("FRIDAY AUG 24, 9AM \nBrightlight Music Festival",
-                                    style: TextStyle(
-                                        color: Colors.white,
-                                        fontFamily: "Work-Bold",
-                                        fontSize: 18,
-                                        letterSpacing: 1.0)),
-                                        
-                                        
-                              ),
                               
-                              
-                            ),
-                            
-                          ),
+                          
                         ),
-                      )
-                     )],
+                        ListTile(
+                         
+                          title: Text("Friday AUG 24, 9 AM ",
+                              style: TextStyle(fontFamily: "Work-bold",fontSize: 16,color: Color(0xFF80848B))),
+                          
+                              onTap: () {
+                                Route route = MaterialPageRoute(
+                                    builder: (context) => Detail());
+                                Navigator.push(context, route);
+                              },
+                              
+                          
+                        ),
+                        
+                       
+                      ],
+                    ),
+                    
                   ),
                   SizedBox(
                     height: ScreenUtil.getInstance().setHeight(40),
@@ -162,41 +168,45 @@ class _HomePageState extends State<HomePage> {
                               fontSize: ScreenUtil.getInstance().setSp(56)))),
                   
                   SizedBox(height: ScreenUtil.getInstance().setHeight(40)),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      Flexible(
-                      child:InkWell(
-                        child: Container(
-                          padding: const EdgeInsets.only(top: 130.0,right: 70),
-                          width: max(0, 385),
-                          height: ScreenUtil.getInstance().setHeight(400),
-                          decoration: new BoxDecoration(image: new DecorationImage(image: new AssetImage("assets/eventpic2.gif"), fit: BoxFit.cover),
-                      borderRadius: BorderRadius.circular(10.0)),
-                          child: Material(
-                            color: Colors.transparent,
-                            child: InkWell(
+                  Card(
+                    elevation: 4.0,
+                    margin: const EdgeInsets.fromLTRB(1.0, 8.0, 1.0, 8.0),
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10.0)),
+                    child: Column(
+                      children: <Widget>[
+                        Image.asset('assets/eventpic2.gif'),
+                        ListTile(
+                         
+                          title: Text("Innovation for a green future",
+                              style: TextStyle(fontFamily: "Work-bold",fontSize: 30,color: Color(0xFF373A42))),
+                          
                               onTap: () {
-                                
+                                Route route = MaterialPageRoute(
+                                    builder: (context) => Detail());
+                                Navigator.push(context, route);
                               },
-                              child: Center(
-                                child: Text("FRIDAY AUG 24, 9AM \nBrightlight Music Festival",
-                                    style: TextStyle(
-                                        color: Colors.white,
-                                        fontFamily: "Work-bold",
-                                        fontSize: 18,
-                                        letterSpacing: 1.0)),
-                                        
-                                        
-                              ),
                               
-                              
-                            ),
-                            
-                          ),
+                          
                         ),
-                      )
-                      )],
+                        ListTile(
+                         
+                          title: Text("Mondat AUG 27, 10 AM ",
+                              style: TextStyle(fontFamily: "Work-bold",fontSize: 16,color: Color(0xFF80848B))),
+                          
+                              onTap: () {
+                                Route route = MaterialPageRoute(
+                                    builder: (context) => Detail());
+                                Navigator.push(context, route);
+                              },
+                              
+                          
+                        ),
+                        
+                       
+                      ],
+                    ),
+                    
                   ),
                   SizedBox(
                     height: ScreenUtil.getInstance().setHeight(160),
