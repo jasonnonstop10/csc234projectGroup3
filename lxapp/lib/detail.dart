@@ -29,7 +29,7 @@ class _DetailState extends State<Detail> {
         resizeToAvoidBottomPadding: false,
         body: SingleChildScrollView(
           child: Container(
-            decoration: new BoxDecoration(image: new DecorationImage(image: new AssetImage("assets/eventpiclong.jpg"), fit: BoxFit.cover)),
+            decoration: new BoxDecoration(image: new DecorationImage(image: new AssetImage("assets/eventpic.jpg"), fit: BoxFit.cover)),
           child: Padding(
             padding: EdgeInsets.only(left: 0.0, right: 0.0, top: 120.0),
             child: Column(
@@ -41,7 +41,7 @@ class _DetailState extends State<Detail> {
                   height: ScreenUtil.getInstance().setHeight(180),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(left: 0.0, right: 130.0),
+                  padding: const EdgeInsets.only(left: 0.0, right: 170.0),
                
                   child: Text("SIT DD",
                       style: TextStyle(
