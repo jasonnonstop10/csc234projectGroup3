@@ -10,8 +10,6 @@ PODS:
   - firebase_core (0.0.1):
     - Firebase/Core
     - Flutter
-  - firebase_core_web (0.1.0):
-    - Flutter
   - FirebaseAnalytics (6.4.1):
     - FirebaseCore (~> 6.6)
     - FirebaseInstallations (~> 1.1)
@@ -79,7 +77,6 @@ PODS:
 DEPENDENCIES:
   - barcode_scan (from `.symlinks/plugins/barcode_scan/ios`)
   - firebase_core (from `.symlinks/plugins/firebase_core/ios`)
-  - firebase_core_web (from `.symlinks/plugins/firebase_core_web/ios`)
   - Flutter (from `Flutter`)
   - path_provider (from `.symlinks/plugins/path_provider/ios`)
 
@@ -104,8 +101,6 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/barcode_scan/ios"
   firebase_core:
     :path: ".symlinks/plugins/firebase_core/ios"
-  firebase_core_web:
-    :path: ".symlinks/plugins/firebase_core_web/ios"
   Flutter:
     :path: Flutter
   path_provider:
@@ -114,8 +109,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   barcode_scan: 33f586d02270046fc6559135038b34b5754eaa4f
   Firebase: 32f9520684e87c7af3f0704f7f88042626d6b536
-  firebase_core: 0d8be0e0d14c4902953aeb5ac5d7316d1fe4b978
-  firebase_core_web: d501d8b946b60c8af265428ce483b0fff5ad52d1
+  firebase_core: a8a3fe72627891cb05558a6ba230b2061e75e18e
   FirebaseAnalytics: 83f822fd0d33a46f49f89b8c3ab16ab4d89df08a
   FirebaseCore: 9aca0f1fffb405176ba15311a5621fcde4106fcf
   FirebaseCoreDiagnostics: 13a6564cd6d5375066bbc8940cc1753af24497f3
