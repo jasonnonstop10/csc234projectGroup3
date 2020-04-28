@@ -131,7 +131,7 @@ class _DetailState extends State<Detail> {
                       ),
                       ListTile(
                         
-                        title: Text("",
+                        title: Text("SIT DD (SIT Digital for social Distancing) program, led by Assoc. Prof. Dr. Wachirasak Vanichcha, Deputy Dean for Administration. Will talk about Online meeting by the Webex program of the company CISCO including answers to questions.",
                             style: TextStyle(fontFamily: "Work-regular")),
                         
                         
