@@ -30,37 +30,24 @@ class _DetailState extends State<Detail> {
       moveToLastScreen();
     },
       child:Scaffold(
-      appBar: AppBar(
-      title: new Text(
-      "",
-      style: const TextStyle(
-      color:  const Color(0xFF373A42),
-      fontWeight: FontWeight.w500,
-      fontFamily: "Work-bold",
-      fontStyle:  FontStyle.normal,
-      fontSize: 32.0
-
-      )),
-      backgroundColor: Colors.transparent,
-      elevation: 0.0,
-      leading: IconButton(icon: Icon(
-      Icons.arrow_back_ios,
-      color:  const Color(0xFFFFFFFF)),
-      onPressed: (){
-      moveToLastScreen();
-      },
-      ),
-      ),
+      
         backgroundColor: Colors.transparent,
         resizeToAvoidBottomPadding: false,
         body: SingleChildScrollView(
           child: Container(
-
-            decoration: new BoxDecoration(image: new DecorationImage(image: new AssetImage("assets/eventpic.jpg"), fit: BoxFit.cover)),
+            
+            decoration: new BoxDecoration(image: new DecorationImage(image: new AssetImage("assets/eventpiclong.jpg"), fit: BoxFit.cover)),
           child: Padding(
-            padding: EdgeInsets.only(left: 0.0, right: 0.0, top: 120.0),
+            padding: EdgeInsets.only(left: 0.0, right: 0.0, top: 60.0),
             child: Column(
+              
               children: <Widget>[
+                Align(
+                  alignment: Alignment.topLeft,
+                child: IconButton(icon: new Icon(Icons.arrow_back_ios),color:  const Color(0xFFFFFFFF),onPressed: (){
+      moveToLastScreen();
+      },
+                )),
                 Row(
                   children: <Widget>[],
                 ),
