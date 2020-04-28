@@ -42,7 +42,7 @@ class _DetailState extends State<Detail> {
                   height: ScreenUtil.getInstance().setHeight(180),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(left: 0.0, right: 170.0),
+                  padding: const EdgeInsets.only(left: 0.0, right: 300.0),
                
                   child: Text("SIT DD",
                       style: TextStyle(

@@ -19,11 +19,16 @@ class _MapPageState extends State<MapPage> {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
-        body: Stack(fit: StackFit.expand, children: <Widget>[
+        body: Stack(fit: StackFit.expand,
+            children: <Widget>[
       SingleChildScrollView(
           child: Padding(
-              padding: EdgeInsets.only(left: 28.0, right: 28.0, top: 0.0),
-              child: Column(children: <Widget>[
+              padding: EdgeInsets.only(left: 50.0, right: 28.0, top: 0.0),
+              child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisSize: MainAxisSize.max,
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: <Widget>[
                 Row(
                   children: <Widget>[],
                 ),
@@ -39,8 +44,30 @@ class _MapPageState extends State<MapPage> {
                             fontSize: ScreenUtil.getInstance().setSp(56)))),
                 SizedBox(height: ScreenUtil.getInstance().setHeight(50)),
                 Row(children:<Widget>[
-                    Image.network(""),
-                ])
+                    Image.asset("assets/lx1.jpg",width: 300,),
+
+                ]),
+                SizedBox(height: ScreenUtil.getInstance().setHeight(50)),
+                Row(children:<Widget>[
+                  Image.asset("assets/lx2.jpg",width: 300,),
+
+                ]),
+                SizedBox(height: ScreenUtil.getInstance().setHeight(50)),
+                Row(children:<Widget>[
+                  Image.asset("assets/lx3.jpg",width: 300,),
+
+                ]),
+                SizedBox(height: ScreenUtil.getInstance().setHeight(50)),
+                Row(children:<Widget>[
+                  Image.asset("assets/lx4.jpg",width: 300,),
+
+                ]),
+                SizedBox(height: ScreenUtil.getInstance().setHeight(50)),
+                Row(children:<Widget>[
+                  Image.asset("assets/lx5.jpg",width: 300,),
+
+                ]),
+                    SizedBox(height: ScreenUtil.getInstance().setHeight(50)),
               ])))
     ]));
   }
