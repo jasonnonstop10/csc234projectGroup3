@@ -25,11 +25,37 @@ class _DetailState extends State<Detail> {
     ScreenUtil.instance = ScreenUtil.getInstance()..init(context);
     ScreenUtil.instance =
         ScreenUtil(width: 750, height: 1334, allowFontScaling: true);
-    return new Scaffold(
+    return WillPopScope(
+        onWillPop: () {
+      moveToLastScreen();
+    },
+      child:Scaffold(
+      appBar: AppBar(
+      title: new Text(
+      "",
+      style: const TextStyle(
+      color:  const Color(0xFF373A42),
+      fontWeight: FontWeight.w500,
+      fontFamily: "Work-bold",
+      fontStyle:  FontStyle.normal,
+      fontSize: 32.0
+
+      )),
+      backgroundColor: Colors.transparent,
+      elevation: 0.0,
+      leading: IconButton(icon: Icon(
+      Icons.arrow_back_ios,
+      color:  const Color(0xFFFFFFFF)),
+      onPressed: (){
+      moveToLastScreen();
+      },
+      ),
+      ),
         backgroundColor: Colors.transparent,
         resizeToAvoidBottomPadding: false,
         body: SingleChildScrollView(
           child: Container(
+
             decoration: new BoxDecoration(image: new DecorationImage(image: new AssetImage("assets/eventpic.jpg"), fit: BoxFit.cover)),
           child: Padding(
             padding: EdgeInsets.only(left: 0.0, right: 0.0, top: 120.0),
@@ -212,6 +238,9 @@ class _DetailState extends State<Detail> {
             ),
           ),
           ),
-        ));
+        )));
+  }
+  void moveToLastScreen() {
+    Navigator.pop(context);
   }
 }
