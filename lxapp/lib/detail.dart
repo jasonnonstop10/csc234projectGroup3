@@ -56,9 +56,9 @@ class _DetailState extends State<Detail> {
                   height: ScreenUtil.getInstance().setHeight(180),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(left: 0.0, right: 100.0),
+                  padding: const EdgeInsets.only(left: 0.0, right: 70.0),
                
-                  child: Text("SIT DD: Quiz in Microsoft Team",
+                  child: Text("SIT DD: Quiz in MS Team",
                       style: TextStyle(
                           color: Colors.white,
                           fontSize: ScreenUtil.getInstance().setSp(45),
@@ -67,7 +67,7 @@ class _DetailState extends State<Detail> {
                 
                 ),
                 SizedBox(
-                  height: ScreenUtil.getInstance().setHeight(10),
+                  height: ScreenUtil.getInstance().setHeight(0),
                 ),
                 Padding(
                   padding: const EdgeInsets.only(left: 0.0, right: 240.0),
@@ -91,7 +91,7 @@ class _DetailState extends State<Detail> {
                           letterSpacing: .6)),
                 ),
                 SizedBox(
-                  height: ScreenUtil.getInstance().setHeight(5),
+                  height: ScreenUtil.getInstance().setHeight(25),
                 ),
                 Padding(
                   padding: const EdgeInsets.only(left: 0.0, right: 323.0),
