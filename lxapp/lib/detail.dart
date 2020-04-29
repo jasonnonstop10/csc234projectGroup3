@@ -56,9 +56,9 @@ class _DetailState extends State<Detail> {
                   height: ScreenUtil.getInstance().setHeight(180),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(left: 0.0, right: 300.0),
+                  padding: const EdgeInsets.only(left: 0.0, right: 100.0),
                
-                  child: Text("SIT DD",
+                  child: Text("SIT DD: Quiz in Microsoft Team",
                       style: TextStyle(
                           color: Colors.white,
                           fontSize: ScreenUtil.getInstance().setSp(45),

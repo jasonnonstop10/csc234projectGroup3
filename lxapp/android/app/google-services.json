@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "24759973068",
+    "firebase_url": "https://lx-application-ca187.firebaseio.com",
+    "project_id": "lx-application-ca187",
+    "storage_bucket": "lx-application-ca187.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:24759973068:android:e1db1e331c7efe26befe69",
+        "android_client_info": {
+          "package_name": "com.example.flutter_login_page_ui"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "24759973068-ok5k6ensslffnghcl7c394osirq0jigt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBArvZ1LC8dIn6_vUlSV2JmPmMMhzkn3Ys"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "24759973068-ok5k6ensslffnghcl7c394osirq0jigt.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "24759973068-0m2v78vqcvird392tt28geb0r039hbbe.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.flutterLoginPageUi"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
