@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_login_page_ui/main.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'qrScanner.dart';
+
 
 Widget horizontalLine() => Padding(
       padding: EdgeInsets.symmetric(horizontal: 16.0),

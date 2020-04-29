@@ -101,7 +101,7 @@ class _SignupPageState extends State<SignupPage> {
                           borderSide: BorderSide(
                               color: Color(0xFFfd7f70), width: 3.0),
                         ),
-                        hintText: "example@kmutt.ac.th",
+                        hintText: "example@mail.kmutt.ac.th",
                         hintStyle:
                             TextStyle(color: Colors.grey, fontSize: 12.0,fontFamily: "Work-thin")),
                   ),
@@ -145,7 +145,8 @@ class _SignupPageState extends State<SignupPage> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
-                      InkWell(
+                      Flexible(
+                        child:InkWell(
                         child: Container(
                           width: max(0, 355),
                           height: ScreenUtil.getInstance().setHeight(100),
@@ -180,7 +181,8 @@ class _SignupPageState extends State<SignupPage> {
                             ),
                           ),
                         ),
-                      )
+                        ),
+                      ),
                     ],
                   ),
                   SizedBox(

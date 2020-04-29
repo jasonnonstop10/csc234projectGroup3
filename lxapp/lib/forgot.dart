@@ -111,7 +111,8 @@ class _ForgotPageState extends State<ForgotPage> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: <Widget>[
-                      InkWell(
+                       Flexible(
+                        child: InkWell(
                         child: Container(
                           width: max(0, 355),
                           height: ScreenUtil.getInstance().setHeight(100),
@@ -142,7 +143,8 @@ class _ForgotPageState extends State<ForgotPage> {
                             ),
                           ),
                         ),
-                      )
+                      ),
+                      ),
                     ],
                   ),
                   SizedBox(

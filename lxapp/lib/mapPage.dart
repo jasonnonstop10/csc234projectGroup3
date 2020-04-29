@@ -21,7 +21,7 @@ class _MapPageState extends State<MapPage> {
   @override
   Widget build(BuildContext context) {
     return WillPopScope(
-      onWillPop: () {
+      onWillPop: () async {
       moveToLastScreen();
     },
         child: Scaffold(
@@ -71,8 +71,9 @@ class _MapPageState extends State<MapPage> {
                               color: Color(0xFFfc315e),
                               fontFamily: "Work-Medium")),
                     ),
+                
                 Row(children:<Widget>[
-                    Image.asset("assets/lx1.jpg",width: 300,),
+                    Image.asset("assets/lx1.jpg",width: ScreenUtil.getInstance().setHeight(500),),
 
                 ]),
                 SizedBox(height: ScreenUtil.getInstance().setHeight(50)),
@@ -84,8 +85,9 @@ class _MapPageState extends State<MapPage> {
                               color: Color(0xFFfc315e),
                               fontFamily: "Work-Medium")),
                     ),
-                Row(children:<Widget>[
-                  Image.asset("assets/lx2.jpg",width: 300,),
+               
+               Row(children:<Widget>[
+                  Image.asset("assets/lx2.jpg",width: ScreenUtil.getInstance().setHeight(500),),
 
                 ]),
 
@@ -98,8 +100,9 @@ class _MapPageState extends State<MapPage> {
                               color: Color(0xFFfc315e),
                               fontFamily: "Work-Medium")),
                     ),
+                
                 Row(children:<Widget>[
-                  Image.asset("assets/lx3.jpg",width: 300,),
+                  Image.asset("assets/lx3.jpg",width: ScreenUtil.getInstance().setHeight(500),),
 
                 ]),
                 SizedBox(height: ScreenUtil.getInstance().setHeight(50)),
@@ -111,8 +114,9 @@ class _MapPageState extends State<MapPage> {
                               color: Color(0xFFfc315e),
                               fontFamily: "Work-Medium")),
                     ),
-                Row(children:<Widget>[
-                  Image.asset("assets/lx4.jpg",width: 300,),
+                
+                  Row(children:<Widget>[
+                  Image.asset("assets/lx4.jpg",width: ScreenUtil.getInstance().setHeight(500),),
 
                 ]),
                 SizedBox(height: ScreenUtil.getInstance().setHeight(50)),
@@ -124,8 +128,8 @@ class _MapPageState extends State<MapPage> {
                               color: Color(0xFFfc315e),
                               fontFamily: "Work-Medium")),
                     ),
-                Row(children:<Widget>[
-                  Image.asset("assets/lx5.jpg",width: 300,),
+                 Row(children:<Widget>[
+                  Image.asset("assets/lx5.jpg",width: ScreenUtil.getInstance().setHeight(500),),
 
                 ]),
                     SizedBox(height: ScreenUtil.getInstance().setHeight(50)),
