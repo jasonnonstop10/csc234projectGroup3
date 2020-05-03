@@ -4,7 +4,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_login_page_ui/grid.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'Widgets/FormCard.dart';
+
 
 import 'finishReg.dart';
 
@@ -93,7 +93,52 @@ class _MyAppState extends State<MyApp> {
                   SizedBox(
                     height: ScreenUtil.getInstance().setHeight(350),
                   ),
-                  FormCard(),
+                 
+                  
+                  SizedBox(height: ScreenUtil.getInstance().setHeight(40)),
+                  
+                  
+                  SizedBox(height: ScreenUtil.getInstance().setHeight(40)),
+                  Align(
+                      alignment: Alignment.centerLeft,
+                      child: Text("Email",
+                          style: TextStyle(
+                              color: Color(0xFFfd7f70),
+                              fontFamily: "Work-medium",
+                              fontSize: ScreenUtil.getInstance().setSp(26)))),
+                  TextField(
+                    
+                    decoration: InputDecoration(
+                        focusedBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(
+                              color: Color(0xFFfd7f70), width: 3.0),
+                        ),
+                        hintText: "example@mail.kmutt.ac.th",
+                        hintStyle:
+                            TextStyle(color: Colors.grey, fontSize: 12.0,fontFamily: "Work-thin")),
+                  ),
+                  SizedBox(height: ScreenUtil.getInstance().setHeight(40)),
+                  Align(
+                      alignment: Alignment.centerLeft,
+                      child: Text("Password",
+                          style: TextStyle(
+                              color: Color(0xFFfd7f70),
+                              fontFamily: "Work-medium",
+                              fontSize: ScreenUtil.getInstance().setSp(26)))),
+                  TextField(
+                    
+                    decoration: InputDecoration(
+                        focusedBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(
+                              color: Color(0xFFfd7f70), width: 3.0),
+                        ),
+                        hintText: "••••••••",
+                        hintStyle:
+                            TextStyle(color: Colors.grey, fontSize: 12.0)),
+                  ),
+                  SizedBox(height: ScreenUtil.getInstance().setHeight(40)),
+                  
+                 
                   Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: <Widget>[
