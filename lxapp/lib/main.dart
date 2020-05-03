@@ -32,7 +32,7 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  // final _auth = FirebaseAuth.instance;
+  final _auth = FirebaseAuth.instance;
   String email;
   String password;
   
@@ -67,31 +67,18 @@ class _MyAppState extends State<MyApp> {
     ScreenUtil.instance = ScreenUtil.getInstance()..init(context);
     ScreenUtil.instance =
         ScreenUtil(width: 750, height: 1334, allowFontScaling: true);
-    return new Scaffold(
-      backgroundColor: Colors.white,
-      resizeToAvoidBottomPadding: true,
-      body: Stack(
-        fit: StackFit.expand,
-        children: <Widget>[
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.end,
+        return new Scaffold(
+          backgroundColor: Colors.white,
+          resizeToAvoidBottomPadding: true,
+          body: Stack(
+            fit: StackFit.expand,
             children: <Widget>[
-              Padding(
-                padding: EdgeInsets.only(top: 20.0),
-                child: Image.asset("assets/image_01.png"),
-              ),
-              Expanded(
-                child: Container(),
-              ),
-            ],
-          ),
-          SingleChildScrollView(
-            child: Padding(
-              padding: EdgeInsets.only(left: 28.0, right: 28.0, top: 60.0),
-              child: Column(
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.end,
                 children: <Widget>[
-                  SizedBox(
-                    height: ScreenUtil.getInstance().setHeight(350),
+                  Padding(
+                    padding: EdgeInsets.only(top: 20.0),
+                    child: Image.asset("assets/image_01.png"),
                   ),
                  
                   
@@ -181,8 +168,17 @@ class _MyAppState extends State<MyApp> {
                           child: Material(
                             color: Colors.transparent,
                             child: RawMaterialButton(
-                              onPressed: () {
-                                Navigator.pushNamed(context, "/menu");
+                              onPressed: () async {
+                                print(this.email);
+                                print(this.password);
+                                try {
+                                  final user = await _auth.signInWithEmailAndPassword(email: email, password: password);
+                                  if (user != null) {
+                                    Navigator.pushNamed(context, "/menu");
+                                  }
+                                } catch (e) {
+                                  print(e);
+                                }
                               },
                               child: Center(
                                 child: Text("Login",
