@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_login_page_ui/finishReg.dart';
+import 'package:flutter_login_page_ui/main.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
@@ -209,8 +210,17 @@ class _SignupPageState extends State<SignupPage> {
                           child: Material(
                             color: Colors.transparent,
                             child: RawMaterialButton(
-                              
-                              onPressed: () {
+                              onPressed: () async {
+                                try {
+                                  final newUser = await _auth.createUserWithEmailAndPassword(email: email, password: password);
+                                  if (newUser != null) {
+                                    MaterialPageRoute (
+                                      builder: (context) => MyApp()
+                                    );
+                                  }
+                                } catch (e) {
+                                  print(e);
+                                }
                                 Route route = MaterialPageRoute(
                                     builder: (context) => FinishReg());
                                 Navigator.push(context, route);

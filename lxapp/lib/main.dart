@@ -32,7 +32,7 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  final _auth = FirebaseAuth.instance;
+  // final _auth = FirebaseAuth.instance;
   String email;
   String password;
   
