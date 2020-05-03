@@ -19,7 +19,12 @@ class SignupPage extends StatefulWidget {
 }
 
 class _SignupPageState extends State<SignupPage> {
-  @override
+  String name;
+  String std;
+  String email;
+  String password;
+
+  
   @override
   Widget build(BuildContext context) {
     ScreenUtil.instance = ScreenUtil.getInstance()..init(context);
@@ -78,6 +83,9 @@ class _SignupPageState extends State<SignupPage> {
                               fontFamily: "Work-medium",
                               fontSize: ScreenUtil.getInstance().setSp(26)))),
                   TextField(
+                    onChanged: (value) {
+                      name = value;
+                    },
                     decoration: InputDecoration(
                         focusedBorder: UnderlineInputBorder(
                           borderSide: BorderSide(
@@ -90,12 +98,36 @@ class _SignupPageState extends State<SignupPage> {
                   SizedBox(height: ScreenUtil.getInstance().setHeight(40)),
                   Align(
                       alignment: Alignment.centerLeft,
+                      child: Text("Student ID",
+                          style: TextStyle(
+                              color: Color(0xFFfd7f70),
+                              fontFamily: "Work-medium",
+                              fontSize: ScreenUtil.getInstance().setSp(26)))),
+                  TextField(
+                    onChanged: (value) {
+                      std = value;
+                    },
+                    decoration: InputDecoration(
+                        focusedBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(
+                              color: Color(0xFFfd7f70), width: 3.0),
+                        ),
+                        hintText: "Your Student Id",
+                        hintStyle:
+                            TextStyle(color: Colors.grey, fontSize: 12.0,fontFamily: "Work-thin")),
+                  ),
+                  SizedBox(height: ScreenUtil.getInstance().setHeight(40)),
+                  Align(
+                      alignment: Alignment.centerLeft,
                       child: Text("Email",
                           style: TextStyle(
                               color: Color(0xFFfd7f70),
                               fontFamily: "Work-medium",
                               fontSize: ScreenUtil.getInstance().setSp(26)))),
                   TextField(
+                    onChanged: (value) {
+                      email = value;
+                    },
                     decoration: InputDecoration(
                         focusedBorder: UnderlineInputBorder(
                           borderSide: BorderSide(
@@ -114,6 +146,10 @@ class _SignupPageState extends State<SignupPage> {
                               fontFamily: "Work-medium",
                               fontSize: ScreenUtil.getInstance().setSp(26)))),
                   TextField(
+                    obscureText: true,
+                    onChanged: (value) {
+                      password = value;
+                    },
                     decoration: InputDecoration(
                         focusedBorder: UnderlineInputBorder(
                           borderSide: BorderSide(
@@ -132,6 +168,7 @@ class _SignupPageState extends State<SignupPage> {
                               fontFamily: "Work-medium",
                               fontSize: ScreenUtil.getInstance().setSp(26)))),
                   TextField(
+                    obscureText: true,
                     decoration: InputDecoration(
                         focusedBorder: UnderlineInputBorder(
                           borderSide: BorderSide(
@@ -165,6 +202,7 @@ class _SignupPageState extends State<SignupPage> {
                           child: Material(
                             color: Colors.transparent,
                             child: InkWell(
+                              
                               onTap: () {
                                 Route route = MaterialPageRoute(
                                     builder: (context) => FinishReg());
