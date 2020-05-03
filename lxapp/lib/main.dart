@@ -1,5 +1,6 @@
 import 'dart:math';
 
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_login_page_ui/grid.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -31,6 +32,10 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+  final _auth = FirebaseAuth.instance;
+  String email;
+  String password;
+  
   Widget radioButton(bool isSelected) => Container(
         width: 16.0,
         height: 16.0,

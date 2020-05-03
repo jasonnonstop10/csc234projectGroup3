@@ -3,6 +3,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter_login_page_ui/finishReg.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 Widget horizontalLine() => Padding(
       padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -19,6 +20,7 @@ class SignupPage extends StatefulWidget {
 }
 
 class _SignupPageState extends State<SignupPage> {
+  final _auth = FirebaseAuth.instance;
   String name;
   String std;
   String email;
