@@ -135,8 +135,8 @@ class _MyAppState extends State<MyApp> {
                               ]),
                           child: Material(
                             color: Colors.transparent,
-                            child: InkWell(
-                              onTap: () {
+                            child: RawMaterialButton(
+                              onPressed: () {
                                 Navigator.pushNamed(context, "/menu");
                               },
                               child: Center(

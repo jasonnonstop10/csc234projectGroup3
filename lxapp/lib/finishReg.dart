@@ -118,8 +118,8 @@ class _FinishRegState extends State<FinishReg> {
                         child: Material(
                           
                           color: Colors.transparent,
-                          child: InkWell(
-                            onTap: (
+                          child: RawMaterialButton(
+                            onPressed: (
                               
                             ) {
                               Route route = MaterialPageRoute(

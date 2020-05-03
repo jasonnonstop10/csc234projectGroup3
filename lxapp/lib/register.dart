@@ -208,9 +208,9 @@ class _SignupPageState extends State<SignupPage> {
                               ]),
                           child: Material(
                             color: Colors.transparent,
-                            child: InkWell(
+                            child: RawMaterialButton(
                               
-                              onTap: () {
+                              onPressed: () {
                                 Route route = MaterialPageRoute(
                                     builder: (context) => FinishReg());
                                 Navigator.push(context, route);
