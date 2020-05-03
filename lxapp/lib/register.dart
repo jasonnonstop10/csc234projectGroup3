@@ -83,6 +83,7 @@ class _SignupPageState extends State<SignupPage> {
                               fontFamily: "Work-medium",
                               fontSize: ScreenUtil.getInstance().setSp(26)))),
                   TextField(
+                    keyboardType: TextInputType.text,
                     onChanged: (value) {
                       name = value;
                     },
@@ -104,6 +105,7 @@ class _SignupPageState extends State<SignupPage> {
                               fontFamily: "Work-medium",
                               fontSize: ScreenUtil.getInstance().setSp(26)))),
                   TextField(
+                    keyboardType: TextInputType.number,
                     onChanged: (value) {
                       std = value;
                     },
@@ -125,6 +127,7 @@ class _SignupPageState extends State<SignupPage> {
                               fontFamily: "Work-medium",
                               fontSize: ScreenUtil.getInstance().setSp(26)))),
                   TextField(
+                    keyboardType: TextInputType.emailAddress,
                     onChanged: (value) {
                       email = value;
                     },
@@ -146,6 +149,7 @@ class _SignupPageState extends State<SignupPage> {
                               fontFamily: "Work-medium",
                               fontSize: ScreenUtil.getInstance().setSp(26)))),
                   TextField(
+                    keyboardType: TextInputType.text,
                     obscureText: true,
                     onChanged: (value) {
                       password = value;
@@ -168,6 +172,7 @@ class _SignupPageState extends State<SignupPage> {
                               fontFamily: "Work-medium",
                               fontSize: ScreenUtil.getInstance().setSp(26)))),
                   TextField(
+                    keyboardType: TextInputType.text,
                     obscureText: true,
                     decoration: InputDecoration(
                         focusedBorder: UnderlineInputBorder(
