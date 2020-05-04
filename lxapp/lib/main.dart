@@ -81,11 +81,7 @@ class _MyAppState extends State<MyApp> {
                     child: Image.asset("assets/image_01.png"),
                   ),
                  
-                  
-                  SizedBox(height: ScreenUtil.getInstance().setHeight(40)),
-                  
-                  
-                  SizedBox(height: ScreenUtil.getInstance().setHeight(40)),
+                
                   Align(
                       alignment: Alignment.centerLeft,
                       child: Text("Email",
@@ -94,7 +90,9 @@ class _MyAppState extends State<MyApp> {
                               fontFamily: "Work-medium",
                               fontSize: ScreenUtil.getInstance().setSp(26)))),
                   TextField(
-                    
+                    onChanged: (value) {
+                      email = value;
+                    },
                     decoration: InputDecoration(
                         focusedBorder: UnderlineInputBorder(
                           borderSide: BorderSide(
@@ -113,7 +111,11 @@ class _MyAppState extends State<MyApp> {
                               fontFamily: "Work-medium",
                               fontSize: ScreenUtil.getInstance().setSp(26)))),
                   TextField(
-                    
+                    onChanged: (value) {
+                      password = value;
+                    },
+                    keyboardType: TextInputType.text,
+                    obscureText: true,
                     decoration: InputDecoration(
                         focusedBorder: UnderlineInputBorder(
                           borderSide: BorderSide(
@@ -169,8 +171,6 @@ class _MyAppState extends State<MyApp> {
                             color: Colors.transparent,
                             child: RawMaterialButton(
                               onPressed: () async {
-                                print(this.email);
-                                print(this.password);
                                 try {
                                   final user = await _auth.signInWithEmailAndPassword(email: email, password: password);
                                   if (user != null) {
@@ -268,8 +268,6 @@ class _MyAppState extends State<MyApp> {
                   ),
                 ],
               ),
-            ),
-          )
         ],
       ),
     );
