@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:flutter_login_page_ui/main.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'qrScanner.dart';
+
 
 Widget horizontalLine() => Padding(
       padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -64,14 +65,6 @@ class _ProfilePageState extends State<ProfilePage> {
                     child: Column(
                       children: <Widget>[
                         ListTile(
-                          leading: Icon(Icons.card_giftcard,
-                              color: Color(0xFFfc315e)),
-                          title: Text("Reward",
-                              style: TextStyle(fontFamily: "Work-bold")),
-                          trailing: Text("100 point"),
-                          onTap: () {},
-                        ),
-                        ListTile(
                           leading:
                               Icon(Icons.history, color: Color(0xFFfc315e)),
                           title: Text("History",
@@ -79,21 +72,6 @@ class _ProfilePageState extends State<ProfilePage> {
                           trailing: Icon(Icons.keyboard_arrow_right,
                               color: Color(0xFFfc315e)),
                           onTap: () {},
-                        ),
-                        ListTile(
-                          leading: Icon(Icons.aspect_ratio,
-                              color: Color(0xFFfc315e)),
-                          title: Text("QR code",
-                              style: TextStyle(fontFamily: "Work-bold")),
-                          trailing: Icon(Icons.keyboard_arrow_right,
-                              color: Color(0xFFfc315e)),
-                          onTap: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => QrScanner()),
-                            );
-                          },
                         ),
                         ListTile(
                           leading: Icon(Icons.lock_outline,
@@ -120,7 +98,14 @@ class _ProfilePageState extends State<ProfilePage> {
                               style: TextStyle(fontFamily: "Work-bold")),
                           trailing: Icon(Icons.keyboard_arrow_right,
                               color: Color(0xFFfc315e)),
-                          onTap: () {},
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => MyApp()
+                              )
+                            );
+                          },
                         ),
                       ],
                     ),

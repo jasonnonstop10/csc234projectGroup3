@@ -1,7 +1,7 @@
 
 
 import 'package:flutter/material.dart';
-import 'package:flutter_login_page_ui/grid.dart';
+import 'package:flutter_login_page_ui/menu.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 Widget horizontalLine() => Padding(
@@ -118,12 +118,12 @@ class _FinishRegState extends State<FinishReg> {
                         child: Material(
                           
                           color: Colors.transparent,
-                          child: InkWell(
-                            onTap: (
+                          child: RawMaterialButton(
+                            onPressed: (
                               
                             ) {
                               Route route = MaterialPageRoute(
-                                    builder: (context) => GridPage());
+                                    builder: (context) => MenuPage());
                                 Navigator.push(context, route);
                             },
                             child: Center(

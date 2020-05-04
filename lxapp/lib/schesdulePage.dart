@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
+import 'mapPage.dart';
+import 'detail.dart';
 Widget horizontalLine() => Padding(
       padding: EdgeInsets.symmetric(horizontal: 16.0),
       child: Container(
@@ -47,7 +48,7 @@ class _SchesdulePageState extends State<SchesdulePage> {
                               children: <Widget>[
                                 const ListTile(
                                   leading: Icon(Icons.calendar_today),
-                                  title: Text('Open Lx building',
+                                  title: Text('SIT DD: Quiz in Microsoft Team',
                                       style: TextStyle(
                                           fontFamily: "Work-bold",
                                           color: Colors.black)),
@@ -63,17 +64,20 @@ class _SchesdulePageState extends State<SchesdulePage> {
                                           style: TextStyle(
                                               fontFamily: "Work-bold",
                                       )),
-                                      onPressed: () {/* ... */},
+                                      onPressed: () {Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => Detail()),
+                            );},
                                     ),
                                     IconButton(
                                       icon: Icon(Icons.map),
                                      
-                                      onPressed: () {/* ... */},
-                                    ),
-                                    IconButton(
-                                      icon: Icon(Icons.center_focus_strong),
-                                      
-                                      onPressed: () {/* ... */},
+                                      onPressed: () {  Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => MapPage()),
+                            );},
                                     ),
                                   ],
                                 ),
@@ -82,49 +86,44 @@ class _SchesdulePageState extends State<SchesdulePage> {
                           ))
                 ]),
                 SizedBox(height: ScreenUtil.getInstance().setHeight(25)),
-                  Row(children: <Widget>[
-                  Flexible(
-
-                          child: Card(
-                            child: Column(
-                              mainAxisSize: MainAxisSize.min,
-                              children: <Widget>[
-                                const ListTile(
-                                  leading: Icon(Icons.calendar_today),
-                                  title: Text('Open Lx building',
-                                      style: TextStyle(
-                                          fontFamily: "Work-bold",
-                                          color: Colors.black)),
-                                  subtitle: Text('Lx building',
-                                      style: TextStyle(
-                                          fontFamily: "Work-bold",
-                                          color: Color(0xFFfc315e))),
-                                ),
-                                ButtonBar(
-                                  children: <Widget>[
-                                    FlatButton(
-                                      child: const Text('View detail',
-                                          style: TextStyle(
-                                              fontFamily: "Work-bold",
-                                      )),
-                                      onPressed: () {/* ... */},
-                                    ),
-                                    IconButton(
-                                      icon: Icon(Icons.map),
-                                     
-                                      onPressed: () {/* ... */},
-                                    ),
-                                    IconButton(
-                                      icon: Icon(Icons.center_focus_strong),
-                                      
-                                      onPressed: () {/* ... */},
-                                    ),
-                                  ],
-                                ),
-                              ],
-                            ),
-                          ))
-                ])
+//                  Row(children: <Widget>[
+//                  Flexible(
+//
+//                          child: Card(
+//                            child: Column(
+//                              mainAxisSize: MainAxisSize.min,
+//                              children: <Widget>[
+//                                const ListTile(
+//                                  leading: Icon(Icons.calendar_today),
+//                                  title: Text('Open Lx building',
+//                                      style: TextStyle(
+//                                          fontFamily: "Work-bold",
+//                                          color: Colors.black)),
+//                                  subtitle: Text('Lx building',
+//                                      style: TextStyle(
+//                                          fontFamily: "Work-bold",
+//                                          color: Color(0xFFfc315e))),
+//                                ),
+//                                ButtonBar(
+//                                  children: <Widget>[
+//                                    FlatButton(
+//                                      child: const Text('View detail',
+//                                          style: TextStyle(
+//                                              fontFamily: "Work-bold",
+//                                      )),
+//                                      onPressed: () {},
+//                                    ),
+//                                    IconButton(
+//                                      icon: Icon(Icons.map),
+//
+//                                      onPressed: () {},
+//                                    ),
+//                                  ],
+//                                ),
+//                              ],
+//                            ),
+//                          ))
+//                ])
               ])))
     ]));
   }

@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_login_page_ui/detail.dart';
 
@@ -42,7 +40,7 @@ class _HomePageState extends State<HomePage> {
           ),
           SingleChildScrollView(
             child: Padding(
-              padding: EdgeInsets.only(left: 28.0, right: 28.0, top: 0.0),
+              padding: EdgeInsets.only(left: 18.0, right: 18.0, top: 0.0),
               child: Column(
                 children: <Widget>[
                   Row(
@@ -63,53 +61,47 @@ class _HomePageState extends State<HomePage> {
                               fontSize: ScreenUtil.getInstance().setSp(56)))),
                   
                   SizedBox(height: ScreenUtil.getInstance().setHeight(40)),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      Flexible(
-                      child: InkWell(
-                        child: Container(
-                          width: max(0, 355),
-                          height: ScreenUtil.getInstance().setHeight(400),
-                          decoration: BoxDecoration(
-                              gradient: LinearGradient(colors: [
-                                Color(0xFFfd7f70),Color(0xFFfc315e)
-                                
-                              ]),
-                              borderRadius: BorderRadius.circular(10.0),
-                              boxShadow: [
-                                BoxShadow(
-                                    color: Color(0xFFfc315e).withOpacity(.5),
-                                    offset: Offset(5.0, 17.0),
-                                    blurRadius: 25.0)
-                              ]),
-                          child: Material(
-                            color: Colors.transparent,
-                            child: InkWell(
+                  Card(
+                    elevation: 4.0,
+                    margin: const EdgeInsets.fromLTRB(1.0, 8.0, 1.0, 8.0),
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10.0)),
+                    child: Column(
+                      children: <Widget>[
+                        Image.asset('assets/eventpic1.jpg'),
+                        ListTile(
+                         
+                          title: Text("SIT DD",
+                              style: TextStyle(fontFamily: "Work-bold",fontSize: 30,color: Color(0xFF373A42))),
+                          
                               onTap: () {
                                 Route route = MaterialPageRoute(
                                     builder: (context) => Detail());
                                 Navigator.push(context, route);
                               },
-                              child: Center(
-                                child: Text("FRIDAY AUG 24, 9AM \nBrightlight Music Festival",
-                                    style: TextStyle(
-                                        color: Colors.white,
-                                        fontFamily: "Work-medium",
-                                        fontSize: 18,
-                                        letterSpacing: 1.0)),
-                                        
-                                        
-                              ),
                               
-                              
-                            ),
-                            
-                          ),
+                          
                         ),
-                      )
-                      )],
+                        ListTile(
+                         
+                          title: Text("Friday AUG 24, 9 AM ",
+                              style: TextStyle(fontFamily: "Work-bold",fontSize: 16,color: Color(0xFF80848B))),
+                          
+                              onTap: () {
+                                Route route = MaterialPageRoute(
+                                    builder: (context) => Detail());
+                                Navigator.push(context, route);
+                              },
+                              
+                          
+                        ),
+                        
+                       
+                      ],
+                    ),
+                    
                   ),
+                  
                   SizedBox(
                     height: ScreenUtil.getInstance().setHeight(40),
                   ),
@@ -122,50 +114,45 @@ class _HomePageState extends State<HomePage> {
                               fontSize: ScreenUtil.getInstance().setSp(56)))),
                   
                   SizedBox(height: ScreenUtil.getInstance().setHeight(40)),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                     Flexible(
-                      child: InkWell(
-                        child: Container(
-                          width: max(0, 355),
-                          height: ScreenUtil.getInstance().setHeight(400),
-                          decoration: BoxDecoration(
-                              gradient: LinearGradient(colors: [
-                                Color(0xFFfd7f70),Color(0xFFfc315e)
-                                
-                              ]),
-                              borderRadius: BorderRadius.circular(10.0),
-                              boxShadow: [
-                                BoxShadow(
-                                    color: Color(0xFFfc315e).withOpacity(.5),
-                                    offset: Offset(5.0, 17.0),
-                                    blurRadius: 25.0)
-                              ]),
-                          child: Material(
-                            color: Colors.transparent,
-                            child: InkWell(
+                  Card(
+                    elevation: 4.0,
+                    margin: const EdgeInsets.fromLTRB(1.0, 8.0, 1.0, 8.0),
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10.0)),
+                    child: Column(
+                      children: <Widget>[
+                        Image.asset('assets/eventpic1.jpg'),
+                        ListTile(
+                         
+                          title: Text("SIT DD",
+                              style: TextStyle(fontFamily: "Work-bold",fontSize: 30,color: Color(0xFF373A42))),
+                          
                               onTap: () {
-                                
+                                Route route = MaterialPageRoute(
+                                    builder: (context) => Detail());
+                                Navigator.push(context, route);
                               },
-                              child: Center(
-                                child: Text("FRIDAY AUG 24, 9AM \nBrightlight Music Festival",
-                                    style: TextStyle(
-                                        color: Colors.white,
-                                        fontFamily: "Work-medium",
-                                        fontSize: 18,
-                                        letterSpacing: 1.0)),
-                                        
-                                        
-                              ),
                               
-                              
-                            ),
-                            
-                          ),
+                          
                         ),
-                      )
-                     )],
+                        ListTile(
+                         
+                          title: Text("Friday AUG 24, 9 AM ",
+                              style: TextStyle(fontFamily: "Work-bold",fontSize: 16,color: Color(0xFF80848B))),
+                          
+                              onTap: () {
+                                Route route = MaterialPageRoute(
+                                    builder: (context) => Detail());
+                                Navigator.push(context, route);
+                              },
+                              
+                          
+                        ),
+                        
+                       
+                      ],
+                    ),
+                    
                   ),
                   SizedBox(
                     height: ScreenUtil.getInstance().setHeight(40),
@@ -179,53 +166,48 @@ class _HomePageState extends State<HomePage> {
                               fontSize: ScreenUtil.getInstance().setSp(56)))),
                   
                   SizedBox(height: ScreenUtil.getInstance().setHeight(40)),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      Flexible(
-                      child:InkWell(
-                        child: Container(
-                          width: max(0, 355),
-                          height: ScreenUtil.getInstance().setHeight(400),
-                          decoration: BoxDecoration(
-                              gradient: LinearGradient(colors: [
-                                Color(0xFFfd7f70),Color(0xFFfc315e)
-                                
-                              ]),
-                              borderRadius: BorderRadius.circular(10.0),
-                              boxShadow: [
-                                BoxShadow(
-                                    color: Color(0xFFfc315e).withOpacity(.5),
-                                    offset: Offset(5.0, 17.0),
-                                    blurRadius: 25.0)
-                              ]),
-                          child: Material(
-                            color: Colors.transparent,
-                            child: InkWell(
+                  Card(
+                    elevation: 4.0,
+                    margin: const EdgeInsets.fromLTRB(1.0, 8.0, 1.0, 8.0),
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10.0)),
+                    child: Column(
+                      children: <Widget>[
+                        Image.asset('assets/eventpic2.gif'),
+                        ListTile(
+                         
+                          title: Text("Innovation for a green future",
+                              style: TextStyle(fontFamily: "Work-bold",fontSize: 30,color: Color(0xFF373A42))),
+                          
                               onTap: () {
-                                
+                                Route route = MaterialPageRoute(
+                                    builder: (context) => Detail());
+                                Navigator.push(context, route);
                               },
-                              child: Center(
-                                child: Text("FRIDAY AUG 24, 9AM \nBrightlight Music Festival",
-                                    style: TextStyle(
-                                        color: Colors.white,
-                                        fontFamily: "Work-medium",
-                                        fontSize: 18,
-                                        letterSpacing: 1.0)),
-                                        
-                                        
-                              ),
                               
-                              
-                            ),
-                            
-                          ),
+                          
                         ),
-                      )
-                      )],
+                        ListTile(
+                         
+                          title: Text("Mondat AUG 27, 10 AM ",
+                              style: TextStyle(fontFamily: "Work-bold",fontSize: 16,color: Color(0xFF80848B))),
+                          
+                              onTap: () {
+                                Route route = MaterialPageRoute(
+                                    builder: (context) => Detail());
+                                Navigator.push(context, route);
+                              },
+                              
+                          
+                        ),
+                        
+                       
+                      ],
+                    ),
+                    
                   ),
                   SizedBox(
-                    height: ScreenUtil.getInstance().setHeight(40),
+                    height: ScreenUtil.getInstance().setHeight(160),
                   ),
                 ],
               ),

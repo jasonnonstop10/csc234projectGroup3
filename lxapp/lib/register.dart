@@ -2,7 +2,9 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_login_page_ui/finishReg.dart';
+import 'package:flutter_login_page_ui/main.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 Widget horizontalLine() => Padding(
       padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -19,7 +21,13 @@ class SignupPage extends StatefulWidget {
 }
 
 class _SignupPageState extends State<SignupPage> {
-  @override
+  final _auth = FirebaseAuth.instance;
+  String name;
+  String std;
+  String email;
+  String password;
+
+  
   @override
   Widget build(BuildContext context) {
     ScreenUtil.instance = ScreenUtil.getInstance()..init(context);
@@ -78,6 +86,10 @@ class _SignupPageState extends State<SignupPage> {
                               fontFamily: "Work-medium",
                               fontSize: ScreenUtil.getInstance().setSp(26)))),
                   TextField(
+                    keyboardType: TextInputType.text,
+                    onChanged: (value) {
+                      name = value;
+                    },
                     decoration: InputDecoration(
                         focusedBorder: UnderlineInputBorder(
                           borderSide: BorderSide(
@@ -90,18 +102,44 @@ class _SignupPageState extends State<SignupPage> {
                   SizedBox(height: ScreenUtil.getInstance().setHeight(40)),
                   Align(
                       alignment: Alignment.centerLeft,
+                      child: Text("Student ID",
+                          style: TextStyle(
+                              color: Color(0xFFfd7f70),
+                              fontFamily: "Work-medium",
+                              fontSize: ScreenUtil.getInstance().setSp(26)))),
+                  TextField(
+                    keyboardType: TextInputType.number,
+                    onChanged: (value) {
+                      std = value;
+                    },
+                    decoration: InputDecoration(
+                        focusedBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(
+                              color: Color(0xFFfd7f70), width: 3.0),
+                        ),
+                        hintText: "Your Student Id",
+                        hintStyle:
+                            TextStyle(color: Colors.grey, fontSize: 12.0,fontFamily: "Work-thin")),
+                  ),
+                  SizedBox(height: ScreenUtil.getInstance().setHeight(40)),
+                  Align(
+                      alignment: Alignment.centerLeft,
                       child: Text("Email",
                           style: TextStyle(
                               color: Color(0xFFfd7f70),
                               fontFamily: "Work-medium",
                               fontSize: ScreenUtil.getInstance().setSp(26)))),
                   TextField(
+                    keyboardType: TextInputType.emailAddress,
+                    onChanged: (value) {
+                      email = value;
+                    },
                     decoration: InputDecoration(
                         focusedBorder: UnderlineInputBorder(
                           borderSide: BorderSide(
                               color: Color(0xFFfd7f70), width: 3.0),
                         ),
-                        hintText: "example@kmutt.ac.th",
+                        hintText: "example@mail.kmutt.ac.th",
                         hintStyle:
                             TextStyle(color: Colors.grey, fontSize: 12.0,fontFamily: "Work-thin")),
                   ),
@@ -114,6 +152,11 @@ class _SignupPageState extends State<SignupPage> {
                               fontFamily: "Work-medium",
                               fontSize: ScreenUtil.getInstance().setSp(26)))),
                   TextField(
+                    keyboardType: TextInputType.text,
+                    obscureText: true,
+                    onChanged: (value) {
+                      password = value;
+                    },
                     decoration: InputDecoration(
                         focusedBorder: UnderlineInputBorder(
                           borderSide: BorderSide(
@@ -132,6 +175,8 @@ class _SignupPageState extends State<SignupPage> {
                               fontFamily: "Work-medium",
                               fontSize: ScreenUtil.getInstance().setSp(26)))),
                   TextField(
+                    keyboardType: TextInputType.text,
+                    obscureText: true,
                     decoration: InputDecoration(
                         focusedBorder: UnderlineInputBorder(
                           borderSide: BorderSide(
@@ -145,7 +190,8 @@ class _SignupPageState extends State<SignupPage> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
-                      InkWell(
+                      Flexible(
+                        child:InkWell(
                         child: Container(
                           width: max(0, 355),
                           height: ScreenUtil.getInstance().setHeight(100),
@@ -163,8 +209,18 @@ class _SignupPageState extends State<SignupPage> {
                               ]),
                           child: Material(
                             color: Colors.transparent,
-                            child: InkWell(
-                              onTap: () {
+                            child: RawMaterialButton(
+                              onPressed: () async {
+                                try {
+                                  final newUser = await _auth.createUserWithEmailAndPassword(email: email, password: password);
+                                  if (newUser != null) {
+                                    MaterialPageRoute (
+                                      builder: (context) => MyApp()
+                                    );
+                                  }
+                                } catch (e) {
+                                  print(e);
+                                }
                                 Route route = MaterialPageRoute(
                                     builder: (context) => FinishReg());
                                 Navigator.push(context, route);
@@ -180,7 +236,8 @@ class _SignupPageState extends State<SignupPage> {
                             ),
                           ),
                         ),
-                      )
+                        ),
+                      ),
                     ],
                   ),
                   SizedBox(

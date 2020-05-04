@@ -1,9 +1,10 @@
 import 'dart:math';
 
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_login_page_ui/grid.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'Widgets/FormCard.dart';
+
 
 import 'finishReg.dart';
 
@@ -31,10 +32,10 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+  final _auth = FirebaseAuth.instance;
+  String email;
+  String password;
   
-
-  
-
   Widget radioButton(bool isSelected) => Container(
         width: 16.0,
         height: 16.0,
@@ -66,36 +67,67 @@ class _MyAppState extends State<MyApp> {
     ScreenUtil.instance = ScreenUtil.getInstance()..init(context);
     ScreenUtil.instance =
         ScreenUtil(width: 750, height: 1334, allowFontScaling: true);
-    return new Scaffold(
-      backgroundColor: Colors.white,
-      resizeToAvoidBottomPadding: true,
-      body: Stack(
-        fit: StackFit.expand,
-        children: <Widget>[
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.end,
+        return new Scaffold(
+          backgroundColor: Colors.white,
+          resizeToAvoidBottomPadding: true,
+          body: Stack(
+            fit: StackFit.expand,
             children: <Widget>[
-              Padding(
-                padding: EdgeInsets.only(top: 20.0),
-                child: Image.asset("assets/image_01.png"),
-              ),
-              Expanded(
-                child: Container(),
-              ),
-              
-            ],
-          ),
-          SingleChildScrollView(
-            child: Padding(
-              padding: EdgeInsets.only(left: 28.0, right: 28.0, top: 60.0),
-              child: Column(
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.end,
                 children: <Widget>[
-                 
-                  SizedBox(
-                    height: ScreenUtil.getInstance().setHeight(350),
+                  Padding(
+                    padding: EdgeInsets.only(top: 20.0),
+                    child: Image.asset("assets/image_01.png"),
                   ),
+                 
+                
+                  Align(
+                      alignment: Alignment.centerLeft,
+                      child: Text("Email",
+                          style: TextStyle(
+                              color: Color(0xFFfd7f70),
+                              fontFamily: "Work-medium",
+                              fontSize: ScreenUtil.getInstance().setSp(26)))),
+                  TextField(
+                    onChanged: (value) {
+                      email = value;
+                    },
+                    decoration: InputDecoration(
+                        focusedBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(
+                              color: Color(0xFFfd7f70), width: 3.0),
+                        ),
+                        hintText: "example@mail.kmutt.ac.th",
+                        hintStyle:
+                            TextStyle(color: Colors.grey, fontSize: 12.0,fontFamily: "Work-thin")),
+                  ),
+                  SizedBox(height: ScreenUtil.getInstance().setHeight(40)),
+                  Align(
+                      alignment: Alignment.centerLeft,
+                      child: Text("Password",
+                          style: TextStyle(
+                              color: Color(0xFFfd7f70),
+                              fontFamily: "Work-medium",
+                              fontSize: ScreenUtil.getInstance().setSp(26)))),
+                  TextField(
+                    onChanged: (value) {
+                      password = value;
+                    },
+                    keyboardType: TextInputType.text,
+                    obscureText: true,
+                    decoration: InputDecoration(
+                        focusedBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(
+                              color: Color(0xFFfd7f70), width: 3.0),
+                        ),
+                        hintText: "••••••••",
+                        hintStyle:
+                            TextStyle(color: Colors.grey, fontSize: 12.0)),
+                  ),
+                  SizedBox(height: ScreenUtil.getInstance().setHeight(40)),
                   
-                  FormCard(),
+                 
                   Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: <Widget>[
@@ -119,14 +151,14 @@ class _MyAppState extends State<MyApp> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
                       Flexible(
-                        child:InkWell(
+                          child: InkWell(
                         child: Container(
                           width: max(0, 355),
                           height: ScreenUtil.getInstance().setHeight(100),
                           decoration: BoxDecoration(
                               gradient: LinearGradient(colors: [
-                                Color(0xFFfd7f70),Color(0xFFfc315e)
-                                
+                                Color(0xFFfd7f70),
+                                Color(0xFFfc315e)
                               ]),
                               borderRadius: BorderRadius.circular(10.0),
                               boxShadow: [
@@ -137,8 +169,17 @@ class _MyAppState extends State<MyApp> {
                               ]),
                           child: Material(
                             color: Colors.transparent,
-                            child: InkWell(
-                              onTap: () {Navigator.pushNamed(context, "/menu");},
+                            child: RawMaterialButton(
+                              onPressed: () async {
+                                try {
+                                  final user = await _auth.signInWithEmailAndPassword(email: email, password: password);
+                                  if (user != null) {
+                                    Navigator.pushNamed(context, "/menu");
+                                  }
+                                } catch (e) {
+                                  print(e);
+                                }
+                              },
                               child: Center(
                                 child: Text("Login",
                                     style: TextStyle(
@@ -150,8 +191,8 @@ class _MyAppState extends State<MyApp> {
                             ),
                           ),
                         ),
-                      )
-                      ),],
+                      )),
+                    ],
                   ),
                   SizedBox(
                     height: ScreenUtil.getInstance().setHeight(40),
@@ -162,8 +203,8 @@ class _MyAppState extends State<MyApp> {
                       Text(
                         "New user? ",
                         style: TextStyle(
-                          color: Colors.blueGrey[700],
-                          fontFamily: "Work-Medium"),
+                            color: Colors.blueGrey[700],
+                            fontFamily: "Work-Medium"),
                       ),
                       InkWell(
                         onTap: () {
@@ -173,11 +214,12 @@ class _MyAppState extends State<MyApp> {
                             style: TextStyle(
                                 color: Color(0xFFfc315e),
                                 fontFamily: "Work-Bold")),
-                      ),Text(
+                      ),
+                      Text(
                         " here",
                         style: TextStyle(
-                           color: Colors.blueGrey[700],
-                          fontFamily: "Work-Medium"),
+                            color: Colors.blueGrey[700],
+                            fontFamily: "Work-Medium"),
                       )
                     ],
                   ),
@@ -190,22 +232,17 @@ class _MyAppState extends State<MyApp> {
                       Text(
                         "By creating an account, you agree to our",
                         style: TextStyle(
-                          color: Colors.blueGrey[700],
-                          fontSize: 10,
-                          fontFamily: "Work-Medium"),
-                          
+                            color: Colors.blueGrey[700],
+                            fontSize: 10,
+                            fontFamily: "Work-Medium"),
                       ),
-                      
-                      
                     ],
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
                       InkWell(
-                        onTap: () {
-                        
-                        },
+                        onTap: () {},
                         child: Text("Terms of Service",
                             style: TextStyle(
                                 color: Colors.pinkAccent[400],
@@ -215,15 +252,12 @@ class _MyAppState extends State<MyApp> {
                       Text(
                         " and",
                         style: TextStyle(
-                          color: Colors.blueGrey[700],
-                          fontSize: 10,
-                          fontFamily: "Work-Medium"),
-                          
+                            color: Colors.blueGrey[700],
+                            fontSize: 10,
+                            fontFamily: "Work-Medium"),
                       ),
                       InkWell(
-                        onTap: () {
-                         
-                        },
+                        onTap: () {},
                         child: Text(" Privacy Policy",
                             style: TextStyle(
                                 color: Colors.pinkAccent[400],
@@ -234,8 +268,6 @@ class _MyAppState extends State<MyApp> {
                   ),
                 ],
               ),
-            ),
-          )
         ],
       ),
     );
