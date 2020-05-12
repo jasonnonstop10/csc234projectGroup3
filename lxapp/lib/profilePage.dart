@@ -1,7 +1,11 @@
+// import 'dart:js';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_login_page_ui/main.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 
 Widget horizontalLine() => Padding(
@@ -19,6 +23,37 @@ class ProfilePage extends StatefulWidget {
 }
 
 class _ProfilePageState extends State<ProfilePage> {
+  final _firestore = Firestore.instance;
+  final _auth = FirebaseAuth.instance;
+
+  FirebaseUser loggedInUser;
+
+  @override
+  void initState() {
+    super.initState();
+
+    getCurrentUser();
+  }
+
+  void getCurrentUser() async {
+    try {
+      final user = await _auth.currentUser();
+      if (user != null) {
+        loggedInUser = user;
+      }
+    } catch (e) {
+      print(e);
+    }
+  }
+
+  void userStream() async {
+    await for ( var snapshot in _firestore.collection('user').snapshots()) {
+      for (var user in snapshot.documents) {
+        print(user.data);
+      }
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
@@ -28,6 +63,22 @@ class _ProfilePageState extends State<ProfilePage> {
               padding: EdgeInsets.only(left: 28.0, right: 28.0, top: 0.0),
               child: Column(
                 children: <Widget>[
+                  // StreamBuilder <QuerySnapshot> (
+                  //   stream: _firestore.collection('user').snapshots(),
+                  //   builder: (context, snapshot) {
+                  //     if (snapshot.hasData) {
+                  //       final user = snapshot.data.documents;
+                  //       List<Text> userWidgets = [];
+                  //       for (var user in user) {
+                  //         final userName = user.data['name'];
+
+                  //         final userWidgets = Text('$userName');
+                  //       }
+                  //       return Column(
+                  //         children: userWidgets
+                  //       );
+                  //     }
+                  //   }),
                   Row(
                     children: <Widget>[],
                   ),
@@ -40,7 +91,7 @@ class _ProfilePageState extends State<ProfilePage> {
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10.0)),
                       child: ListTile(
-                        title: Text("Jean Doe",
+                        title: Text("Krerkthad",
                             style: TextStyle(
                                 fontFamily: "Work-bold",
                                 fontSize:
@@ -99,6 +150,7 @@ class _ProfilePageState extends State<ProfilePage> {
                           trailing: Icon(Icons.keyboard_arrow_right,
                               color: Color(0xFFfc315e)),
                           onTap: () {
+                            _auth.signOut();
                             Navigator.push(
                               context,
                               MaterialPageRoute(

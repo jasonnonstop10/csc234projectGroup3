@@ -1,7 +1,7 @@
 import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 
 Widget horizontalLine() => Padding(
@@ -19,7 +19,19 @@ class ForgotPage extends StatefulWidget {
 }
 
 class _ForgotPageState extends State<ForgotPage> {
-  @override
+  GlobalKey<ScaffoldState> scaffoldKey = GlobalKey();
+  FirebaseAuth _auth = FirebaseAuth.instance;
+  TextEditingController emailController = TextEditingController();
+
+  void resetPassword() {
+    String email = emailController.text.trim();
+    _auth.sendPasswordResetEmail(email: email);
+    scaffoldKey.currentState.showSnackBar(SnackBar(
+      content: Text("We send the detail to $email successfully.",
+          style: TextStyle(color: Colors.white)),
+      backgroundColor: Colors.green[300],
+    ));
+  }
   @override
   Widget build(BuildContext context) {
     ScreenUtil.instance = ScreenUtil.getInstance()..init(context);
@@ -98,6 +110,7 @@ class _ForgotPageState extends State<ForgotPage> {
                               fontFamily: "Work-Medium",
                               fontSize: ScreenUtil.getInstance().setSp(26)))),
                   TextField(
+                    controller: emailController,
                     decoration: InputDecoration(
                         focusedBorder: UnderlineInputBorder(
                           borderSide:
@@ -131,7 +144,7 @@ class _ForgotPageState extends State<ForgotPage> {
                           child: Material(
                             color: Colors.transparent,
                             child: InkWell(
-                              onTap: () {},
+                              onTap: () => resetPassword(),
                               child: Center(
                                 child: Text("Submit",
                                     style: TextStyle(

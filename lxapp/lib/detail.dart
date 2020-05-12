@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_login_page_ui/mapPage.dart';
 import 'package:flutter_login_page_ui/schesdulePage.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 Widget horizontalLine() => Padding(
       padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -20,7 +22,30 @@ class Detail extends StatefulWidget {
 }
 
 class _DetailState extends State<Detail> {
+  final _firestore = Firestore.instance;
+  final _auth = FirebaseAuth.instance;
+  FirebaseUser loggedInUser;
+  String activity;
+
   @override
+  
+  void initState() {
+    super.initState();
+
+    getCurrentUser();
+  }
+
+  void getCurrentUser() async {
+    try {
+      final user = await _auth.currentUser();
+      if (user != null) {
+        loggedInUser = user;
+      }
+    } catch (e) {
+      print(e);
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     ScreenUtil.instance = ScreenUtil.getInstance()..init(context);
@@ -205,6 +230,12 @@ class _DetailState extends State<Detail> {
                           color: Colors.transparent,
                           child: InkWell(
                             onTap: () {
+                              activity = "SIT DD: Quiz in MS Team";
+                              _firestore.collection('activity').add({
+                                'act_id' : "1",
+                                'activity' : activity,
+                                'attendee' : loggedInUser.email
+                              });
                           Navigator.push(
                               context,
                               MaterialPageRoute(
